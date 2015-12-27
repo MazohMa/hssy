@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:padding="5dp"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/img_user_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/touxiang"
+        android:layout_alignParentLeft="true"
+        />
+    <TextView
+        android:id="@+id/like_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="测试"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/img_user_icon"
+        android:textColor="@color/grey_dark"
+        android:textSize="@dimen/w13" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="13dp"
+        android:background="@color/water_blue"
+        android:layout_below="@+id/like_name"
+        />
+
+</RelativeLayout>

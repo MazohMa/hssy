@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/map_appointment"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/w5"
+        android:textSize="@dimen/w18"
+        android:textColor="@color/white"
+        android:text="@string/go_to_order"/>
+    
+
+</LinearLayout>

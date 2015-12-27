@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_simple_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/h25" >
+
+        <include layout="@layout/line_horizontal_grey_small" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/dianzhuangno_layout_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="@dimen/h20"
+        android:paddingTop="@dimen/h20" >
+
+        <TextView
+            android:id="@+id/dianzhuangno_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/h18"
+            android:gravity="center_vertical"
+            android:text="电桩编号："
+            android:textColor="@color/water_blue" />
+
+        <TextView
+            android:id="@+id/dianzhuangno_tvs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/dianzhuangno_tv"
+            android:layout_alignBottom="@+id/dianzhuangno_tv"
+            android:layout_toRightOf="@+id/dianzhuangno_tv"
+            android:gravity="center_vertical"
+            android:text="1234567894"
+            android:textColor="@color/water_blue" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/h18"
+        android:paddingRight="@dimen/h18" >
+
+        <include layout="@layout/line_horizontal_grey_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/h18" >
+
+        <RelativeLayout
+            android:id="@+id/dianzhuangtype_layout_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="@dimen/h8"
+            android:paddingTop="@dimen/h8" >
+
+            <TextView
+                android:id="@+id/dianzhuangtype_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/h18"
+                android:gravity="center_vertical"
+                android:text="电桩类型:"
+                android:textColor="@color/text_gray" />
+
+            <TextView
+                android:id="@+id/dianzhuangtype_tvs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/dianzhuangtype_tv"
+                android:layout_alignBottom="@+id/dianzhuangtype_tv"
+                android:layout_marginLeft="@dimen/h18"
+                android:layout_toRightOf="@+id/dianzhuangtype_tv"
+                android:gravity="center_vertical"
+                android:text="直流"
+                android:textColor="@color/text_gray_dark" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edinggonglv_tv_layout_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="@dimen/h8"
+            android:paddingTop="@dimen/h8" >
+
+            <TextView
+                android:id="@+id/edinggonglv_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/h18"
+                android:gravity="center_vertical"
+                android:text="额定功率:"
+                android:textColor="@color/text_gray" />
+
+            <TextView
+                android:id="@+id/edinggonglv_tvs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/edinggonglv_tv"
+                android:layout_alignBottom="@+id/edinggonglv_tv"
+                android:layout_marginLeft="@dimen/h18"
+                android:layout_toRightOf="@+id/edinggonglv_tv"
+                android:gravity="center_vertical"
+                android:text="50kWh"
+                android:textColor="@color/text_gray_dark" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edingdianya_tv_layout_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="@dimen/h8"
+            android:paddingTop="@dimen/h8" >
+
+            <TextView
+                android:id="@+id/edingdianya_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/h18"
+                android:gravity="center_vertical"
+                android:text="额定电压:"
+                android:textColor="@color/text_gray" />
+
+            <TextView
+                android:id="@+id/edingdianya_tvs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/edingdianya_tv"
+                android:layout_alignBottom="@+id/edingdianya_tv"
+                android:layout_marginLeft="@dimen/h18"
+                android:layout_toRightOf="@+id/edingdianya_tv"
+                android:gravity="center_vertical"
+                android:text="220v"
+                android:textColor="@color/text_gray_dark" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edingdianliu_tv_layout_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="@dimen/h8"
+            android:paddingTop="@dimen/h8" >
+
+            <TextView
+                android:id="@+id/edingdianliu_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/h18"
+                android:gravity="center_vertical"
+                android:text="额定电流:"
+                android:textColor="@color/text_gray" />
+
+            <TextView
+                android:id="@+id/edingdianliu_tvs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/edingdianliu_tv"
+                android:layout_alignBottom="@+id/edingdianliu_tv"
+                android:layout_marginLeft="@dimen/h18"
+                android:layout_toRightOf="@+id/edingdianliu_tv"
+                android:gravity="center_vertical"
+                android:text="15A"
+                android:textColor="@color/text_gray_dark" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/localaddr_tv_layout_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="@dimen/h8"
+            android:paddingTop="@dimen/h8" >
+
+            <TextView
+                android:id="@+id/localaddr_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/h18"
+                android:gravity="center_vertical"
+                android:text="当前位置:"
+                android:textColor="@color/text_gray" />
+
+            <TextView
+                android:id="@+id/localaddr_tvs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/h18"
+                android:layout_toRightOf="@+id/localaddr_tv"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/text_gray_dark" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/h13" >
+
+        <include layout="@layout/line_horizontal_grey_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/h45" >
+
+        <include layout="@layout/line_horizontal_grey_small" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/pilepoint_layout_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="@dimen/h20"
+        android:paddingTop="@dimen/h20" >
+
+        <TextView
+            android:id="@+id/pilepoint_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/h18"
+            android:gravity="center_vertical"
+            android:text="桩总评分"
+            android:textColor="@color/text_gray" />
+
+        <TextView
+            android:id="@+id/command_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/user_command_tv_star"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/h5"
+            android:paddingTop="3dp"
+            android:text="5分"
+            android:textColor="@color/text_gray_dark" />
+
+        <ImageView
+            android:id="@+id/user_command_tv_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/user_command_tv_star1"
+            android:padding="@dimen/h5"
+            android:paddingLeft="@dimen/h8"
+            android:src="@drawable/star_small_green"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/user_command_tv_star1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/user_command_tv_star2"
+            android:padding="@dimen/h5"
+            android:paddingLeft="@dimen/h8"
+            android:src="@drawable/star_small_green"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/user_command_tv_star2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/user_command_tv_star3"
+            android:padding="@dimen/h5"
+            android:paddingLeft="@dimen/h8"
+            android:src="@drawable/star_small_green"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/user_command_tv_star3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/user_command_tv_star4"
+            android:padding="@dimen/h5"
+            android:paddingLeft="@dimen/h8"
+            android:src="@drawable/star_small_green"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/user_command_tv_star4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/next_bt"
+            android:padding="@dimen/h5"
+            android:paddingLeft="@dimen/h8"
+            android:src="@drawable/star_small_green"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/next_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/h10"
+            android:src="@drawable/icon_next"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/h18"
+        android:paddingRight="@dimen/h18" >
+
+        <include layout="@layout/line_horizontal_grey_small" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/usercommand_layout_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="@dimen/h20"
+        android:paddingTop="@dimen/h20" >
+
+        <TextView
+            android:id="@+id/usercommand_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/h18"
+            android:gravity="center_vertical"
+            android:text="用户评论"
+            android:textColor="@color/text_gray" />
+
+        <TextView
+            android:id="@+id/sum_num_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image_next_bt2"
+            android:layout_toLeftOf="@+id/image_next_bt2"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/h5"
+            android:paddingTop="3dp"
+            android:text="0人已评价"
+            android:textColor="@color/water_blue" />
+
+        <ImageView
+            android:id="@+id/image_next_bt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/h10"
+            android:src="@drawable/icon_next" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_horizontal_grey_small" />
+
+</LinearLayout>

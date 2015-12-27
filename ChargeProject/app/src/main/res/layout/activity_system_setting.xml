@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_white"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/top_simple_layout"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d5"
+        android:background="@color/split_line_gray"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_message_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_grey_white_click"
+        android:paddingBottom="@dimen/h15"
+        android:paddingTop="@dimen/h15"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/main_menu_btn"
+            android:drawablePadding="@dimen/h15"
+            android:text="@string/system_setting_message_notification"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/w10"
+            android:background="@drawable/icon_next"
+            android:padding="@dimen/h8"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d5"
+        android:background="@color/split_line_gray"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_clear_cache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_grey_white_click"
+        android:paddingBottom="@dimen/h15"
+        android:paddingTop="@dimen/h15">
+
+        <TextView
+            style="@style/main_menu_btn"
+            android:drawablePadding="@dimen/h15"
+            android:text="@string/system_setting_clear_cache"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_cache_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/w10"
+            android:textSize="@dimen/h18"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d5"
+        android:background="@color/split_line_gray"/>
+
+    <!-- <RelativeLayout
+         android:id="@+id/rl_payway"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@drawable/select_grey_white_click"
+         android:paddingBottom="@dimen/h15"
+         android:paddingTop="@dimen/h15">
+
+         <TextView
+             style="@style/main_menu_btn"
+             android:drawablePadding="@dimen/h15"
+             android:text="@string/system_setting_payway"
+             android:textColor="@color/black"/>
+
+         <ImageView
+             android:id="@+id/iv_payway"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_centerInParent="true"
+             android:layout_marginRight="@dimen/w10"
+             android:background="@drawable/icon_next"
+             android:padding="@dimen/h8"/>
+
+         <TextView
+             android:id="@+id/tv_payway"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toLeftOf="@id/iv_payway"
+             android:layout_centerInParent="true"
+             android:textSize="@dimen/h18"
+             android:text="@string/not_select_payway"
+             android:layout_marginRight="@dimen/w10"/>
+
+
+     </RelativeLayout>
+
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/d5"
+         android:background="@color/split_line_gray"/>-->
+
+    <RelativeLayout
+        android:id="@+id/rl_account_bind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_grey_white_click"
+        android:paddingBottom="@dimen/h15"
+        android:paddingTop="@dimen/h15"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/main_menu_btn"
+            android:drawablePadding="@dimen/h15"
+            android:text="@string/system_setting_account_bind"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/w10"
+            android:background="@drawable/icon_next"
+            android:padding="@dimen/h8"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d5"
+        android:background="@color/split_line_gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_grey_white_click"
+        android:paddingBottom="@dimen/h15"
+        android:paddingTop="@dimen/h15">
+
+        <TextView
+            style="@style/main_menu_btn"
+            android:drawablePadding="@dimen/h15"
+            android:text="@string/system_setting_save_traffic"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/iv_save_traffic_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/w10"
+            android:background="@drawable/btn_show_free_pile_selector"
+            android:padding="@dimen/h8"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d5"
+        android:background="@color/split_line_gray"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_version_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_grey_white_click"
+        android:paddingBottom="@dimen/h15"
+        android:paddingTop="@dimen/h15">
+
+        <TextView
+            style="@style/main_menu_btn"
+            android:drawablePadding="@dimen/h15"
+            android:text="@string/system_setting_version_update"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_version_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/w10"
+            android:textSize="@dimen/h18"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d5"
+        android:background="@color/split_line_gray"/>
+
+    <View
+        android:id="@+id/vi_version_touch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

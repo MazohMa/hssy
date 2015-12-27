@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/shape_time_pick_grey_frame_round_big" android:state_enabled="false"/>
+    <item android:drawable="@drawable/shape_time_pick_water_blue_frame_round_big" android:state_selected="false"/>
+    <item android:drawable="@drawable/shape_time_pick_water_blue_round_big" android:state_selected="true"/>
+    <item android:drawable="@drawable/shape_time_pick_water_blue_round_big" android:state_pressed="true"/>
+    <item android:drawable="@drawable/shape_time_pick_water_blue_frame_round_big" android:state_pressed="false"/>
+
+</selector>

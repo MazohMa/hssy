@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_white"
+              android:orientation="vertical">
+
+    <include layout="@layout/top_simple_layout"/>
+
+    <LinearLayout
+        android:id="@+id/item_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_order_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EFEDEC"
+            android:padding="@dimen/h15">
+
+            <TextView
+                android:id="@+id/tag_order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="订单号："
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/w18"/>
+
+            <TextView
+                android:id="@+id/tv_order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tag_order_id"
+                android:text="78234958234"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/w18"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_order_condition1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/h15"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/tv_order_actions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="订单情况："
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/w14"/>
+
+            <TextView
+                android:id="@+id/tv_order_action2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_order_actions"
+                android:text="已完成"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/w14"/>
+
+            <com.xpg.hssy.view.EvaluateColumn
+                android:id="@+id/eva_star_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_order_action2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:evaluate="0"
+                app:maxCount="5"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_order_condition3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/h15"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/tag_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="付款人："
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/w14"/>
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/tag_username"
+                android:text="ADMIN"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/w16"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_order_condition4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/h15"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/tag_contact_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="联系电话："
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/w14"/>
+
+            <TextView
+                android:id="@+id/tv_contact_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/tag_contact_phone"
+                android:text="13988888888"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/w14"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_order_condition5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/h15"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/tag_charge_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="充电时间："
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/w14"/>
+
+            <TextView
+                android:id="@+id/tv_charge_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/tag_charge_time"
+                android:text="2015/02/03  17:00-18:00"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/w14"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_order_condition6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/h15"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/tag_charge_electric"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="充电电量："
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/w14"/>
+
+            <TextView
+                android:id="@+id/tv_charge_electric"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/tag_charge_electric"
+                android:text="50 kWh"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/w14"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_order_condition7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/h15"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/tag_charge_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="充电费用："
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/w14"/>
+
+            <TextView
+                android:id="@+id/tv_charge_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/tag_charge_money"
+                android:text="80元"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/w14"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_order_condition9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/h15"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/tag_sequence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="充电流水号："
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/w14"/>
+
+            <TextView
+                android:id="@+id/tv_sequence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/tag_sequence"
+                android:text="213412"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/w14"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_order_condition10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/h15"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/tag_pay_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="付款时间："
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/w14"/>
+
+            <TextView
+                android:id="@+id/tv_pay_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/tag_pay_time"
+                android:text="2015/02/03  17:00"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/w14"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_water_blue_round_top"
+        android:padding="@dimen/w10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/charge_duration"
+            android:textColor="@color/white"
+            android:textSize="@dimen/w20"/>
+
+        <ImageButton
+            android:id="@+id/ib_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:src="@drawable/connect_button_cancel"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_round_bottom">
+
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/h15"
+            android:cacheColorHint="@null"
+            android:divider="@null"
+            android:drawSelectorOnTop="false"
+            android:listSelector="@null"
+            android:minHeight="@dimen/h200"
+            android:scrollbars="none">
+        </ListView>
+    </RelativeLayout>
+</LinearLayout>

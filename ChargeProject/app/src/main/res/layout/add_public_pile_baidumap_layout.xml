@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout1"
+        android:descendantFocusability="blocksDescendants">
+
+        <RelativeLayout
+            android:id="@+id/rl_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/iv_map_center_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/map_mark_icon"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btn_Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/icon_positioning"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_top"
+        android:background="@color/map_filtrate_background">
+
+        <TextView
+            android:id="@+id/tv_location_message"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h50"
+            android:layout_centerVertical="true"
+            android:background="@color/map_location_message_background"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:textColor="@color/map_location_message_text"
+            android:textSize="@dimen/h15"/>
+    </RelativeLayout>
+
+</RelativeLayout>

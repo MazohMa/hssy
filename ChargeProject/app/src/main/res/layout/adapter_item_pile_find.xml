@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xpg="http://schemas.android.com/apk/res/com.xpg.hssychargingpole"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/select_grey_white_click"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/h15"
+        android:paddingLeft="@dimen/h15"
+        android:paddingRight="@dimen/h15"
+        android:paddingTop="@dimen/h15" >
+
+        <LinearLayout
+            android:id="@+id/check_box_layout"
+            android:layout_width="@dimen/w35"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@color/bg_white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <CheckBox
+                android:id="@+id/choice_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:button="@drawable/switch_press_selector"
+                android:checked="false"/>
+        </LinearLayout>
+
+        <com.xpg.hssy.view.RoundAngleImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/h85"
+            android:layout_height="@dimen/h85"
+            android:layout_marginRight="@dimen/h10"
+            android:layout_toRightOf="@+id/check_box_layout"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_tab_logo" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_icon"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="电桩xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            android:textColor="@color/text_gray_dark"
+            android:textSize="@dimen/h18" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_icon"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="海珠区江南大道中325号首层之一xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/h13" />
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_location"
+            android:text="1.2km"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/h13" />
+
+        <LinearLayout
+            android:id="@+id/ll_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/tv_location"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tv_price_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="￥"
+                android:textColor="@color/text_wather_blue"
+                android:textSize="@dimen/h13" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="0.6"
+                android:textColor="@color/text_wather_blue"
+                android:textSize="@dimen/h23" />
+
+            <TextView
+                android:id="@+id/tv_price_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="/kWh"
+                android:textColor="@color/text_wather_blue"
+                android:textSize="@dimen/h12" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_current_type"
+            android:layout_width="@dimen/h18"
+            android:layout_height="@dimen/h18"
+            android:layout_below="@+id/tv_name"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:gravity="center"
+            android:src="@drawable/icon_direct" />
+
+        <ImageView
+            android:id="@+id/iv_own_type"
+            android:layout_width="@dimen/h18"
+            android:layout_height="@dimen/h18"
+            android:layout_below="@+id/tv_name"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_current_type"
+            android:gravity="center"
+            android:src="@drawable/icon_private" />
+
+        <TextView
+            android:id="@+id/tv_grade_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/h13"
+            android:layout_toRightOf="@+id/iv_own_type"
+            android:gravity="bottom"
+            android:text="4.5分"
+            android:textColor="@color/red"
+            android:textSize="@dimen/h10" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_horizontal_grey_small" />
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/top_height"
+    android:background="@color/water_blue">
+
+    <ImageButton
+        android:id="@+id/btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:padding="@dimen/h10"
+        android:scaleType="center"
+        android:src="@drawable/back_bt"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableRight="@drawable/triangle_down_white"
+        android:gravity="center"
+        android:padding="@dimen/h10"
+        android:drawablePadding="@dimen/h5"
+        android:text="城市名"
+        android:textColor="@color/white"
+        android:textSize="@dimen/h15" />
+
+
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/h8"
+        android:layout_marginBottom="@dimen/h8"
+        android:background="@drawable/input_bg"
+        android:drawableRight="@drawable/search_icon"
+        android:gravity="center|left"
+        android:hint="@string/search_input"
+        android:paddingLeft="@dimen/h5"
+        android:paddingRight="@dimen/h5"
+        android:singleLine="true"
+        android:textSize="@dimen/h16" />
+
+    <ImageButton
+        android:id="@+id/btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:paddingLeft="@dimen/h10"
+        android:paddingRight="@dimen/h10"
+        android:scaleType="center"
+        android:src="@drawable/icon_tab_map"
+        android:visibility="visible" />
+
+</LinearLayout>

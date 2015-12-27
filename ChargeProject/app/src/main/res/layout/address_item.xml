@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_address_background_click_color" >
+
+    <ImageView
+        android:id="@+id/iv_left_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/h30"
+        android:layout_marginRight="@dimen/h20"
+        android:src="@drawable/find_icon_search" />
+
+    <ImageView
+        android:id="@+id/iv_right_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/h20"
+        android:layout_marginRight="@dimen/h30"
+        android:src="@drawable/find_icon_map" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h60"
+        android:layout_toLeftOf="@id/iv_right_icon"
+        android:layout_toRightOf="@id/iv_left_icon"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/h5" >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="位置名"
+            android:textAppearance="?android:attr/textAppearanceSearchResultTitle" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="地址"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/text_gray"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="信息"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/text_gray"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

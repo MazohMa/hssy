@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_blue">
+
+    <TextView
+        android:id="@+id/tv_head_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/w8"
+        android:layout_marginTop="@dimen/h40"
+        android:text="@string/synchroning_record"
+        android:textColor="@color/blue_green"
+        android:textSize="@dimen/h34"/>
+
+    <TextView
+        android:id="@+id/tv_second_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_head_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/w8"
+        android:layout_marginTop="@dimen/h2"
+        android:text="@string/do_not_disconnect_bluetooth"
+        android:textColor="@color/blue_green"
+        android:textSize="@dimen/h18"/>
+
+    <ImageView
+        android:id="@+id/iv_syn_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/charging_bluetooth"/>
+
+    <LinearLayout
+        android:id="@+id/ll_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_syn_icon"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="65dp"
+        android:layout_marginTop="@dimen/h20"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:id="@+id/pb_syn_progress_bar"
+            style="@style/StyleProgressBarMini"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/h12"
+            android:layout_alignBaseline="@id/tv_electricity"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:max="100"
+            android:maxHeight="@dimen/h8"
+            android:minHeight="@dimen/h8"
+            android:padding="@dimen/h3"
+            android:progress="0"/>
+
+
+        <TextView
+            android:id="@+id/tv_progress_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w8"
+            android:text="0%"
+            android:textColor="@color/blue_green"
+            android:textSize="@dimen/h14"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h40"
+        android:layout_below="@+id/ll_progress_bar"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="65dp"
+        android:layout_marginTop="@dimen/h30"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_button_left"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/h40"
+            android:layout_weight="1"
+            android:background="@drawable/shape_time_pick_water_blue_round_big"
+            android:text="@string/btn_cancel_syn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h20"/>
+
+        <Button
+            android:id="@+id/btn_button_right"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/h40"
+            android:layout_marginLeft="@dimen/h15"
+            android:layout_weight="1"
+            android:background="@drawable/shape_time_pick_water_blue_round_big"
+            android:text="@string/btn_view_order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h20"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</RelativeLayout>

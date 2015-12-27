@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_simple_layout" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/line_grey_back"
+        android:paddingBottom="@dimen/w10"
+        android:paddingLeft="@dimen/w15"
+        android:paddingTop="@dimen/w10"
+        android:text="问题和意见"
+        android:textColor="@color/bg_grey"
+        android:textSize="@dimen/w15" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h150"
+        android:layout_gravity="center"
+        android:background="@color/bg_gray_pale"
+        android:divider="@drawable/line1"
+        android:dividerPadding="@dimen/h5"
+        android:orientation="vertical"
+        android:showDividers="middle|beginning|end" >
+
+        <EditText
+            android:id="@+id/question_suggestion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/h5"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="left"
+            android:hint="请简要描述你的问题和意见(最多400字)"
+            android:maxLength="400"
+            android:paddingLeft="@dimen/w10"
+            android:textSize="@dimen/w15" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/line_grey_back"
+        android:paddingBottom="@dimen/w10"
+        android:paddingLeft="@dimen/w15"
+        android:paddingTop="@dimen/w10"
+        android:text="图片（选项，提供问题截图）"
+        android:textColor="@color/bg_grey"
+        android:textSize="@dimen/w15" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:divider="@drawable/line1"
+        android:dividerPadding="@dimen/h5"
+        android:orientation="vertical"
+        android:showDividers="middle|beginning|end" >
+
+        <GridView
+            android:id="@+id/noScrollgridview_introduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:listSelector="#00000000"
+            android:numColumns="5"
+            android:paddingLeft="@dimen/h5"
+            android:paddingRight="@dimen/h5"
+            android:scrollbars="none" >
+        </GridView>
+
+        <include layout="@layout/line_horizontal_grey_small" >
+        </include>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_top_or_bottom"
+        android:orientation="vertical"
+        android:padding="@dimen/h15" >
+
+        <Button
+            android:id="@+id/save"
+            style="@style/btn_orange_small"
+            android:layout_centerInParent="true"
+            android:text="提交" />
+    </RelativeLayout>
+
+</LinearLayout>

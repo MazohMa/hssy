@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+              android:focusable="true"
+              android:focusableInTouchMode="true">
+    <!--不要让EditText默认获取焦点-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/w40"
+        android:layout_marginRight="@dimen/w40"
+        android:layout_marginTop="@dimen/h50"
+        android:background="@drawable/input_box_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/w10"
+        android:paddingRight="@dimen/w10" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/contact_icon" />
+
+        <com.xpg.hssy.view.EditDeleteText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h50"
+            android:drawableRight="@drawable/emotionstore_progresscancelbtn"
+            android:layout_marginLeft="@dimen/w6"
+            android:background="@color/clear"
+            android:editable="false"
+            android:hint="@string/input_phone"
+            android:singleLine="true"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/w15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/w40"
+        android:layout_marginRight="@dimen/w40"
+        android:layout_marginTop="@dimen/h10"
+        android:background="@drawable/input_box_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/w10"
+        android:paddingRight="@dimen/w10" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/password_icon" />
+
+        <com.xpg.hssy.view.EditDeleteText
+            android:id="@+id/et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h50"
+            android:drawableRight="@drawable/emotionstore_progresscancelbtn"
+            android:layout_marginLeft="@dimen/w6"
+            android:background="@color/clear"
+            android:hint="@string/input_pwd_length"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="@dimen/w15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/w40"
+        android:layout_marginRight="@dimen/w40"
+        android:layout_marginTop="@dimen/h10"
+        android:background="@drawable/input_box_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/w10"
+        android:paddingRight="@dimen/w10" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_icon" />
+
+        <com.xpg.hssy.view.EditDeleteText
+            android:id="@+id/et_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h50"
+            android:drawableRight="@drawable/emotionstore_progresscancelbtn"
+            android:layout_marginLeft="@dimen/w6"
+            android:background="@color/clear"
+            android:hint="@string/nickname"
+            android:singleLine="true"
+            android:textSize="@dimen/w15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/w40"
+        android:layout_marginRight="@dimen/w40"
+        android:layout_marginTop="@dimen/h10"
+        android:background="@drawable/input_box_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/w10"
+        android:paddingRight="@dimen/w10" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gender_icon" />
+
+        <TextView
+            android:id="@+id/tv_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sex"
+            android:textColor="@color/text_gray" />
+
+        <Spinner
+            android:id="@+id/spinner_sex"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/h40"
+            android:layout_weight="1.0"
+            android:background="@color/clear"
+            android:gravity="right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=">"
+            android:textColor="@color/text_gray" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/registration_new" />
+
+    <Button
+        android:id="@+id/btn_agree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/w40"
+        android:layout_marginRight="@dimen/w40"
+        android:layout_marginTop="@dimen/h50"
+        android:background="@drawable/green_bt_bg"
+        android:text="@string/agree"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/h18" />
+
+</LinearLayout>

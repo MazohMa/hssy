@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+              android:focusable="true"
+              android:focusableInTouchMode="true">
+    <!--不要让EditText默认获取焦点-->
+
+    <include layout="@layout/top_next_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/imageButton_alipay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/alipay_icon1" />
+
+        <com.xpg.hssy.view.EditDeleteText
+            android:id="@+id/et_alipayname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h50"
+            android:background="@null"
+            android:drawableRight="@drawable/emotionstore_progresscancelbtn"
+            android:hint="请输入支付宝账号"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textSize="@dimen/w15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line_horizontal_grey_small" />
+    </LinearLayout>
+
+</LinearLayout>

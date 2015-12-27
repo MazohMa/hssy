@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical" >
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/w10"
+        android:paddingLeft="@dimen/w15"
+        android:paddingRight="15dp"
+        android:paddingTop="@dimen/w10"
+        android:text="常见问题1"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/w10"
+        android:paddingLeft="@dimen/w15"
+        android:paddingRight="15dp"
+        android:lineSpacingExtra="@dimen/h5"
+        android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        android:textColor="@color/bg_grey"
+        android:textSize="15dp" />
+
+</LinearLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <!--不要让EditText默认获取焦点-->
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/top_next_layout"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="@dimen/h280"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h20"
+            android:visibility="gone"
+            android:text="@string/tips_set_password"/>
+
+        <com.xpg.hssy.view.EditDeleteText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h50"
+            android:layout_marginTop="@dimen/h20"
+            android:background="@drawable/shape_water_blue_frame_90"
+            android:drawableLeft="@drawable/login_icon_number"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/emotionstore_progresscancelbtn"
+            android:editable="false"
+            android:hint="手机号"
+            android:inputType="number"
+            android:lines="1"
+            android:padding="@dimen/h15"
+            android:enabled="false"
+            android:singleLine="true"
+            android:textSize="@dimen/w13"/>
+
+        <com.xpg.hssy.view.EditDeleteText
+            android:id="@+id/et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h50"
+            android:layout_marginTop="@dimen/h10"
+            android:background="@drawable/shape_water_blue_frame_90"
+            android:digits="1234567890abcdefghijklmnopqrstuvwxyz"
+            android:drawableLeft="@drawable/login_icon_password"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/emotionstore_progresscancelbtn"
+            android:hint="@string/input_pwd_length"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:padding="@dimen/h15"
+            android:singleLine="true"
+            android:textSize="@dimen/w13"/>
+
+        <com.xpg.hssy.view.EditDeleteText
+            android:id="@+id/et_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h50"
+            android:layout_marginTop="@dimen/h10"
+            android:background="@drawable/shape_water_blue_frame_90"
+            android:drawableLeft="@drawable/personal_icon_name"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/emotionstore_progresscancelbtn"
+            android:hint="用户名"
+            android:lines="1"
+            android:padding="@dimen/h15"
+            android:singleLine="true"
+            android:textSize="@dimen/w13"/>
+
+        <RelativeLayout
+            android:id="@+id/contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h10"
+            android:background="@drawable/shape_water_blue_frame_90"
+            android:padding="@dimen/h15">
+
+            <ImageView
+                android:id="@+id/personal_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/personal_icon_sex"/>
+
+            <TextView
+                android:id="@+id/sex"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/w5"
+                android:layout_toRightOf="@+id/personal_sex"
+                android:hint="性别"
+                android:textSize="@dimen/w13"/>
+
+            <RadioGroup
+                android:id="@+id/sex_tab_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/sex_male"
+                    style="@style/tab_booking_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:checked="true"
+                    android:drawableLeft="@drawable/tab_sex_selector"
+                    android:drawablePadding="6dp"
+                    android:text="男"/>
+
+                <RadioButton
+                    android:id="@+id/sex_female"
+                    style="@style/tab_booking_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/tab_sex_selector"
+                    android:drawablePadding="6dp"
+                    android:text="女"/>
+            </RadioGroup>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/read_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="《华商三优蓝牙充电桩服务协议》"
+            android:textColor="@color/water_blue"
+            android:textSize="@dimen/w13"/>
+
+        <TextView
+            android:id="@+id/read_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@+id/read_bt"
+            android:text="请阅读"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/w13"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="#ECEAE8"
+        android:drawableLeft="@drawable/personal_icon_sex"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/h20">
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="@dimen/w112"
+            android:layout_height="@dimen/h46"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_orange_small"
+            android:gravity="center"
+            android:text="@string/btn_register"
+            android:textColor="@color/white"
+            android:textSize="@dimen/w17"/>
+    </LinearLayout>
+
+</LinearLayout>

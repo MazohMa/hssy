@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_pile_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ibtn_filter"
+        android:layout_alignTop="@+id/ibtn_filter"
+        android:layout_marginRight="@dimen/h25"
+        android:layout_marginTop="@dimen/h25"
+        android:background="@drawable/shape_white_window_round_middle">
+
+        <LinearLayout
+            android:id="@+id/ll_filt_pile_type"
+            android:layout_width="@dimen/w300"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/h10"
+            android:layout_marginTop="@dimen/h10"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_pile_type_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_pile_type_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/h4"
+                    android:src="@drawable/selector_search_pile_all_icon"/>
+
+                <RadioButton
+                    android:layout_width="@dimen/h18"
+                    android:layout_height="@dimen/h18"
+                    android:layout_alignBottom="@id/iv_pile_type_all"
+                    android:layout_alignLeft="@id/iv_pile_type_all"
+                    android:layout_marginBottom="@dimen/h62"
+                    android:layout_marginLeft="@dimen/w34"
+                    android:button="@drawable/selector_search_pile_radio_button"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_pile_type_all"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="@dimen/h2"
+                    android:gravity="center"
+                    android:text="@string/search_pile_all"
+                    android:textColor="@drawable/selector_text_color_light_gray_to_black"
+                    android:textSize="@dimen/w14"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_pile_type_personal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_pile_type_personal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/h4"
+                    android:src="@drawable/selector_search_pile_personal_icon"/>
+
+                <RadioButton
+                    android:layout_width="@dimen/h20"
+                    android:layout_height="@dimen/h20"
+                    android:layout_alignBottom="@id/iv_pile_type_personal"
+                    android:layout_alignLeft="@id/iv_pile_type_personal"
+                    android:layout_marginBottom="@dimen/h62"
+                    android:layout_marginLeft="@dimen/w34"
+                    android:button="@drawable/selector_search_pile_radio_button"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_pile_type_personal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="@dimen/h2"
+                    android:gravity="center"
+                    android:text="@string/search_pile_personal"
+                    android:textColor="@drawable/selector_text_color_light_gray_to_black"
+                    android:textSize="@dimen/w14"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_pile_type_studio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_pile_type_studio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/h4"
+                    android:src="@drawable/selector_search_pile_studio_icon"/>
+
+                <RadioButton
+                    android:layout_width="@dimen/h20"
+                    android:layout_height="@dimen/h20"
+                    android:layout_alignBottom="@id/iv_pile_type_studio"
+                    android:layout_alignLeft="@id/iv_pile_type_studio"
+                    android:layout_marginBottom="@dimen/h62"
+                    android:layout_marginLeft="@dimen/w34"
+                    android:button="@drawable/selector_search_pile_radio_button"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_pile_type_studio"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="@dimen/h2"
+                    android:gravity="center"
+                    android:text="@string/search_pile_studio"
+                    android:textColor="@drawable/selector_text_color_light_gray_to_black"
+                    android:textSize="@dimen/w14"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/split_line"
+            android:layout_width="@dimen/w300"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_filt_pile_type"
+            android:background="@color/split_line_gray"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_filt_pile_free"
+            android:layout_width="@dimen/w300"
+            android:layout_height="@dimen/h60"
+            android:layout_below="@id/split_line"
+            android:padding="@dimen/h10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/only_show_bookable"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/btn_show_free_pile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_show_free_pile_selector"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/ibtn_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@color/transparent"
+        android:src="@drawable/selector_search_pile_button"/>
+</RelativeLayout>

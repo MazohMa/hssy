@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawingCacheQuality="low"
+        android:src="@drawable/bg_blue"
+        android:scaleType="centerCrop"/>
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/top_bt_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_connect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_connect_tips1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/h50"
+            android:text="@string/please_connect_bluetooth"
+            android:textColor="@color/text_cyan"
+            android:textSize="@dimen/w30"/>
+
+        <TextView
+            android:id="@+id/tv_connect_tips2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_connect_tips1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/h5"
+            android:text="@string/tap_bluetooth_icon"
+            android:textColor="@color/text_cyan"
+            android:textSize="@dimen/w17"/>
+
+        <ImageButton
+            android:id="@+id/ib_connect_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:drawingCacheQuality="low"/>
+        <!-- android:src="@drawable/connect_bluetooth_low" -->
+
+        <ImageButton
+            android:id="@+id/ib_connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:src="@drawable/connect_bluetooth"
+            android:drawingCacheQuality="low"/>
+        <!-- android:src="@drawable/connect_bluetooth" -->
+
+        <TextView
+            android:id="@+id/tv_connect_tips3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ib_connect"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/h155"
+            android:text="@string/connect_bluetooth"
+            android:textColor="@color/text_cyan"
+            android:textSize="@dimen/w13"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_qrcode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top"
+        android:visibility="visible">
+
+        <SurfaceView
+            android:id="@+id/preview_view"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent"/>
+
+        <com.xpg.hssy.zxing.view.ViewfinderView
+            android:id="@+id/viewfinderview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-55dp"
+          />
+
+        <LinearLayout
+            android:id="@+id/ll_scan_qr_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="请扫一扫"
+                android:textColor="@color/water_blue"
+                android:textSize="25dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:text="请将充电终端上的二维码图像置于\n扫码区域内，识别后即可开始充电"
+                android:lines="2"
+                android:textColor="@color/water_blue"
+                android:textSize="20dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_scan_or_ble_charge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:background="#00000000"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:visibility="visible">
+
+        <ToggleButton
+            android:id="@+id/switch_onoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textOn=""
+            android:textOff=""
+            android:checked="false"
+            android:background="@drawable/light_on_off"
+            android:drawingCacheQuality="low"/>
+
+        <RadioGroup
+            android:id="@+id/rg_scan_ble_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switch_onoff"
+            android:background="@null"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/ib_scan_qr_charge"
+                style="@style/main_tab"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:button="@null"
+                android:drawableTop="@drawable/scan_qr_charge_bg"
+                android:text="扫码充电"
+                android:textColor="@drawable/main_text_selector"
+                android:paddingLeft="0dp"/>
+
+            <RadioButton
+                android:id="@+id/ib_ble_charge"
+                style="@style/main_tab"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:button="@null"
+                android:drawableTop="@drawable/ble_charge_bg"
+                android:textColor="@drawable/main_text_selector"
+                android:text="蓝牙充电"
+                android:checked="true"
+                android:paddingLeft="0dp"
+                />
+        </RadioGroup>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_charge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_change_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/h40"
+            android:background="@null"
+            android:drawableLeft="@drawable/bluetooth_connected_bt_white"
+            android:text="切换设备"
+            android:textColor="@color/white"
+            android:textSize="@dimen/w17"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_output_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/h40"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/w25"
+            android:paddingRight="@dimen/w25"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_output_current"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/w20"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/h2"
+                    android:text="A"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/w12"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_output_voltage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/w20"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/h2"
+                    android:text="V"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/w12"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_output_power"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_output_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/w20"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_w_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/h2"
+                    android:text="kWh"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/w12"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_output_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="桩类型"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/w17"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/electric_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/h85"
+            android:background="@drawable/home_yuan_bg1">
+
+            <ImageView
+                android:id="@+id/iv_electric"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawingCacheQuality="low"/>
+            <!-- android:src="@drawable/home_yuan_bg2" -->
+
+            <ImageView
+                android:id="@+id/iv_electric_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawingCacheQuality="low"/>
+            <!-- android:src="@drawable/home_yuan_bg3" -->
+
+            <LinearLayout
+                android:id="@+id/ll_charge_time_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_dian"
+                    android:drawablePadding="@dimen/w5"
+                    android:gravity="center_vertical"
+                    android:text="充电计时"
+                    android:textColor="@color/text_gray_dark"
+                    android:textSize="@dimen/w14"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/h10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_time_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00"
+                        android:textColor="@color/text_green_dark"
+                        android:textSize="@dimen/w42"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="h"
+                        android:textColor="@color/text_green_dark"
+                        android:textSize="@dimen/w18"/>
+
+                    <TextView
+                        android:id="@+id/tv_time_minutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00"
+                        android:textColor="@color/text_green_dark"
+                        android:textSize="@dimen/w42"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="m"
+                        android:textColor="@color/text_green_dark"
+                        android:textSize="@dimen/w18"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_charge_soc_or_ele_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_charging_type_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_dian"
+                    android:drawablePadding="@dimen/w5"
+                    android:gravity="center_vertical"
+                    android:text="充电电量"
+                    android:textColor="@color/text_gray_dark"
+                    android:textSize="@dimen/w14"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_tv_soc_or_ele"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/h10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_soc_or_ele"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00"
+                        android:textColor="@color/text_green_dark"
+                        android:textSize="@dimen/w40"/>
+
+                    <TextView
+                        android:id="@+id/tv_soc_or_ele_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:textColor="@color/text_green_dark"
+                        android:textSize="@dimen/w25"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_charge_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/h10"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/tv_charge_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="启动中"
+                        android:textColor="@color/text_green_dark"
+                        android:textSize="@dimen/w40"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_control_charge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/h40"
+            android:background="@drawable/connect_button_start"
+            android:gravity="center"
+            android:text="@string/start_charge"
+            android:textColor="@color/text_cyan"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h30"
+        android:layout_below="@id/top"
+        android:background="@color/bg_yellow"
+        android:drawableLeft="@drawable/record_icon_message"
+        android:drawablePadding="@dimen/w10"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/w145"
+        android:text="@string/charge_error"
+        android:textColor="@color/text_orange"
+        android:textSize="@dimen/w15"
+        android:visibility="gone"/>
+
+</RelativeLayout>

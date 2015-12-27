@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xpg.hssy.view.EvaluateColumn
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:coustom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    coustom:balanceWeight="true"
+    coustom:evaluate="2"
+    coustom:evaluateLayout="@layout/item_published_grida"
+    coustom:maxCount="5"/>

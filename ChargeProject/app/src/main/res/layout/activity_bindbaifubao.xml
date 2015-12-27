@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/white">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/top_height"
+                    android:background="@color/water_blue">
+
+    <ImageView
+        android:id="@+id/iv_left"
+        android:layout_width="@dimen/top_height"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:scaleType="center"
+        android:src="@drawable/back_bt"/>
+
+    <TextView
+        style="@style/text_title_top"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@+id/iv_left"
+        android:focusable="true"
+        android:paddingRight="@dimen/w2"
+        android:gravity="center_vertical"
+        android:text="@string/select_payway"
+        android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/bind_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+
+</LinearLayout>

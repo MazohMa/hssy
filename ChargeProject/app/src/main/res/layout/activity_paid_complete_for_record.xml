@@ -1,0 +1,326 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_white"
+              android:orientation="vertical">
+    <include layout="@layout/top_next_layout"/>
+    <RelativeLayout
+        android:id="@+id/rl_charge_free"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h160"
+        android:background="@color/water_blue"
+        android:paddingBottom="@dimen/h18"
+        android:paddingTop="@dimen/h18">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/w10"
+            android:drawableLeft="@drawable/info_icon_power"
+            android:drawablePadding="@dimen/w5"
+            android:gravity="center"
+            android:text="充电电量"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/w16"/>
+
+        <TextView
+            android:id="@+id/tv_electric_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="0.00"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/w85"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_electric_quantity"
+            android:layout_toRightOf="@+id/tv_electric_quantity"
+            android:text="@string/power_unit"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/w25"/>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/line1"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/bg_white"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h36"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="充电费用"
+                        android:textColor="@color/text_menu"
+                        android:textSize="@dimen/w15"/>
+
+                    <TextView
+                        android:id="@+id/tv_price_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_price"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/w3"
+                        android:layout_toLeftOf="@+id/tv_price"
+                        android:text="@string/rmb_symbol"
+                        android:textColor="@color/water_blue"
+                        android:textSize="@dimen/w13"/>
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="0.00"
+                        android:textColor="@color/water_blue"
+                        android:textSize="@dimen/w25"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_paid_free"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h36"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已付费用"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_menu"
+                        android:textSize="@dimen/w15"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_paid_free_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_paid_free"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/w3"
+                        android:layout_toLeftOf="@+id/tv_paid_free"
+                        android:text="@string/rmb_symbol"
+                        android:textColor="@color/ebpay_text_red"
+                        android:textSize="@dimen/w13"/>
+
+                    <TextView
+                        android:id="@+id/tv_paid_free"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="0.00"
+                        android:textColor="@color/ebpay_text_red"
+                        android:textSize="@dimen/w25"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_pile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h36"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="电桩名称"
+                        android:textColor="@color/text_menu"
+                        android:textSize="@dimen/w15"/>
+
+                    <TextView
+                        android:id="@+id/tv_pile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/w15"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_start_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h36"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="开始时间"
+                        android:textColor="@color/text_menu"
+                        android:textSize="@dimen/w15"/>
+
+                    <TextView
+                        android:id="@+id/tv_start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/w18"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_end_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h36"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="结束时间"
+                        android:textColor="@color/text_menu"
+                        android:textSize="@dimen/w15"/>
+
+                    <TextView
+                        android:id="@+id/tv_end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/w18"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_charge_time_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h36"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="充电时长"
+                        android:textColor="@color/text_menu"
+                        android:textSize="@dimen/w15"/>
+
+                    <TextView
+                        android:id="@+id/tv_charge_time_period"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/h5"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/w18"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h36"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="充电价格"
+                        android:textColor="@color/text_menu"
+                        android:textSize="@dimen/w15"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/h5"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/w15"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h36"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/w15"
+                    android:paddingRight="@dimen/w15"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="交易单号"
+                        android:textColor="@color/text_menu"
+                        android:textSize="@dimen/w15"/>
+
+                    <TextView
+                        android:id="@+id/tv_order_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/text_gray_light"
+                        android:textSize="@dimen/w18"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_top_or_bottom"
+            android:padding="@dimen/h10"
+            >
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_continue"
+                android:text="确定"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/w20"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

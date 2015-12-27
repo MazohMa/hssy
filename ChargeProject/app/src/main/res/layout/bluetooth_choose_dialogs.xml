@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="@dimen/h290"
+        android:layout_height="@dimen/h425"
+        android:background="@drawable/dialog_title_waterblue_round"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="@dimen/h290"
+            android:layout_height="@dimen/h50" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:padding="@dimen/h5"
+                android:text="设备列表"
+                android:textColor="@color/white"
+                android:textSize="@dimen/w20" />
+
+            <ImageView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/connect_button_cancel" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/h290"
+            android:layout_height="@dimen/h350"
+            android:background="#ffffff"
+            android:minHeight="@dimen/h50" >
+
+            <ListView
+                android:id="@+id/lv_bluetooth"
+                android:layout_width="@dimen/h290"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:divider="@null" >
+            </ListView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/h290"
+            android:layout_height="match_parent"
+            android:background="@drawable/dialog_bottom_white_round"
+            android:orientation="vertical" >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h8"
+                android:background="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

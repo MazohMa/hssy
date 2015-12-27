@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_simple_layout" />
+
+    <LinearLayout
+        android:id="@+id/lv_pile_exist_payout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h5"
+            android:orientation="vertical" >
+
+            <include layout="@layout/line_horizontal_grey_small" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_pile_manage_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/line1"
+            android:dividerHeight="0.5dp"
+            android:scrollbars="none" />
+
+        <include layout="@layout/line_horizontal_grey_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lv_pile_noneexist_payout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <ImageView
+            android:layout_width="@dimen/w180"
+            android:layout_height="@dimen/h180"
+            android:paddingTop="@dimen/h15"
+            android:src="@drawable/device_not_release_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h10"
+            android:gravity="center"
+            android:text="您目前没有可查看的充电桩！"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/w20" />
+
+        <Button
+            android:id="@+id/btn_find_pile"
+            style="@style/btn_water_blue_big"
+            android:layout_marginTop="@dimen/h100"
+            android:text="寻找充电桩" />
+    </LinearLayout>
+
+</LinearLayout>

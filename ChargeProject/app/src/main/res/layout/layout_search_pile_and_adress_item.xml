@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/h5"
+                android:paddingLeft="@dimen/w12"
+                android:paddingRight="@dimen/w12"
+                android:background="@drawable/selector_address_background_click_color"
+                android:paddingTop="@dimen/h5">
+
+    <LinearLayout
+        android:layout_toLeftOf="@+id/tv_distance"
+        android:id="@+id/ll_center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h66"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/h5">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/h30"
+            android:singleLine="true"
+            android:text="名"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/h24"
+            android:singleLine="true"
+            android:text="地址"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/text_gray"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_alignBottom="@id/ll_center"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/h24"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/h5"
+        android:singleLine="true"
+        android:text="距离"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/text_gray"/>
+
+    <View
+        android:id="@+id/split_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+     android:layout_below="@id/ll_center"
+        android:background="@color/split_line_gray"/>
+</RelativeLayout>

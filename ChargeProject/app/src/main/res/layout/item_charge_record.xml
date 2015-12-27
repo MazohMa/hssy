@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/check_box_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:background="@color/bg_white"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/choice_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@drawable/switch_press_selector"
+                android:checked="false"
+                android:paddingTop="@dimen/h30" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_order_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/bg_white"
+                android:padding="3dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tag_order_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="订\t单\t号 "
+                    android:textColor="@color/water_blue"
+                    android:textSize="@dimen/w15" />
+
+                <TextView
+                    android:id="@+id/tv_order_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/tag_order_id"
+                    android:text="78234958234"
+                    android:textColor="@color/water_blue"
+                    android:textSize="@dimen/w15" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_sequence_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/bg_white"
+                android:padding="3dp">
+
+                <TextView
+                    android:id="@+id/tag_sequence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="流\t水\t号 "
+                    android:textColor="@color/water_blue"
+                    android:textSize="@dimen/w15" />
+
+                <TextView
+                    android:id="@+id/tv_sequence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/tag_sequence"
+                    android:text="78234958234"
+                    android:textColor="@color/water_blue"
+                    android:textSize="@dimen/w15" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_charge_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/bg_white"
+                android:padding="3dp">
+
+                <TextView
+                    android:id="@+id/tag_charge_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="充电时段"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/w15" />
+
+                <TextView
+                    android:id="@+id/tv_charge_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/tag_charge_time"
+                    android:text="2015/02/03  17:00-18:00"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/w15" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_charge_electric"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/bg_white"
+                android:padding="3dp">
+
+                <TextView
+                    android:id="@+id/tag_charge_electric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="充电电量"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/w15" />
+
+                <TextView
+                    android:id="@+id/tv_charge_electric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/tag_charge_electric"
+                    android:text="50 kWh"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/w15" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_charge_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@color/bg_white"
+                android:padding="3dp">
+
+                <TextView
+                    android:id="@+id/tag_charge_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="充电费用"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/w15" />
+
+                <TextView
+                    android:id="@+id/tv_charge_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/tag_charge_money"
+                    android:text="￥ 80.00"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/w14" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

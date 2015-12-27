@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_next_layout" />
+
+    <ImageView
+        android:layout_marginTop="@dimen/h50"
+        android:layout_marginBottom="@dimen/h12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_about" />
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/share_title"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/grey_dark"
+        android:textSize="@dimen/w22" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/share_second_title"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/hint_gray"
+        android:textSize="@dimen/w15" />
+
+
+    <Button
+        android:id="@+id/btn_call_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h10"
+        android:background="@drawable/about_button"
+        android:text="拨打热线"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/w5"
+        android:text="24小时服务热线 400-655-6620（免长途费）"
+        android:textColor="@color/grey_dark"
+        android:textSize="@dimen/w13" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/w10"
+        android:src="@drawable/download_app_qr_code" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/w5"
+        android:text="扫一扫，获取更多信息"
+        android:textColor="@color/grey_dark"
+        android:textSize="@dimen/w13" />
+
+</LinearLayout>

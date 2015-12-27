@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_simple_layout" />
+
+    <include layout="@layout/line_horizontal_grey_small_padding" />
+
+    <RelativeLayout
+        android:id="@+id/rl_date_start"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/h80"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/imageButton_next1"
+            android:layout_width="@dimen/w16"
+            android:layout_height="@dimen/w16"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/next_bt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="开始日期"
+            android:textColor="@color/black"
+            android:textSize="@dimen/w15" />
+
+        <TextView
+            android:id="@+id/tv_date_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imageButton_next1"
+            android:text="2015-03-24"
+            android:textColor="@color/water_blue"
+            android:textSize="@dimen/w18" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_horizontal_grey_small_padding" />
+
+    <RelativeLayout
+        android:id="@+id/rl_time_start"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/h80"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/imageButton_next2"
+            android:layout_width="@dimen/w16"
+            android:layout_height="@dimen/w16"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/next_bt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="开始时间"
+            android:textColor="@color/black"
+            android:textSize="@dimen/w15" />
+
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imageButton_next2"
+            android:text="09:00"
+            android:textColor="@color/water_blue"
+            android:textSize="@dimen/w18" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_horizontal_grey_small_padding" />
+
+    <RelativeLayout
+        android:id="@+id/rl_date_end"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/h80"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/imageButton_next3"
+            android:layout_width="@dimen/w16"
+            android:layout_height="@dimen/w16"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/next_bt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="结束日期"
+            android:textColor="@color/black"
+            android:textSize="@dimen/w15" />
+
+        <TextView
+            android:id="@+id/tv_date_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imageButton_next3"
+            android:text="2015-03-24"
+            android:textColor="@color/water_blue"
+            android:textSize="@dimen/w18" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_horizontal_grey_small_padding" />
+
+    <RelativeLayout
+        android:id="@+id/rl_time_end"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/h80"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/imageButton_next4"
+            android:layout_width="@dimen/w16"
+            android:layout_height="@dimen/w16"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/next_bt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="结束时间"
+            android:textColor="@color/black"
+            android:textSize="@dimen/w15" />
+
+        <TextView
+            android:id="@+id/end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imageButton_next4"
+            android:text="09:00"
+            android:textColor="@color/water_blue"
+            android:textSize="@dimen/w18" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_horizontal_grey_small_padding" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/btn_unlimited"
+            style="@style/btn_green_big"
+            android:layout_marginTop="@dimen/h30"
+            android:text="不限" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/btn_green_big"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/h30"
+            android:text="提交" />
+    </RelativeLayout>
+
+</LinearLayout>

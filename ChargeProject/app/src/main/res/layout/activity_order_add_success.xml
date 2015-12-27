@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <include layout="@layout/top_simple_layout" />
+
+        <ImageView
+            android:layout_width="@dimen/h132"
+            android:layout_height="@dimen/h132"
+            android:layout_marginTop="@dimen/h50"
+            android:src="@drawable/pay_success" />
+
+        <TextView
+            android:id="@+id/pile_book_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h35"
+            android:text="三优电桩A预约成功！"
+            android:textColor="@color/text_wather_blue"
+            android:textSize="@dimen/h30" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h10"
+            android:text="请等待业主的确认！"
+            android:textColor="@color/text_order_add_black"
+            android:textSize="@dimen/h16" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/h8"
+            android:layout_marginLeft="@dimen/h8"
+            android:layout_marginTop="@dimen/h32"
+            android:text="预约信息"
+            android:textColor="@color/text_wather_blue"
+            android:textSize="@dimen/h14" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/order_add_split_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_order_add_dark_grey"
+            android:paddingBottom="@dimen/h15"
+            android:paddingTop="@dimen/h15" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/h8"
+                android:text="充电时段"
+                android:textColor="@color/text_order_add_black"
+                android:textSize="@dimen/h14" />
+
+            <TextView
+                android:id="@+id/start_date_and_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/h8"
+                android:text="2015/03/20  14:00-18:00"
+                android:textColor="@color/text_order_add_grey"
+                android:textSize="@dimen/h14" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/order_add_split_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_order_add_dark_grey"
+            android:paddingBottom="@dimen/h15"
+            android:paddingTop="@dimen/h15" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/h8"
+                android:text="预约人"
+                android:textColor="@color/text_order_add_black"
+                android:textSize="@dimen/h14" />
+
+            <TextView
+                android:id="@+id/contact_name_and_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/h8"
+                android:text="王小明  1359867486"
+                android:textColor="@color/text_order_add_grey"
+                android:textSize="@dimen/h14" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/order_add_split_line" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/h72"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_order_add_dark_grey" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/order_add_split_line" />
+
+        <Button
+            android:id="@+id/btn_check_order"
+            style="@style/btn_green_big"
+            android:layout_width="130dp"
+            android:layout_height="52dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_order_add_orange_frame"
+            android:text="查看预约单" />
+    </RelativeLayout>
+
+</RelativeLayout>

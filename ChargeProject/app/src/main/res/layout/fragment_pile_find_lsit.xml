@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey" >
+
+    <com.xpg.hssy.view.RefreshListView
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:id="@+id/lv_piles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_condition"
+        android:divider="@color/list_view_grey"
+        android:dividerHeight="1px"
+        android:listSelector="@android:color/transparent" />
+
+    <View
+        android:id="@+id/v_touch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/water_blue"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_condition1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h70"
+            android:layout_margin="@dimen/h18"
+            android:background="@color/water_blue"
+            android:orientation="horizontal"
+            android:padding="@dimen/h8" >
+
+            <RelativeLayout
+                android:id="@+id/rl_location"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingRight="@dimen/h8" >
+
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/location" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/h5"
+                    android:layout_toLeftOf="@+id/iv_location_next"
+                    android:layout_toRightOf="@id/iv_location"
+                    android:ellipsize="end"
+                    android:lines="2"
+                    android:text="广州XXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                    android:textColor="@color/text_condition"
+                    android:textSize="@dimen/h13" />
+
+                <ImageView
+                    android:id="@+id/iv_location_next"
+                    android:layout_width="@dimen/h13"
+                    android:layout_height="@dimen/h13"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/next_bt" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_vertical_green_small" />
+
+            <RelativeLayout
+                android:id="@+id/rl_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/h8" >
+
+                <ImageView
+                    android:id="@+id/iv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/alarm" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_time_next"
+                    android:layout_toRightOf="@id/iv_time"
+                    android:gravity="center_horizontal"
+                    android:lines="2"
+                    android:text="从 12月10 15:33\n至 12月11 16:11"
+                    android:textColor="@color/text_condition"
+                    android:textSize="@dimen/h13" />
+
+                <ImageView
+                    android:id="@+id/iv_time_next"
+                    android:layout_width="@dimen/h13"
+                    android:layout_height="@dimen/h13"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/next_bt" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_condition2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h40"
+            android:background="@color/water_blue"
+            android:divider="@drawable/line_vertical_grey_small"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/h6"
+            android:paddingTop="@dimen/h6"
+            android:showDividers="middle" >
+
+            <RadioButton
+                android:id="@+id/rb_distance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="false"
+                android:drawableRight="@drawable/selector_check_arrow"
+                android:gravity="center"
+                android:padding="@dimen/h5"
+                android:text="@string/distance"
+                android:textColor="@drawable/selector_check_gray_green"
+                android:textSize="@dimen/h16" />
+
+            <RadioButton
+                android:id="@+id/rb_sort"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableRight="@drawable/selector_check_arrow"
+                android:gravity="center"
+                android:padding="@dimen/h5"
+                android:text="@string/sort"
+                android:textColor="@drawable/selector_check_gray_green"
+                android:textSize="@dimen/h16" />
+
+            <RadioButton
+                android:id="@+id/rb_filter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableRight="@drawable/selector_check_arrow"
+                android:gravity="center"
+                android:padding="@dimen/h5"
+                android:text="@string/filtrate"
+                android:textColor="@drawable/selector_check_gray_green"
+                android:textSize="@dimen/h16" />
+        </RadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_next_theme_layout" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/wv_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/rl_loading_fail"
+            layout="@layout/layout_activity_loading_fail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    <include
+        android:id="@+id/rl_loading"
+        layout="@layout/layout_activity_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_below="@id/top_bar"
+        android:visibility="visible"/>
+    </FrameLayout>
+</LinearLayout>

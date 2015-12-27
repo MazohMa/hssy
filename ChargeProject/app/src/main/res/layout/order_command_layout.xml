@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white" >
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <include layout="@layout/top_simple_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/top"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line_horizontal_grey_small" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/display_statue2"
+        android:layout_below="@id/top"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_white" >
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h130"
+                android:background="@color/bg_white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/h5"
+                        android:layout_marginTop="@dimen/h5"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/image_user"
+                            android:layout_width="@dimen/h80"
+                            android:layout_height="match_parent" >
+                        </ImageView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/h5"
+                        android:layout_marginTop="@dimen/h5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/pile_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/h5"
+                            android:text="三优电桩A"
+                            android:textColor="@color/text_gray_dark"
+                            android:textSize="@dimen/h20" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/local"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:lines="2"
+                            android:text="三优电桩AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/h12" >
+                        </TextView>
+
+                        <LinearLayout
+                            android:id="@+id/ll_pile_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/h2" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="电桩业主："
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/h12" >
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/pile_owner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="刘先生"
+                                android:textColor="@color/text_gray" >
+                            </TextView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_pile_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/h2" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="联系电话："
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/h12" >
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/tv_user_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1380000000"
+                                android:textColor="@color/text_gray" >
+                            </TextView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_pile_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/h2" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="分享时段："
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/h12" />
+
+                            <TextView
+                                android:id="@+id/data_h_m"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="17:00-18:00"
+                                android:textColor="@color/text_gray" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/content"
+                android:orientation="vertical" >
+
+                <include layout="@layout/line_horizontal_grey_small" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/command_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line2"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:padding="@dimen/h10"
+                android:text=""
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/h15" />
+
+            <LinearLayout
+                android:id="@+id/command_star"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/command_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/image_star1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/order_star_3" />
+
+                <ImageView
+                    android:id="@+id/image_star2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/order_star_3" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/image_star3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/order_star_3" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/image_star4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/order_star_3" >
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/image_star5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/order_star_3" >
+                </ImageView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/star_command_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/command_star"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="非常满意！值得向所有人推荐！"
+                android:textColor="#FF8000"
+                android:textSize="@dimen/h15" />
+
+            <RelativeLayout
+                android:id="@+id/edit_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/h180"
+                android:layout_below="@+id/star_command_state"
+                android:layout_marginLeft="@dimen/h20"
+                android:layout_marginRight="@dimen/h20" >
+
+                <EditText
+                    android:id="@+id/et_content"
+                    android:layout_width="@dimen/h350"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/h15"
+                    android:background="@color/bg_gray_pale"
+                    android:gravity="start"
+                    android:hint="请简要描述你的问题和意见"
+                    android:padding="@dimen/h12"
+                    android:textSize="@dimen/w13" >
+
+                    <requestFocus />
+                </EditText>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/num_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_layout"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/num"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/h20"
+                    android:gravity="left"
+                    android:hint="还可输入200字"
+                    android:textColor="#FF8000"
+                    android:textSize="@dimen/h10" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/display_statue2"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ECEAE8"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/bt_command"
+            android:layout_width="@dimen/h200"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shape_orange_small"
+            android:gravity="center"
+            android:padding="@dimen/h15"
+            android:text="发表评价"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/h16" />
+    </RelativeLayout>
+
+</RelativeLayout>

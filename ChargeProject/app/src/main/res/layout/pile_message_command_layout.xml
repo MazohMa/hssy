@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/bg_white"
+              android:orientation="vertical">
+
+    <include layout="@layout/top_simple_layout"/>
+
+    <LinearLayout
+        android:id="@+id/pile_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_gray_pale"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/pile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/h5"
+            android:paddingLeft="10dp"
+            android:text="三优电桩A"
+            android:textColor="@color/water_blue"
+            android:textSize="18dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/h5"
+                android:text="总体评价:"
+                android:textColor="@color/text_gray"/>
+
+            <com.xpg.hssy.view.EvaluateColumn
+                android:id="@+id/eva_star_point"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/h28"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/h5"
+                app:evaluate="0"
+                app:maxCount="5"/>
+
+            <TextView
+                android:id="@+id/point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/h5"
+                android:paddingLeft="@dimen/h8"
+                android:text="5.0分"
+                android:textColor="#FBA700"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:orientation="vertical">
+
+        <include layout="@layout/line_horizontal_grey_small"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/id_listview_commands"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@null"
+        android:dividerHeight="5dp">
+    </ListView>
+
+</LinearLayout>

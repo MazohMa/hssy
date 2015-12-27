@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical">
+    <!--#00B5AE-->
+    <include layout="@layout/top_next_layout" />
+
+    <LinearLayout
+        android:id="@+id/ll_btn_bind_wechat"
+        android:layout_width="@dimen/h260"
+        android:layout_height="@dimen/h50"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/h80"
+        android:background="@drawable/selector_btn_bind"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/h50"
+            android:layout_marginRight="@dimen/h10"
+            android:src="@drawable/logo_weixin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="微信账号绑定"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/h20" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn_bind_qq"
+        android:layout_width="@dimen/h260"
+        android:layout_height="@dimen/h50"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/h30"
+        android:background="@drawable/selector_btn_bind"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/h50"
+            android:layout_marginRight="@dimen/h10"
+            android:src="@drawable/logo_qq1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="QQ账号绑定"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/h20" />
+
+    </LinearLayout>
+
+</LinearLayout>

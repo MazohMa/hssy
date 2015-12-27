@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/top_height"
+    android:background="@color/water_blue" >
+
+    <ImageButton
+        android:id="@+id/btn_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:scaleType="center"
+        android:src="@drawable/back_bt"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@id/tv_center"
+        style="@style/text_title_top"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:text="我的信息" 
+        android:visibility="visible"/>
+
+    <ImageButton
+        android:id="@+id/btn_right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:scaleType="center"
+        android:visibility="visible"
+        android:src="@drawable/sign_out_bt" />
+
+</LinearLayout>
+    

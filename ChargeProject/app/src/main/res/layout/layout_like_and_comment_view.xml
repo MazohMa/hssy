@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/like_and_commend_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/like_and_comment_background"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_like_avatar_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"/>
+
+    <View
+        android:id="@+id/split_line"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/white"/>
+
+    <com.xpg.hssy.view.FixHeightListView
+        android:id="@+id/fhlv_comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:focusable="false"
+        android:paddingLeft="5dp"
+        android:scrollbarSize="@null"
+        android:scrollbars="none"/>
+</LinearLayout>

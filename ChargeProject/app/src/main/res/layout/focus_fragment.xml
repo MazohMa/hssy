@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg_focus_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/water_blue"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/id_tab_theme"
+            style="@style/tab_line_white_new_outside"
+            android:background="@drawable/pile_tab_bg"
+            android:checked="true"
+            android:text="优易圈"/>
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/id_tab_project"-->
+            <!--style="@style/tab_line_white_new_outside"-->
+            <!--android:background="@drawable/pile_tab_bg"-->
+            <!--android:text="专题"/>-->
+
+        <RadioButton
+            android:id="@+id/id_tab_dynamic"
+            style="@style/tab_line_white_new_outside"
+            android:background="@drawable/pile_tab_bg"
+            android:text="动态"/>
+    </RadioGroup>
+    <com.xpg.hssy.view.PageView
+        android:id="@+id/sec_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>

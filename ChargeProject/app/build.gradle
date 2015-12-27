@@ -1,0 +1,162 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+    defaultConfig {
+        applicationId "com.xpg.hssychargingpole"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 151225001
+        versionName "2.4.2"
+        //默认使用测试签名
+        signingConfig signingConfigs.debug
+        //测试用百度地图KEY,默认渠道号:友盟
+        manifestPlaceholders = [COM_BAIDU_LBSAPI_API_KEY: "PDiYupqlRtQQWlX8apbcNMDv", UMENG_CHANNEL_VALUE: "umeng"]
+        //默认在81端口上
+        buildConfigField "String", "BASE_URL", "\"http://42.159.251.153:81/charge\""
+        buildConfigField "String", "BEECLOUD_APPID", "\"49552fd4-9018-429a-8432-579e553bcde4\""
+        buildConfigField "String", "BEECLOUD_SECRET", "\"948f3448-8f4a-4b52-8be1-77626aa6197b\""
+        //修改输出的文件名
+        //这种闭包方式实际上是把方法体附加到这个闭包执行的末端doLast()中执行,类似于监听器的角色,用来进行扫尾或者修改工作
+        applicationVariants.all { variant ->//声明闭包所用的参数
+            //闭包中仍然可以再写闭包
+            variant.outputs.each { output ->
+                def outputFile = output.outputFile//获取本次执行的输出文件
+                //判断输出文件内容,不为空,且后缀为apk,构造类型符合要求才进行重命名操作
+                if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                    // 输出apk名称
+                    def fileName = "hssychargingpole-${defaultConfig.versionName.replace('.', '_')}-${defaultConfig.versionCode}-${name}.apk"
+                    output.outputFile = new File(outputFile.parent, fileName)
+                }
+            }
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file('../keyStores/debug.keystore')
+        }
+        release {
+            keyAlias 'xpg'
+            keyPassword 'go4xpg'
+            storeFile file('../keyStores/xpg_chargingpile.keystore')
+            storePassword 'go4xpg'
+        }
+    }
+    productFlavors {
+        baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+        }
+        qihu360 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qihu360"]
+        }
+        xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+        }
+        leshi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "leshi"]
+        }
+        umeng {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]
+        }
+        huawei {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "huawei"]
+        }
+        lianxiang {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "lianxiang"]
+        }
+        meizu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "meizu"]
+        }
+        tengxun {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "tengxun"]
+        }
+    }
+    buildTypes {
+        //PDiYupqlRtQQWlX8apbcNMDv Joke用于开发的签名对应
+        //zkq1mD4m2zRniyzqup3IFOKT 正式签名对应
+        release {
+            //这个是混淆开关,但是英文意思的确是压缩...
+            minifyEnabled false
+            //除去没有用到资源文件,要使能minifyEnable,才有效果
+//          shrinkResources true
+            //混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            //使用正式证书签名
+            signingConfig signingConfigs.release
+            manifestPlaceholders = [COM_BAIDU_LBSAPI_API_KEY: "zkq1mD4m2zRniyzqup3IFOKT"]
+            buildConfigField "String", "BASE_URL", "\"http://yyc.renrenchongdian.com/charge\""
+            buildConfigField "String", "BEECLOUD_APPID", "\"49552fd4-9018-429a-8432-579e553bcde4\""
+            buildConfigField "String", "BEECLOUD_SECRET", "\"948f3448-8f4a-4b52-8be1-77626aa6197b\""
+        }
+        debug {
+            buildConfigField "String", "BASE_URL", "\"http://yyc.renrenchongdian.com/charge\""
+            buildConfigField "String", "BEECLOUD_APPID", "\"49552fd4-9018-429a-8432-579e553bcde4\""
+            buildConfigField "String", "BEECLOUD_SECRET", "\"948f3448-8f4a-4b52-8be1-77626aa6197b\""
+            signingConfig signingConfigs.debug
+        }
+        debugIn8080 {
+            buildConfigField "String", "BASE_URL", "\"http://222.128.77.155:8080/chargepile\""
+            buildConfigField "String", "BEECLOUD_APPID", "\"49552fd4-9018-429a-8432-579e553bcde4\""
+            buildConfigField "String", "BEECLOUD_SECRET", "\"948f3448-8f4a-4b52-8be1-77626aa6197b\""
+            signingConfig signingConfigs.debug
+            debuggable true
+            jniDebuggable true
+        }
+
+        debugIn3152 {
+            buildConfigField "String", "BASE_URL", "\"http://222.128.77.155:3152/charge\""
+            buildConfigField "String", "BEECLOUD_APPID", "\"27d967d0-bf80-449a-b44e-e4323121dbde\""
+            buildConfigField "String", "BEECLOUD_SECRET", "\"bd96d1a3-4b7e-4d45-937f-f8ae94325d2f\""
+
+            signingConfig signingConfigs.debug
+            debuggable true
+            jniDebuggable true
+        }
+
+        debugForWeixin {//NOTE:使用正式版签名,但是接入测试接口,进行调试,注意不要发给客户
+            debuggable true
+            jniDebuggable true
+            signingConfig signingConfigs.release
+            manifestPlaceholders = [COM_BAIDU_LBSAPI_API_KEY: "zkq1mD4m2zRniyzqup3IFOKT"]
+            buildConfigField "String", "BASE_URL", "\"http://222.128.77.155:3152/charge\""
+            buildConfigField "String", "BEECLOUD_APPID", "\"27d967d0-bf80-449a-b44e-e4323121dbde\""
+            buildConfigField "String", "BEECLOUD_SECRET", "\"bd96d1a3-4b7e-4d45-937f-f8ae94325d2f\""
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-v4:22.2.1'
+    compile files('libs/android-viewbadger.jar')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/greendao-1.3.0-beta-1.jar')
+    compile files('libs/iBridge.jar')
+    compile files('libs/jpush-sdk-release1.7.3.jar')
+    compile files('libs/takePhoto-view.jar')
+    compile files('libs/pinnedSectionListView.jar')
+    compile files('libs/pinyin4j-2.5.0.jar')
+    compile files('libs/umeng-analytics-v5.4.2.jar')
+    compile files('libs/umeng-update-v2.6.0.1.jar')
+    compile files('libs/universal-image-loader-1.9.3-with-sources.jar')
+    compile files('libs/volley.jar')
+    compile files('libs/zxing.jar')
+    compile files('libs/gson-2.2.4.jar')
+    compile(name: 'android-easy-core-release', ext: 'aar')
+    compile files('libs/alipaySDK-20150724.jar')
+    compile files('libs/alipaysdk.jar')
+    compile files('libs/alipaysecsdk.jar')
+    compile files('libs/alipayutdid.jar')
+    compile files('libs/Cashier_SDK-v4.2.0.jar')
+    compile files('libs/gson-2.4.jar')
+    compile files('libs/UPPayAssistEx.jar')
+    compile files('libs/beecloud-2.0.3.jar')
+
+}

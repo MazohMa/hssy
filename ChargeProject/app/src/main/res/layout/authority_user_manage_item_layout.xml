@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/h20"
+        android:paddingTop="@dimen/h20" >
+
+        <ImageView
+            android:id="@+id/imageView_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/user_list_delete"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/shouquan_userno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:text="13888888888"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/w16" />
+
+        <TextView
+            android:id="@+id/shouquan_usertime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/shouquan_userno"
+            android:gravity="center_vertical"
+            android:hint="添加于 2014/12/12"
+            android:textColor="@color/text_gray_dark"
+            android:textSize="@dimen/w13" />
+
+        <TextView
+            android:id="@+id/shouquan_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/shouquan_usertime"
+            android:layout_toRightOf="@+id/shouquan_userno"
+            android:layout_marginLeft="@dimen/w20"
+            android:text="USERNAME"
+            android:textColor="@color/water_blue"
+            android:textSize="@dimen/w16" />
+
+    </RelativeLayout>
+
+</LinearLayout>

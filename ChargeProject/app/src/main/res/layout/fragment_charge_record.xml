@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:listViewAttr="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h50"
+        android:background="@color/water_blue">
+
+        <TextView
+            android:id="@+id/tv_year_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/w10"
+            android:text="2015年"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h14"/>
+
+        <TextView
+            android:id="@+id/tv_month_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/w10"
+            android:layout_toRightOf="@+id/tv_year_top"
+            android:text="5月"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h14"/>
+
+        <TextView
+            android:id="@+id/tv_user_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/w10"
+            android:layout_toRightOf="@+id/tv_month_top"
+            android:text="租赁用户"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h14"/>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/w10"
+            android:background="@null"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h16"/>
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_filter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h50"
+        android:background="@color/water_blue"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/rb_year"
+            style="@style/record_filter"
+            android:checked="true"
+            android:text="@string/choice_year"/>
+
+        <RadioButton
+            android:id="@+id/rb_month"
+            style="@style/record_filter"
+            android:text="@string/choice_month"/>
+
+        <RadioButton
+            android:id="@+id/rb_user_type"
+            style="@style/record_filter"
+            android:text="@string/choice_all_user"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/yuyue_charge_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="没有相关的充电记录！"
+            android:textColor="@color/grey_dark"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cache_record_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ECEAE8"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/record_icon_message"/>
+
+        <TextView
+            android:id="@+id/num_unload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="充电桩里有20条充电信息未下载"
+            android:textColor="#FF6561"
+            android:textSize="13dp"/>
+
+        <Button
+            android:id="@+id/update"
+            style="@style/upload_btn_water_blue_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:text="下载"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progress_record_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ECEAE8"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="正在下载"
+            android:textColor="#00C0DD"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="100dp"
+            android:layout_height="2dp"/>
+
+        <TextView
+            android:id="@+id/percent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:text="45%"
+            android:textColor="#00C0DD"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/finished_record_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ECEAE8"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/record_icon_message"/>
+
+        <TextView
+            android:id="@+id/finished_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:text="已下载20条充电信息"
+            android:textColor="#00C965"/>
+    </LinearLayout>
+
+    <com.xpg.hssy.view.DropDownListView
+        android:id="@+id/lv_record"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@drawable/line1"
+        android:dividerHeight="8dp"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        listViewAttr:isAutoLoadOnBottom="true"
+        listViewAttr:isOnBottomStyle="true"/>
+
+    <RelativeLayout
+        android:id="@+id/cancel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h90"
+        android:background="@color/bg_top_or_bottom"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/sum_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/w10"
+            android:layout_toLeftOf="@+id/sum_moneyss"
+            android:text="电费总额："
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/w20"/>
+
+        <TextView
+            android:id="@+id/sum_moneyss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/w5"
+            android:layout_toLeftOf="@+id/sum_money"
+            android:text="@string/rmb_symbol"
+            android:textColor="@color/text_gray_dark"
+            android:textSize="@dimen/w20"/>
+
+        <TextView
+            android:id="@+id/sum_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/w10"
+            android:text="0.00"
+            android:textColor="@color/red"
+            android:textSize="@dimen/w20"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bt_sum_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h90"
+        android:layout_gravity="bottom"
+        android:background="@color/bg_top_or_bottom"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/line_grey_light"/>
+
+        <Button
+            android:id="@+id/btn_sum"
+            style="@style/btn_orange_hint_grey_small"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="统计电费金额"/>
+    </RelativeLayout>
+
+</LinearLayout>

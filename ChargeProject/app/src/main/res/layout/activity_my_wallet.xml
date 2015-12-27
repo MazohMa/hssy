@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools ="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/top_simple_layout"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/water_blue">
+
+
+        <TextView
+            android:id="@+id/tv_charge_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/h20"
+            tools:text="123456.78"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h66"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_charge_money"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/h20"
+            android:drawableLeft="@drawable/wallet_coin"
+            android:drawablePadding="@dimen/w5"
+            android:gravity="center_vertical"
+            android:text="@string/charge_money_remain"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h16"/>
+
+        <TextView
+            android:id="@+id/tv_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_charge_money"
+            android:text="个"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h20"/>
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/line_horizontal_grey_small"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/h15">
+
+        <Button
+            android:id="@+id/btn_use"
+            style="@style/btn_water_blue"
+            android:layout_marginRight="@dimen/h10"
+            android:text="@string/immediate_use"/>
+
+        <Button
+            android:id="@+id/btn_recharge"
+            style="@style/btn_orange"
+            android:text="@string/recharge"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/h20"
+        android:layout_marginRight="@dimen/h15">
+
+        <TextView
+            android:id="@+id/tv_use"
+            style="@style/text_gray_smaller"
+            android:layout_alignParentRight="true"
+            android:text="@string/how_to_use_charge_money"/>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h15"
+        android:background="@color/line_grey_back"/>
+
+    <LinearLayout
+        android:id="@+id/ll_payment_history"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h50"
+        android:background="@drawable/select_grey_white_click"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_my_evaluate"
+            style="@style/main_menu_btn"
+            android:layout_width="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="@dimen/h10"
+            android:text="@string/payment_history"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/w10"
+            android:background="@drawable/icon_next"
+            android:padding="@dimen/h8"/>
+    </LinearLayout>
+
+
+    <include layout="@layout/line_horizontal_grey_small"/>
+
+
+</LinearLayout>

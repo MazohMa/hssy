@@ -1,0 +1,689 @@
+<resources>
+
+    <!-- base string -->
+    <string name="app_name">优易充</string>
+    <string name="app_title">优易充</string>
+    <string name="btn_delete_with_count">删除(%d)</string>
+    <string name="btn_delete">删除</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_register">注册</string>
+    <string name="rmb">元</string>
+
+    <string name="rmb_symbol">￥</string>
+    <string name="fix_success_tip">修改完成</string>
+    <string name="please_login">点击登录</string>
+    <string name="unnamed">匿名</string>
+    <string name="unknow">未知</string>
+
+    <!-- Login Layout -->
+    <string name="phone_number">手机号码</string>
+    <string name="password">密码</string>
+    <string name="input_phone_number">请输入手机号码</string>
+    <string name="input_password">请输入密码</string>
+    <string name="login">登录</string>
+    <string name="forget_pwd">忘记密码？</string>
+    <string name="create_new_account">创建新用户</string>
+    <string name="pwd_wrong">手机号或密码不正确！</string>
+    <string name="logining">正在登录，请稍候</string>
+    <string name="other_deivce_login">您的账号已经在其他设备登录,已从本设备下线,请检查</string>
+
+    <!-- RegisterLayout -->
+    <string name="user_register">会员注册</string>
+    <string name="input_phone">请输入手机号码</string>
+    <string name="phone_format_error">手机格式有误</string>
+    <string name="input_code">请输入验证码</string>
+    <string name="register_tips">手机号码会作为您会员登录的唯一凭证。</string>
+    <string name="send_code">验证码已经发送至${0}\n接收短信大约需要${1}秒</string>
+    <string name="input_pwd_length">输入6-16位的数字或字母</string>
+    <string name="nickname">请称呼我</string>
+    <string name="sex">性别</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="read">请阅读</string>
+    <string name="agree">同意服务协议并注册</string>
+    <string name="register_succeed">注册成功</string>
+    <string name="register_succeed_tips">恭喜您加入优易充，快为爱车充电吧！</string>
+    <string name="charge_car">为爱车充电</string>
+    <string name="phone_no_null">手机号码不能为空</string>
+    <string name="phone_length_error">手机号码不能为空</string>
+    <string name="pwd_no_null">密码不能为空</string>
+    <string name="pwd_length_error">密码不能为空</string>
+    <string name="loading_verify_code">获取验证码中...</string>
+    <string name="loading_register">注册中...</string>
+
+    <!-- Main -->
+    <string name="charge">充电</string>
+    <string name="search_pole">寻找电桩</string>
+    <string name="me">我</string>
+    <string name="refresh">刷新</string>
+    <string name="filter">筛选</string>
+    <string name="my_order">我的订单</string>
+    <string name="my_collection">我的收藏</string>
+    <string name="my_evaluation">我的评价</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="pole_control">电桩管理</string>
+    <string name="service_center">客服中心</string>
+    <string name="suggestion">帮助与反馈</string>
+    <string name="my_setting">我的设置</string>
+
+    <!-- MyEvaluation -->
+
+    <!-- 充电币-->
+    <string name="payment_records">收支记录</string>
+    <string name="recharge">充 值</string>
+    <string name="charge_money_instructions">充电币使用说明</string>
+    <string name="how_to_use_charge_money">充电币如何使用？</string>
+    <string name="recharge_records">充值记录</string>
+    <string name="pay_records">支付记录</string>
+    <string name="hint_recharge">金额（元）    请输入充值金额</string>
+    <string name="select_pay_type">选择充值方式</string>
+    <string name="charge_money_remain">充电币余额</string>
+    <string name="immediate_use">立即使用</string>
+    <string name="payment_history">收支历史</string>
+    <string name="recharge_money_must_greater_than_zero">充值金额必须大于0</string>
+
+    <string name="recharge_count">充值金额：</string>
+    <string name="recharge_time">充值时间：</string>
+    <string name="recharge_type">充值方式：</string>
+    <string name="pay_count">消费币数：</string>
+    <string name="pay_coin_time">消费时间：</string>
+    <string name="pay_order_id"> 订 单 号 ：</string>
+
+    <string name="trade_order"> 交易订单</string>
+    <string name="charge_money">充电费用</string>
+    <string name="need_to_pay"> 还需支付</string>
+    <string name="remaining_coin">剩余充电币</string>
+
+    <string name="recharge_succeed"> 充值成功！</string>
+    <string name="recharge_failed">充值失败！</string>
+    <string name="known"> 知道了</string>
+    <string name="reselecte_recharge_way">重新选取充值方式</string>
+    <string name="cancel_recharge">取消充值</string>
+
+    <!-- ChargeLayout -->
+    <string name="output_tension">输出电压</string>
+    <string name="output_electricity">输出电流</string>
+    <string name="please_connect_bluetooth">请连接蓝牙</string>
+    <string name="tap_bluetooth_icon">轻轻点击蓝牙图标</string>
+    <string name="please_wait">请稍候...</string>
+    <string name="connect_bluetooth">连接蓝牙</string>
+    <string name="connecting">连接中</string>
+    <string name="please_connect_pile">请连接充电桩</string>
+    <string name="insert_gun">将充电桩的插头接入</string>
+    <string name="delay_charge">%s启动</string>
+    <string name="start_charge">启 动</string>
+    <string name="stop_charge">停 止</string>
+
+    <!-- 充电fragment -->
+    <string name="charge_error">故障</string>
+    <string name="charge_voltage_over">交流过压</string>
+    <string name="charge_voltage_lower">交流欠压</string>
+    <string name="charge_current_over">交流过流</string>
+    <string name="charge_current_leak">交流漏电</string>
+    <string name="charge_current_short">交流短路</string>
+
+    <!-- Charge complete -->
+    <string name="electric_charge">充电计费</string>
+    <string name="electric_serial_no">充电流水号</string>
+    <string name="yuan">元</string>
+    <string name="confirm">确定</string>
+
+    <!-- SearchPile Layout -->
+    <string name="share_time">分享时段：</string>
+    <string name="tag_operator">运营商：</string>
+    <string name="station_position">站点位置</string>
+    <string name="station_annotation">站点信息</string>
+    <string name="pole_position">电桩位置：</string>
+    <string name="user_evaluation">用户评价：</string>
+    <string name="pole_owner">电桩业主：</string>
+    <string name="contrat_phone">联系电话\t</string>
+    <!-- 又有写错的 contact_phone -->
+    <string name="tag_position">位置：</string>
+    <string name="tag_distance">距离：</string>
+    <string name="position">电桩位置</string>
+    <string name="pole_type">电桩类型</string>
+    <string name="rated_power">额定功率</string>
+    <string name="charge_price">充电价格</string>
+    <string name="nominal_voltage">额定电压</string>
+    <string name="rated_current">额定电流</string>
+    <string name="collect">收藏</string>
+    <string name="cancel_collect">取消收藏</string>
+    <string name="navigation">导航</string>
+    <string name="no_baidu_map">您还未装百度地图</string>
+    <string name="go_to_order">去预约</string>
+    <string name="go_to_baidu_navigation">即将跳转到百度地图导航</string>
+    <!-- Title -->
+    <string name="title_order_add">电桩预约</string>
+    <string name="title_order_add_success">预约成功</string>
+
+    <!-- Filter -->
+    <string name="all_city">全城</string>
+    <string name="distance">距离</string>
+    <string name="distance_500m">500m</string>
+    <string name="distance_1km">1km</string>
+    <string name="distance_2km">2km</string>
+    <string name="distance_3km">3km</string>
+    <string name="distance_4km">4km</string>
+    <string name="distance_5km">5km</string>
+    <string name="all_type">全部</string>
+    <string name="dc">直流</string>
+    <string name="ac">交流</string>
+    <string name="all_share_time">任何时段</string>
+    <string name="all_day">全天</string>
+    <string name="morning">上午</string>
+    <string name="afternoon">下午</string>
+    <string name="sort">排序</string>
+    <string name="sort_hot">智能排序</string>
+    <string name="sort_distance">距离优先</string>
+    <string name="sort_grade">好评优先</string>
+    <string name="sort_price">价格优先</string>
+    <string name="other">其它</string>
+    <string name="filtrate">筛选</string>
+
+    <!-- MyIntroductionMessageActivity -->
+    <string name="qr_code_tips">业主扫一扫上面的二维码图案，添加用户</string>
+    <string name="my_qr_code">我的个人二维码</string>
+    <string name="take_photo">拍照</string>
+    <string name="from_album">从手机相册选择</string>
+
+    <!-- bt -->
+    <string name="bt_list">设备列表</string>
+    <string name="bt_unsupport">本设备不支持蓝牙通讯</string>
+    <string name="bt_conn_timeout">蓝牙连接超时</string>
+    <string name="bt_conn_fail">蓝牙连接失败</string>
+    <string name="bt_conn_success">蓝牙连接成功</string>
+    <string name="bt_disconn">蓝牙连接断开</string>
+    <string name="bt_cmd_timeout">蓝牙命令发送超时</string>
+    <string name="bt_cmd_fail">蓝牙命令发送失败</string>
+
+    <!-- 充电桩控制 -->
+    <string name="control_no_permission">对不起，您没有权限控制该充电桩</string>
+    <string name="control_has_permission">您可以开始使用充电桩了</string>
+    <string name="control_begin_verify">开始验证Key的有效性</string>
+
+    <!-- time -->
+    <string name="start_time">起始时间</string>
+    <string name="end_time">结束时间</string>
+
+    <!-- common -->
+    <string name="title">标题</string>
+    <string name="ok">确定</string>
+    <string name="complete">完成</string>
+    <string name="cancel">取消</string>
+    <string name="no_limit">不限</string>
+    <string name="exit_tips">再按一次退出应用</string>
+    <string name="next">下一步</string>
+    <string name="commit">提交</string>
+
+    <!-- pole info -->
+    <string name="pole_info">电桩信息</string>
+    <string name="order_now">马上预约</string>
+
+    <!-- location -->
+    <string name="lbs">定位</string>
+    <string name="lbsing">定位中</string>
+    <string name="lbs_fail">定位失败</string>
+    <string name="lbs_city">定位城市</string>
+    <string name="select_city">选择城市</string>
+    <string name="search_city">搜索城市（中文/拼音）</string>
+    <string name="hot_city">热门城市</string>
+    <string name="navi_by_location_map">其他地图导航</string>
+    <!-- network -->
+    <string name="network_no_connection">没有网络连接</string>
+    <!-- date -->
+    <string name="_thursday">周四</string>
+    <string name="_monday">周一</string>
+    <string name="_thuesday">周二</string>
+    <!-- 这个写错字了 tuesday -->
+    <string name="_wednesday">周三</string>
+    <string name="_friday">周五</string>
+    <string name="_saturday">周六</string>
+    <string name="_sunday">周日</string>
+
+    <!-- dialog -->
+    <string name="pile_error">充电桩故障</string>
+    <string name="tips_pile_error">充电桩故障，请联系客服！</string>
+    <string name="tips_service_center">有问题咨询，请联系客服！</string>
+    <string name="call_service">拨打热线 400-655-6620</string>
+    <string name="cancel_display_button">取消发布</string>
+    <string name="update_display_button">更新发布</string>
+    <string name="collecting">收藏中…</string>
+    <string name="cancel_collecting">取消中…</string>
+    <string name="collect_fail">收藏失败</string>
+    <string name="cancel_collect_fail">取消收藏失败</string>
+    <string name="collect_success">收藏成功</string>
+    <string name="cancel_collect_success">取消收藏成功</string>
+    <string name="pile_display_activity_timeConflict">时间段有冲突,请修改时间段</string>
+    <string name="setting_time_activity_timeConflict">时间段有冲突,请修改或删除</string>
+    <!-- 电桩设置 -->
+    <string name="authorized_management">授权用户管理</string>
+    <string name="qr_code_add_user">扫描二维码添加用户</string>
+    <string name="format_error">二维码格式有误</string>
+    <string name="decode_fail">解析失败</string>
+    <string name="scan_qr_code_tips1">业主：请扫描需要添加的用户二维码</string>
+    <string name="scan_qr_code_tips2">用户：打开 “我的” ，点击个人资料，打开二维码</string>
+    <string name="scan_qr_code_tips3">用户：打开</string>
+    <string name="scan_qr_code_tips4">“我的”</string>
+    <string name="scan_qr_code_tips5">，点击个人资料，打开二维码</string>
+    <string name="waiting">请稍候...</string>
+    <string name="loading">加载中…</string>
+    <string name="canceling">正在取消发布</string>
+    <string name="canceled">已取消发布</string>
+    <string name="get_collectedtag_fail">获取收藏信息失败</string>
+    <string name="display_update">更新发布</string>
+    <string name="display_rn">马上发布</string>
+    <string name="contact_name">联系人</string>
+    <string name="setting_time">设置时间段</string>
+    <string name="add">添加</string>
+    <string name="charge_free">充电价格</string>
+    <string name="charge_free_format_error">充电价格格式不对，请重输</string>
+    <string name="charge_free_empty">充电价格不能为空，请重输</string>
+    <string name="btn_pile_type">电桩类型</string>
+    <string name="display_none">取消发布</string>
+    <string name="phone_num">登录手机号</string>
+    <string name="login_pwd">登录密码</string>
+    <string name="user_name">用户名</string>
+    <string name="pile_current_time_setting">电桩对时</string>
+    <string name="pile_current_time_tip">桩当前时间</string>
+    <string name="pile_current_time_tip2">对时前，请确保手机系统时间为当地时间，且正确</string>
+    <string name="pile_automatic_change_time">自动对时</string>
+    <string name="pile_unautomatic_change_time">手动对时</string>
+    <string name="choice_year">全部年份</string>
+    <string name="choice_month">全部月份</string>
+    <string name="choice_all_user">全部用户</string>
+    <!-- 订单信息 order_info_view -->
+    <string name="contact_car_owner">联系对方</string>
+    <string name="agree_order">同意</string>
+    <string name="nocomment_order">对方未评价</string>
+    <string name="reject_order">拒绝</string>
+    <string name="owner_reject">桩主拒绝</string>
+    <string name="status_wait_for_confirm">待确认</string>
+    <string name="status_wait_for_play">待租户付款</string>
+    <string name="status_wait_for_evaluate">未评价</string>
+    <string name="status_confrimed">已确认</string>
+    <string name="status_finish_order">已完成</string>
+    <string name="status_commanded">已评价</string>
+    <string name="status_overdue">已过期</string>
+    <string name="status_rejected">已拒绝</string>
+    <string name="status_canceled">已取消</string>
+    <string name="tenant_phone">联系方式\t</string>
+    <string name="tenant_name">预\t约\t人\t\t</string>
+    <string name="appointment_time">预约时段\t</string>
+    <string name="charge_time">充电时间\t</string>
+    <string name="order_charge_price">充电价格\t</string>
+    <string name="charge_energy">充电电量\t</string>
+    <string name="charge_bill">充电费用\t</string>
+    <string name="pay_time">付款时间\t</string>
+    <string name="status_paid">已付款</string>
+    <string name="status_commented">已评价</string>
+    <string name="contact_pile_owner">联系桩主</string>
+    <string name="contact_re_appointment">重新预约</string>
+    <string name="pile_location">电桩位置\t</string>
+    <string name="cancel_order">撤销</string>
+    <string name="user_pay">付款</string>
+    <string name="user_all_pay">合并付款</string>
+    <string name="status_wait_to_play">待付款</string>
+    <string name="go_to_evaluate">评价分享</string>
+    <string name="out_of_charge_time_order_tips">充电权限已失效，记录尚未同步，请稍候</string>
+    <!-- 找桩 -->
+    <string name="search_input">搜索</string>
+    <string name="pile_find_address">搜索地址</string>
+    <string name="today">今天</string>
+    <!-- select_address_activity -->
+    <!-- sarech type -->
+    <string name="find_pile">找电桩</string>
+    <string name="find_name">找名称</string>
+    <string name="find_address">找地点</string>
+    <!-- search_pile_address_head -->
+    <string name="delete_all_recode">清除历史数据</string>
+    <string name="no_search_recode">没有任何搜索历史</string>
+    <string name="no_search_result">没有找到相关结果</string>
+    <string name="search_result">搜索结果</string>
+    <string name="search_recode">搜索历史</string>
+    <!--电桩地图 -->
+    <string name="search_pile_all">全部显示</string>
+    <string name="search_pile_personal">私人电桩</string>
+    <string name="search_pile_studio">充电站</string>
+    <string name="only_show_bookable">只显示在线</string>
+    <string name="book_charge">预约充电</string>
+    <string name="details">详情</string>
+    <string name="had_shared">已分享</string>
+    <string name="not_shared">未分享</string>
+    <string name="immediately_charge">立即充电</string>
+    <string name="comment_pile">点评</string>
+    <!-- 运营商-->
+    <string name="operator_hssy">华商三优</string>
+    <string name="operator_nation">国家电网</string>
+    <string name="operator_public">公共开放站</string>
+    <!-- 站内空闲桩-->
+    <string name="default_studio_annotation">直流桩 %1$d\t\t交流桩 %2$d</string>
+    <string name="studio_offline">未上线</string>
+    <string name="studio_pile_num">总数%1$d\t\t空闲%2$d</string>
+    <!-- 电桩列表 -->
+    <string name="to_tag_distance"><Data><![CDATA[距我<font color="#ff8400">%1$s</font>km]]></Data></string>
+    <string name="distance_unknow">距离未知</string>
+    <string name="no_grade">暂无评价</string>
+    <!-- 电桩详情 -->
+    <string name="book_pile_date_pick">%1$s\n%2$s</string>
+    <string name="no_book_pile_time_split">没有可选的时间段</string>
+    <string name="charge_price_with_symbol">￥</string>
+    <string name="pile_info_charge_date">充电日期</string>
+    <string name="pile_info_charge_time">充电时长</string>
+    <string name="charge_time_more">显示更多时段</string>
+    <string name="charge_time_flod">收起</string>
+    <string name="pile_comment_detail">电桩评价</string>
+    <string name="studio_comment_detail">电站评价</string>
+    <string name="pile_comment_all"><Data><![CDATA[查看所有 <font color="#00b4ae">%1$s</font> 条评价]]></Data></string>
+    <string name="pile_detail">电桩描述</string>
+    <string name="pilestation_detail">电站描述</string>
+    <string name="pile_station_type">站点类型</string>
+    <string name="personal_dc">直流充电桩</string>
+    <string name="personal_ac">交流充电桩</string>
+    <string name="personal_wireless">无线充电桩</string>
+    <string name="exchange_battery_unit">换电工位</string>
+    <string name="pay_way">计费方式</string>
+    <string name="charging_pay">充电收费</string>
+    <string name="function_area">功 能 区</string>
+    <string name="amenities">便利设施</string>
+    <string name="wifi">wifi</string>
+    <string name="convenience_store">便利店</string>
+    <string name="parking_space">停车位</string>
+    <string name="camera">摄像头</string>
+    <string name="market">商超</string>
+    <string name="restaurant">餐饮</string>
+    <string name="hotel">酒店</string>
+    <string name="traffic">地铁沿线+交通枢纽</string>
+    <string name="living">住宅小区</string>
+    <string name="super_market">大型商超</string>
+    <string name="car_shop">4S店</string>
+    <string name="school">科技园区+学校</string>
+    <string name="scenic">景区</string>
+    <string name="service_area">高速公路服务区</string>
+    <string name="office">办公场所</string>
+    <string name="nothing">暂无</string>
+
+
+    <string name="current_electricity">当前电量</string>
+    <string name="current_progress">当前进度</string>
+    <string name="progress">进度</string>
+    <string name="idle">空闲</string>
+    <string name="charging">充电中</string>
+    <string name="full_load">满载</string>
+    <string name="offline">离网</string>
+    <string name="maintenance">维护</string>
+    <string name="occupy">占用</string>
+    <string name="booked">已预约</string>
+    <string name="unknown">未知</string>
+    <string name="maintain">检修</string>
+    <string name="offline_pile">离线</string>
+
+    <!-- 公共站详情 -->
+    <string name="get_pile_list_failec">获取桩列表失败</string>
+    <string name="not_pile">暂未添加桩</string>
+
+    <string name="owner_detail">业主信息</string>
+    <string name="manufacturer">生产厂家</string>
+    <string name="charging_port_num">充电口数</string>
+    <string name="charging_time">您何时充电</string>
+    <string name="minute">分钟内</string>
+    <string name="owner_operator">运营商</string>
+    <string name="operator_type_other">其他企业</string>
+    <string name="studio_detail">电站描述</string>
+    <string name="studio_detail_default">欢迎使用充电站,竭诚为您服务!</string>
+    <string name="pile_detail_default">欢迎使用充电桩,竭诚为您服务!</string>
+    <string name="pile_book_success_message">预约成功,请等待业主确认</string>
+    <string name="add_success_collect_pile">收藏电桩</string>
+    <string name="add_success_order_num">订 单 号</string>
+    <string name="add_success_pile_name">电桩名称</string>
+    <string name="add_success_pile_location">电桩位置</string>
+    <string name="add_success_book_time">预约时段</string>
+    <string name="add_success_pile_price">电桩价格</string>
+    <string name="power_unit">kWh</string>
+    <string name="power">kW</string>
+    <string name="charge_unit">/kWh</string>
+    <string name="price_unit">￥/kWh</string>
+    <string name="price_unit_1">￥%1$s/kWh</string>
+    <string name="type_other_station">其他</string>
+    <string name="type_public_station">公共站</string>
+    <string name="type_special_station">专用站</string>
+    <string name="type_hssy_station">优易充小站</string>
+    <string name="pay_other">其他</string>
+    <string name="pay_free">免费</string>
+    <string name="pay_cash">现金</string>
+    <string name="pay_swiping_card">刷卡</string>
+    <string name="pay_online">在线支付</string>
+    <string name="name">名称</string>
+    <string name="type">类型</string>
+    <string name="electricity">电量</string>
+    <string name="has_idle">有空闲</string>
+
+    <string name="try_to_refresh">刷新试试</string>
+    <string name="activity_loading_fail">加载失败,请稍后试试</string>
+
+    <!-- 订单 -->
+    <string name="none_order">您还没有相关的订单！</string>
+    <string name="total_price">总\t费\t用\t</string>
+    <!-- 桩主的电桩充电记录 -->
+    <string name="no_charge_record">没有相关的充电记录</string>
+    <!--充电完成页面-->
+    <string name="load_price_fail">获取单价失败</string>
+    <!-- 图片浏览 -->
+    <string name="only_choose_num">超出可选图片张数</string>
+    <string name="finish">完成</string>
+    <string name="invalidSD">sdcard无效或没有插入！</string>
+    <string name="photo">选择相册</string>
+    <string name="album">相册</string>
+    <string name="preview">预览</string>
+    <string name="unfinished">完成</string>
+    <string name="camera_cancel">取消</string>
+    <string name="no_photo">相册没有图片</string>
+    <string name="find_city">搜索城市</string>
+    <string name="city_no_load_finish">城市列表尚未加载完毕,请稍后再试</string>
+    <!-- pileFindFragment -->
+    <string name="please_select_city">请选择城市</string>
+    <string name="network_over_time">网络连接超时</string>
+    <string name="location_fail">定位失败,请手动选择城市</string>
+    <string name="charge_duration">充电时长</string>
+    <string name="no_family">没有授权用户</string>
+    <string name="manual_add">手动添加</string>
+    <string name="qr_add">二维码添加</string>
+    <string name="authed_user">已绑定用户</string>
+    <string name="pile_type_other">其他</string>
+
+    <!-- multiple_evaluate_activity-->
+    <string name="publish_evaluate">发布</string>
+    <string name="evaluate_environment">周边环境</string>
+    <string name="evaluate_exterior">设备情况</string>
+    <string name="evaluate_performance">充电速度</string>
+    <string name="evaluate_services">服\t\t\t\t务</string>
+    <string name="evaluate_poor">差</string>
+    <string name="evaluate_ordinary">一般</string>
+    <string name="evaluate_good">满意</string>
+    <string name="evaluate_very_good">很满意</string>
+    <string name="evaluate_recommend">强烈推荐</string>
+    <string name="photo_pick_num">%1$s/%2$s</string>
+    <string name="please_make_objective_evaluate">请进行客观评价</string>
+    <string name="please_make_subjectivity_evaluate">请进行主观评价</string>
+    <string name="evaluate_must_over_to_15_word">评语要超过10个字</string>
+    <string name="edit_view_hint">这里充电给力吗,环境如何?</string>
+
+    <!-- AlbumActivity-->
+    <string name="only_can_choice">只能选%1$d张</string>
+
+    <!-- systemSettingActivity -->
+    <string name="system_setting">设置</string>
+    <string name="system_setting_message_notification">消息提醒</string>
+    <string name="system_setting_clear_cache">清除缓存</string>
+    <string name="system_setting_payway">支付方式</string>
+    <string name="payway_baifubao">百度钱包</string>
+    <string name="payway_alipay">支付宝</string>
+    <string name="not_select_payway">未选择支付方式</string>
+    <string name="select_payway">选择支付方式</string>
+    <string name="pay_tips">支付提醒</string>
+    <string name="system_setting_account_bind">账号绑定</string>
+    <string name="system_setting_save_traffic">非wifi下使用节省流量模式</string>
+    <string name="system_setting_version_update">版本更新</string>
+    <string name="system_setting_version_last">已是最新版</string>
+    <string name="system_setting_new_version">发现新版本:\t</string>
+
+    <!-- 充电币 -->
+    <string name="get_remain_monuy_failed">获取充电币失败</string>
+    <string name="get_remaining_money">正在获取充电币...</string>
+
+    <!-- messageNotificationSetting -->
+    <string name="message_notification_setting">消息提醒设置</string>
+    <string name="message_notification_setting_push">消息推送</string>
+    <string name="message_notification_setting_transaction">交易提醒</string>
+    <string name="message_notification_setting_transaction_explain">您的订单消费等相关信息</string>
+    <string name="message_notification_setting_push_explain">点评促销优惠活动及精彩内容</string>
+
+
+    <!-- mchargeDialogSetting -->
+    <string name="message_ble_match_fail_tip">蓝牙配对不成功</string>
+    <string name="message_charge_title_tip">温馨提示</string>
+    <string name="message_charge_pile_tip">电桩信息</string>
+    <string name="message_content_owner_tip">您已是此桩业主，如需充电，\n请打开蓝牙连接</string>
+    <string name="message_content_owner_gprs_tip">您已是此桩业主，如需充电,请点击确定</string>
+
+    <string name="message_cancel_tip">取消</string>
+    <string name="message_charge_now_tip">现在充电</string>
+    <string name="message_charge_detail_tip">充电桩信息（名称，所属业主，\n充电价格，蓝牙ID）</string>
+    <string name="message_confirm_charge_tip">确认充电</string>
+    <string name="message_link_ble_out_time_tip">蓝牙连接超时，请检查蓝牙设备</string>
+    <string name="message_unlink_gun_tip">您尚未连接充电枪</string>
+    <string name="message_be_token_tip">充电桩正在被占用</string>
+    <string name="message_being_fixing_tip">当前充电桩正在维护，请尝试其他充电桩</string>
+    <string name="message_being_accident_tip">设备故障，请您尝试其他充电桩或联系客服400-655-6220</string>
+    <string name="message_being_unknow_error_tip">该桩发生未知错误，请您尝试其他充电桩或联系客服400-655-6220</string>
+    <string name="message_confirm_tip">确认</string>
+    <string name="message_ble_link_tip">蓝牙连接</string>
+    <string name="message_unline_tip">该桩未上线</string>
+    <string name="message_device_error_tip">很抱歉，设备发生异常，已经中断充电，请检查</string>
+    <string name="message_device_error_contact_tip">很抱歉，租户正在充电的设备发生异常，已经中断充电</string>
+    <string name="message_device_unoperator_tip">设备尚未运营，无法启动设备</string>
+    <string name="message_device_unsupport_scan_tip">抱歉，本设备暂不支持扫码启动充电，建议您通过蓝牙连接此设备</string>
+    <string name="message_device_unexist_scan_tip">桩不存在</string>
+    <string name="message_device_undisplay_scan_tip">桩未发布</string>
+    <string name="message_device_unrequest_scan_tip">未知的应用请求</string>
+    <string name="message_finish_ple_pull_gun_tip">充电完成，请拔枪</string>
+    <string name="message_finish_ple_pull_and_insert_gun_tip">充电已完成，如需充电，请拔枪后再重新插抢扫码</string>
+    <string name="message_charging_for_other_pile_tip">检测到您当前有正在充电的桩，请勿扫描其他充电桩,如需跳到正在充电页面，请点击确定，返回请点击取消</string>
+    <string name="message_charging_unwaiting_status_tip">该桩不在待机状态</string>
+    <string name="message_charging_on_request_outtime_tip">很抱歉，开机超时，请重新扫码</string>
+    <string name="message_charging_getting_tip">获取中</string>
+    <string name="message_charging_starting_tip">启动中</string>
+    <string name="message_charging_stopping_tip">停止中</string>
+    <string name="message_charging_had_finish_tip">已完成</string>
+    <string name="message_charging_pile_type_tip">桩类型</string>
+    <string name="message_charging_stop_observer_tip">停止观察</string>
+    <string name="message_charging_device_exception_tip">很抱歉，租户正在充电的设备发生异常，已经中断充电</string>
+    <string name="message_charging_tanent_stop_tip">租户已停止充电</string>
+    <string name="message_charging_finish_tip">您本次充电已完成...</string>
+    <string name="message_charging_progress_tip">充电进度</string>
+    <string name="message_charging_ele_tip">充电电量</string>
+    <string name="message_charging_pile_dc_name_tip">直流桩</string>
+    <string name="message_charging_pile_ac_name_tip">交流桩</string>
+    <string name="message_charging_current_offline_tip">当前网络不可用</string>
+    <string name="message_charging_device_exception_unstart_tip">设备发生异常，无法启动该设备</string>
+
+
+    <!-- WebViewNewsActivity -->
+    <string name="news_details">详情</string>
+
+
+    <!-- ChoicePayWayActivity -->
+    <string name="pay_failed">支付失败</string>
+    <string name="pay_succeed">支付成功</string>
+
+    <string name="pay_baidu_pocket">百度钱包支付</string>
+    <string name="baidu_pocket">百度钱包</string>
+
+    <string name="pay_other_way">其他支付方式</string>
+    <string name="pay_fail">支付失败</string>
+
+
+    <!-- addpileorsite -->
+    <string name="add_pile_or_site_product_name">厂商名称</string>
+    <string name="add_pile_or_site_pile_des">电桩描述</string>
+    <string name="add_pile_or_site_opernator">运营商</string>
+    <string name="add_pile_or_site_site_des">站点描述</string>
+
+    <string name="add_pile_or_site_pile_type">电桩类型</string>
+    <string name="add_pile_or_site_site_type">站点类型</string>
+    <string name="add_pile_or_site_operate_status">运行状态</string>
+    <string name="add_pile_or_site_site_status">站点状态</string>
+    <string name="add_pile_or_site_pile_name">私人电桩</string>
+    <string name="add_pile_or_site_site_name">充电站</string>
+
+    <string name="add_pile_or_site_normal_operate">正常运行</string>
+    <string name="add_pile_or_site_protecting">维护中</string>
+
+    <string name="add_pile_or_site_fast_pile">快速充电桩</string>
+    <string name="add_pile_or_site_slow_pile">慢速充电桩</string>
+
+    <string name="add_pile_or_site_touyuned">已投运</string>
+    <string name="add_pile_or_site_untouyun">未投运</string>
+    <string name="add_pile_or_site_building">建设中</string>
+    <string name="add_pile_or_site_planning">规划中</string>
+    <string name="add_pile_or_site_other">其他</string>
+
+    <string name="add_pile_or_site_public_open_site">公共开放站</string>
+    <string name="add_pile_or_site_public_special_site">专用站</string>
+
+
+    <string name="add_pile_or_site_type">类型</string>
+    <string name="add_pile_or_site_choose_type">请选择电桩类型</string>
+    <string name="add_pile_or_site_no_message">您还没有添加相关信息</string>
+    <string name="add_pile_or_site_no_image_message">请拍上几张真实图片，以便审核</string>
+
+    <!-- shareSDK -->
+    <string name="share_text">我在使用优易充,欢迎朋友们一起下载使用</string>
+    <string name="tips_input_phone">请输入您注册时填写的手机号码，我们会给您发送一条验证短信，请注意查收</string>
+
+    <!-- chargeTimeLine -->
+    <string name="view_more">查看更多(%d)</string>
+    <string name="topic_title">详情</string>
+    <string name="dynamic_title">资讯详情</string>
+    <string name="comment">评论</string>
+    <string name="charge_experience">充电体验</string>
+    <string name="charge_comment">充电评价</string>
+    <string name="charge_time_line_format"><Data><![CDATA[#%1$s# 来了<font color="#00b4ae">%2$s</font>,%3$s]]></Data></string>
+    <string name="charge_time_line_format_2">#%1$s# 来了,</string>
+    <string name="charge_comment_format"><Data><![CDATA[#%1$s# 去了<font color="#00b4ae">%2$s</font>,%3$s]]></Data></string>
+    <string name="show_your_mind">发表一下您的评论</string>
+    //bindPhone
+    <string name="function_bind_phone">绑定手机号，可以更好地保护您的账号安全，也可即时接收充电提示消息及方便您与充电桩主联系。</string>
+    <string name="function_bind_phone_effect">绑定手机号作用</string>
+    <!--loginActivity-->
+    <string name="tips_set_password">设置密码后您也可以用手机号及密码登录</string>
+    <string name="tips_username_length">请输入用户名，2-12字符</string>
+    <string name="tips_username_null">用户名不能为空</string>
+    <!-- all evaluate-->
+    <string name="avg_evaluate">总体评分</string>
+    <string name="all_evaluate">所有评价</string>
+    <string name="my_all_evaluate">我的所有评价</string>
+    <string name="avg_environment">周边环境</string>
+    <string name="avg_exterior">设备情况</string>
+    <string name="avg_performance">充电速度</string>
+    <!-- comment_list_item-->
+    <string name="commend_string"><Data><![CDATA[<font color="#00b4ae">%1$s</font>%2$s<font color="#00b4ae">%3$s</font>: %4$s]]></Data></string>
+
+    <!--about app-->
+    <string name="download_qr_code_text">扫描二维码下载app</string>
+    <string name="share_title">智慧汽车充电分享平台</string>
+    <string name="share_second_title">优享充电\t\t易享充电\t\t智享充电</string>
+
+    <!-- charge record syn-->
+    <string name="btn_cancel_syn">取消同步</string>
+    <string name="btn_back">返回</string>
+    <string name="btn_view_order">查看订单</string>
+    <string name="synchroning_record">正在同步充电记录</string>
+    <string name="synchronized_success">同步已成功!</string>
+    <string name="do_not_disconnect_bluetooth">请不要断开蓝牙</string>
+    <!-- charge money instructions-->
+    <string name="charge_money_instructions_1">点击 \"立即支付\" ,进入订单页面</string>
+    <string name="charge_money_instructions_2">寻找需支付订单后,点击订单右下角 \"去付款\"</string>
+    <string name="charge_money_instructions_3">支付时,勾选使用充电币,系统会先扣除账号剩余充电币,若充电币不足,则余下金额可选取其他支付方式支付 (第三方支付)</string>
+
+    <string name="try_again">重试</string>
+</resources>

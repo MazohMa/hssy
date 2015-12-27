@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                tools:context="com.xpg.hssy.main.activity.PileInfoNewActivity">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/top_pile_info_layout"/>
+
+    <include layout="@layout/line_horizontal_grey_small"/>
+
+    <include
+        android:id="@+id/rl_loading_fail"
+        layout="@layout/layout_activity_loading_fail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_below="@id/top_bar"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/rl_loading"
+        layout="@layout/layout_activity_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_below="@id/top_bar"
+        android:visibility="gone"/>
+
+    <com.ecloud.pulltozoomview.PullToZoomScrollViewEx
+        android:id="@+id/pzs_center_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_below="@id/top_bar"
+        android:scrollbars="none"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+    </RelativeLayout>
+
+</RelativeLayout>

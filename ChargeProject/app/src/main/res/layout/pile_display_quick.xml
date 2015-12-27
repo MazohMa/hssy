@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_simple_layout" />
+
+    <TextView
+        android:id="@+id/statue_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:padding="@dimen/w12"
+        android:text="你目前电桩发布状态"
+        android:textColor="@color/white" >
+    </TextView>
+
+    <include layout="@layout/line_horizontal_grey_small" />
+
+    <ListView
+        android:id="@+id/id_listview_msgs"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@null"
+        android:dividerHeight="@dimen/h8" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/pile_none_exist_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="@dimen/w160"
+            android:layout_height="@dimen/h160"
+            android:paddingTop="@dimen/h18"
+            android:src="@drawable/device_not_release_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h10"
+            android:gravity="center"
+            android:text="你目前没有可发布的电桩"
+            android:textColor="@color/text_white" />
+
+        <Button
+            android:id="@+id/btn_charge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w40"
+            android:layout_marginRight="@dimen/w40"
+            android:layout_marginTop="@dimen/h80"
+            android:background="@drawable/shape_green"
+            android:padding="@dimen/w12"
+            android:text="寻找充电桩"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/h16" />
+    </LinearLayout>
+
+</LinearLayout>

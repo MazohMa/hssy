@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_group_discuss"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:padding="@dimen/h10">
+
+        <EditText
+            android:focusable="true"
+            android:id="@+id/ed_group_discuss"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_repeat"
+            android:background="@null"
+            android:hint="@string/show_your_mind"
+            android:state_enabled="true"
+            android:state_focused="true"
+            android:textSize="12dp">
+
+            <requestFocus/>
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:text="回复"
+            android:textColor="@color/water_blue"/>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_repeat"
+            android:background="@color/water_blue"/>
+    </RelativeLayout>
+</LinearLayout>

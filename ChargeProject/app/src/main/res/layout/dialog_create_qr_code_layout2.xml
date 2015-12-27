@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linearlayout_round"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h45"
+            android:background="@drawable/dialog_title_white_round"
+            android:gravity="center"
+            android:text="我的二维码"
+            android:textColor="@color/black"
+            android:paddingTop="@dimen/h10"
+            android:textSize="@dimen/w18"/>
+
+        <RelativeLayout
+            android:layout_width="@dimen/h250"
+            android:layout_height="@dimen/h250"
+            android:background="#FFFFFF"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_qr_code"
+                android:text="@string/qr_code_tips"
+                android:textColor="@color/grey_dark_pressed"
+                android:textSize="@dimen/w13" />
+
+            <ImageView
+                android:id="@+id/img_qr_code"
+                android:layout_width="@dimen/h250"
+                android:layout_height="@dimen/h250"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h40"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="业主：请扫描需要添加的用户二维码"
+            android:textColor="@color/text_gray"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+</LinearLayout>

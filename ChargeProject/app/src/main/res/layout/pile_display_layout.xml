@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/bg_white"
+              android:orientation="vertical">
+
+    <include layout="@layout/top_simple_layout"/>
+
+    <ScrollView
+        android:id="@+id/scoll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/lianxiren_tv_layout_id"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="@dimen/w12"
+                android:layout_marginRight="@dimen/w12"
+                android:visibility="gone"
+                android:background="@drawable/select_grey_click">
+
+                <ImageButton
+                    android:id="@+id/imageButton_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_next"
+                    android:padding="@dimen/h8"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/lianxiren_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/h12"
+                    android:gravity="center_vertical"
+                    android:text="@string/contact_name"
+                    android:textColor="@color/text_gray_dark"/>
+
+                <TextView
+                    android:id="@+id/phone_tvs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/imageButton_next"
+                    android:gravity="right"
+                    android:hint="(电话号码)"
+                    android:textColor="@color/text_gray_dark"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/username_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/h12"
+                    android:layout_toLeftOf="@+id/chongdianfuwufei_imageButton_next1"
+                    android:gravity="right"
+                    android:hint="用户名"
+                    android:textColor="@color/text_gray_dark"/>
+
+                <ImageButton
+                    android:id="@+id/chongdianfuwufei_imageButton_next1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_next"
+                    android:padding="@dimen/h8"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/line_horizontal_grey_small"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/settingtime_tv_layout_id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/h12"
+                android:layout_marginRight="@dimen/h12"
+                android:background="@drawable/select_grey_white_click"
+                android:paddingBottom="@dimen/h15"
+                android:paddingTop="@dimen/h15">
+
+                <ImageButton
+                    android:id="@+id/img_settingtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_next"
+                    android:padding="@dimen/h8"/>
+
+                <LinearLayout
+                    android:id="@+id/lv_content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toLeftOf="@+id/img_settingtime"
+                    android:layout_toRightOf="@+id/settingtime_tv"
+                    android:orientation="vertical"/>
+
+                <TextView
+                    android:id="@+id/settingtime_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/h12"
+                    android:gravity="center_vertical"
+                    android:text="时间段"
+                    android:textColor="@color/text_gray_dark"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/line_horizontal_grey_small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:background="@color/bg_white"
+                android:divider="@drawable/line1"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <RelativeLayout
+                    android:id="@+id/chongdianfuwufei_layout_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/h12"
+                    android:layout_marginRight="@dimen/h12"
+                    android:background="@drawable/select_grey_white_click">
+
+                    <ImageButton
+                        android:id="@+id/chongdianfuwufei_imageButton_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_next"
+                        android:padding="@dimen/h8"/>
+
+                    <TextView
+                        android:id="@+id/chongdianfuwufei_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/h12"
+                        android:gravity="center_vertical"
+                        android:text="@string/charge_free"
+                        android:textColor="@color/text_gray"/>
+
+                    <TextView
+                        android:id="@+id/chongdianfuwufei_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@+id/chongdianfuwufei_tvs"
+                        android:gravity="center_vertical"
+                        android:text="￥"
+                        android:textColor="@color/text_gray_dark"/>
+
+                    <TextView
+                        android:id="@+id/chongdianfuwufei_tvs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="2dp"
+                        android:layout_toLeftOf="@+id/chongdianfuwufei_tvsh"
+                        android:gravity="center_vertical"
+                        android:text="0.6"
+                        android:textColor="@color/water_blue"/>
+
+                    <TextView
+                        android:id="@+id/chongdianfuwufei_tvsh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/h12"
+                        android:layout_toLeftOf="@+id/chongdianfuwufei_imageButton_next"
+                        android:gravity="center_vertical"
+                        android:text="/kWh"
+                        android:textColor="@color/text_gray_dark"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dianzhuangtype_layout_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/h12"
+                    android:layout_marginRight="@dimen/h12">
+
+                    <ImageButton
+                        android:id="@+id/dianzhuangtype_imageButton_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_next"
+                        android:padding="@dimen/h8"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/dianzhuangtype_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/h12"
+                        android:gravity="center_vertical"
+                        android:text="@string/btn_pile_type"
+                        android:textColor="@color/text_gray"/>
+
+                    <ImageButton
+                        android:id="@+id/dianzhuangtype_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/h12"
+                        android:layout_toLeftOf="@+id/dianzhuangtype_imageButton_next"
+                        android:background="@drawable/icon_communication"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/h8"/>
+
+                    <TextView
+                        android:id="@+id/dianzhuangtype_tvs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/h12"
+                        android:layout_toLeftOf="@+id/dianzhuangtype_imageButton_next"
+                        android:gravity="center_vertical"
+                        android:text="直流"
+                        android:textColor="@color/text_gray_dark"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/edinggonglv_layout_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/h12"
+                    android:layout_marginRight="@dimen/h12">
+
+                    <ImageButton
+                        android:id="@+id/edinggonglv_imageButton_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_next"
+                        android:padding="@dimen/h8"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/edinggonglv_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/h12"
+                        android:gravity="center_vertical"
+                        android:text="额定功率"
+                        android:textColor="@color/text_gray"/>
+
+                    <TextView
+                        android:id="@+id/edinggonglv_tvs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="2dp"
+                        android:layout_toLeftOf="@+id/edinggonglv_tvskw"
+                        android:gravity="center_vertical"
+                        android:text="15"
+                        android:textColor="@color/water_blue"/>
+
+                    <TextView
+                        android:id="@+id/edinggonglv_tvskw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/h12"
+                        android:layout_toLeftOf="@+id/edinggonglv_imageButton_next"
+                        android:gravity="center_vertical"
+                        android:text="kW"
+                        android:textColor="@color/text_gray_dark"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/edingdianya_layout_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/h12"
+                    android:layout_marginRight="@dimen/h12">
+
+                    <ImageButton
+                        android:id="@+id/edingdianya_imageButton_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_next"
+                        android:padding="@dimen/h8"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/edingdianya_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/h12"
+                        android:gravity="center_vertical"
+                        android:text="额定电压"
+                        android:textColor="@color/text_gray"/>
+
+                    <TextView
+                        android:id="@+id/edingdianya_tvs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="2dp"
+                        android:layout_toLeftOf="@+id/edingdianya_tvsv"
+                        android:gravity="center_vertical"
+                        android:text="220"
+                        android:textColor="@color/water_blue"/>
+
+                    <TextView
+                        android:id="@+id/edingdianya_tvsv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/h12"
+                        android:layout_toLeftOf="@+id/edingdianya_imageButton_next"
+                        android:gravity="center_vertical"
+                        android:text="V"
+                        android:textColor="@color/text_gray_dark"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/electric_current_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/h12"
+                    android:layout_marginRight="@dimen/h12">
+
+                    <TextView
+                        android:id="@+id/electric_current_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/h12"
+                        android:gravity="center_vertical"
+                        android:text="额定电流"
+                        android:textColor="@color/text_gray"/>
+
+                    <TextView
+                        android:id="@+id/electric_current"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="2dp"
+                        android:layout_toLeftOf="@+id/electric_current_unit"
+                        android:gravity="center_vertical"
+                        android:text="10"
+                        android:textColor="@color/water_blue"/>
+
+                    <ImageButton
+                        android:id="@+id/edingdianya_imageButton_next12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_next"
+                        android:padding="@dimen/h8"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/electric_current_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/h12"
+                        android:layout_toLeftOf="@+id/edingdianya_imageButton_next12"
+                        android:gravity="center_vertical"
+                        android:text="A"
+                        android:textColor="@color/text_gray_dark"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/display_statue"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:background="#ECEAE8"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/bt_updatedisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/h50"
+            android:background="@drawable/selector_btn_water_blue"
+            android:paddingBottom="@dimen/h12"
+            android:paddingLeft="@dimen/h20"
+            android:paddingRight="@dimen/h20"
+            android:paddingTop="@dimen/h12"
+            android:text="@string/display_update"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/h16"/>
+
+        <Button
+            android:id="@+id/bt_canceldisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/bt_updatedisplay"
+            android:layout_alignBottom="@+id/bt_updatedisplay"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/h50"
+            android:background="@drawable/shape_btn_orange"
+            android:paddingBottom="@dimen/h12"
+            android:paddingLeft="@dimen/h20"
+            android:paddingRight="@dimen/h20"
+            android:paddingTop="@dimen/h12"
+            android:text="@string/display_none"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/h16"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/display_statue2"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:background="#ECEAE8"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <include layout="@layout/line_horizontal_grey_small"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_mashangdisplays"
+            android:layout_width="@dimen/h125"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_btn_orange"
+            android:padding="@dimen/h12"
+            android:text="@string/display_rn"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/h16"/>
+    </RelativeLayout>
+
+</LinearLayout>

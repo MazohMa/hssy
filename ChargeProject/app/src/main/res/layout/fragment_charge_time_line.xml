@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:listViewAttr="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <com.xpg.hssy.view.RefreshListView
+        android:id="@+id/rlv_charge_time_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:drawSelectorOnTop="false"
+        android:scrollbarSize="0dp"
+        android:scrollbarStyle="@null"
+        android:scrollbars="none"
+        listViewAttr:isAutoLoadOnBottom="true"
+        listViewAttr:isDropDownStyle="true"
+        listViewAttr:isOnBottomStyle="true"/>
+
+    <Button
+        android:id="@+id/btn_display_topic"
+        android:layout_width="@dimen/h50"
+        android:layout_height="@dimen/h50"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/youyiquan_faquan"/>
+</RelativeLayout>

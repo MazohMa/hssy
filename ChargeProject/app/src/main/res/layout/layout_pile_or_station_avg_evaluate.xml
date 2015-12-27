@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:customer="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/h14"
+                android:paddingLeft="@dimen/h10"
+                android:paddingRight="@dimen/h10"
+                android:paddingTop="@dimen/h14">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/split_line_gray"
+        android:paddingBottom="@dimen/h10"
+        android:paddingLeft="@dimen/h8"
+        android:paddingRight="@dimen/h8"
+        android:paddingTop="@dimen/h10">
+
+        <TextView
+            android:id="@+id/tv_pile_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h32"
+            android:layout_marginBottom="@dimen/h6"
+            android:text="越秀区私人充电桩"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/water_blue"
+            android:textSize="@dimen/h20"/>
+
+        <TextView
+            android:id="@+id/tv_avg_evaluate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_pile_name"
+            android:layout_marginBottom="@dimen/h10"
+            android:text="@string/avg_evaluate"
+            android:textColor="@color/gold_yellow"
+            android:textSize="@dimen/h14"/>
+
+        <com.xpg.hssy.view.EvaluateColumn
+            android:id="@+id/eva_evaluate_star_line"
+            android:layout_width="@dimen/w96"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_avg_evaluate"
+            android:layout_alignTop="@id/tv_avg_evaluate"
+            android:layout_marginLeft="@dimen/w8"
+            android:layout_marginRight="@dimen/w8"
+            android:layout_toRightOf="@id/tv_avg_evaluate"
+            android:gravity="center"
+            android:paddingBottom="@dimen/h2"
+            customer:balanceWeight="true"
+            customer:editable="false"
+            customer:evaluate="5"
+            customer:maxCount="5"/>
+
+        <TextView
+            android:id="@+id/tv_avg_evaluate_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/eva_evaluate_star_line"
+            android:layout_alignTop="@+id/eva_evaluate_star_line"
+            android:layout_toRightOf="@+id/eva_evaluate_star_line"
+            android:text="5.0"
+            android:textColor="@color/gold_yellow"
+            android:textSize="@dimen/h14"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/eva_evaluate_star_line"
+            android:layout_alignTop="@+id/eva_evaluate_star_line"
+            android:layout_toRightOf="@+id/tv_avg_evaluate_point"
+            android:text="分"
+            android:textColor="@color/gold_yellow"
+            android:textSize="@dimen/h14"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_below="@id/tv_avg_evaluate"
+            android:background="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_avg_evaluate"
+            android:layout_marginTop="@dimen/h8"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/h30"
+                android:layout_marginRight="@dimen/h5"
+                android:layout_marginTop="@dimen/h8"
+                android:layout_weight="1"
+                android:background="@drawable/shape_yellow_round_small">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/avg_environment"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/h12"/>
+
+                <TextView
+                    android:id="@+id/tv_avg_environment_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="5.0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/h12"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/h30"
+                android:layout_marginLeft="@dimen/h5"
+                android:layout_marginRight="@dimen/h5"
+                android:layout_marginTop="@dimen/h8"
+                android:layout_weight="1"
+                android:background="@drawable/shape_yellow_round_small">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/avg_exterior"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/h12"/>
+
+                <TextView
+                    android:id="@+id/tv_avg_exterior_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="5.0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/h12"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/h30"
+                android:layout_marginLeft="@dimen/h5"
+                android:layout_marginTop="@dimen/h8"
+                android:layout_weight="1"
+                android:background="@drawable/shape_yellow_round_small">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/avg_performance"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/h12"/>
+
+                <TextView
+                    android:id="@+id/tv_avg_performance_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="5.0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/h12"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

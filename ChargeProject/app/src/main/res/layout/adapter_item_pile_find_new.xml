@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/item_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:xpg="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/select_grey_white_click"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/w180"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageView
+        android:id="@+id/iv_collect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/w4"
+        android:padding="@dimen/h20"
+        android:scaleType="center"
+        android:src="@drawable/find_collect03"/>
+
+    <com.xpg.hssy.view.CircleImageView
+        android:id="@+id/civ_user_avatar"
+        android:layout_width="@dimen/w50"
+        android:layout_height="@dimen/h50"
+        android:layout_alignBottom="@+id/tv_name"
+        android:layout_alignEnd="@+id/tv_distance"
+        android:layout_alignRight="@+id/tv_distance"
+        android:layout_marginBottom="@dimen/h10"
+        android:scaleType="centerCrop"
+        android:src="@drawable/touxiang"
+        xpg:border_color="@color/text_white"
+        xpg:border_width="@dimen/w2"/>
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_icon"
+        android:layout_toLeftOf="@id/civ_user_avatar"
+        android:layout_marginLeft="@dimen/w10"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/h10"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/text_gray_dark"
+        android:textSize="@dimen/h20"/>
+
+    <Button
+        android:id="@+id/btn_pile_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginLeft="@dimen/w13"
+        android:background="@null"
+        android:gravity="center"
+        android:text="私人交流桩"
+        android:textColor="@color/sky_blue"
+        android:textSize="@dimen/h13"/>
+
+    <TextView
+        android:id="@+id/tv_idle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_pile_type"
+        android:layout_marginLeft="@dimen/w13"
+        android:layout_toRightOf="@id/btn_pile_type"
+        android:text="空闲"
+        android:textColor="@color/sky_blue"
+        android:textSize="@dimen/h13"/>
+
+    <com.xpg.hssy.view.EvaluateColumn
+        android:id="@+id/eva_star_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginLeft="@dimen/w6"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/w5"
+        android:paddingLeft="@dimen/w10"
+        android:paddingRight="@dimen/w10"
+        android:paddingTop="@dimen/w5"
+        app:evaluate="0"
+        app:maxCount="5"/>
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btn_pile_type"
+        android:layout_marginRight="@dimen/w13"
+        android:text="1.2km"
+        android:textColor="#999999"
+        android:textSize="@dimen/h13"/>
+
+    <LinearLayout
+        android:id="@+id/ll_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_icon"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/h14"
+        android:background="@color/back_light"
+        android:gravity="bottom"
+        android:padding="@dimen/w5">
+
+        <TextView
+            android:id="@+id/tv_price_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/w5"
+            android:gravity="bottom"
+            android:text="￥"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h15"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/w5"
+            android:gravity="bottom"
+            android:text="0.6"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h20"/>
+
+        <TextView
+            android:id="@+id/tv_price_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:text="/kWh"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h12"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="@dimen/w280"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_pile_type"
+        android:layout_marginLeft="@dimen/w13"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="海珠区江南大道中325号首层之一江南大道中325号首层之一"
+        android:textColor="#999999"
+        android:textSize="@dimen/h13"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_location"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/h10">
+
+        <Button
+            android:id="@+id/btn_appoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/h10"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/find_daohang01"
+            android:gravity="center"
+            android:text="@string/book_charge"
+            android:textColor="@color/white"
+            android:textSize="@dimen/w20"/>
+
+        <Button
+            android:id="@+id/btn_navigate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/h10"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/find_daohang02"
+            android:gravity="center"
+            android:text="@string/navigation"
+            android:textColor="@color/white"
+            android:textSize="@dimen/w20"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h5"
+        android:layout_below="@+id/rl_btn"
+        android:visibility="gone"
+        android:background="@drawable/line1"/>
+
+</RelativeLayout>

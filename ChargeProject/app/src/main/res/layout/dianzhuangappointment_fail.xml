@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/wifi_timeout" />
+    
+   
+    <Button
+        android:id="@+id/btn_dianzhuangappoint_fail"
+        style="@style/btn_green_big"
+        android:layout_marginBottom="60dp"
+        android:text="重新提交订单" />
+    
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jeremyfeinstein.slidingmenu.lib.SlidingMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/slidingmenumain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" />
+
+     <!--
+        sliding:behindOffset="@dimen/YOUR_OFFSET"
+        sliding:behindScrollScale="@dimen/YOUR_SCALE"
+        sliding:behindWidth="@dimen/YOUR_WIDTH"
+        sliding:fadeDegree="float"
+        sliding:fadeEnabled="true|false"
+        sliding:selectorDrawable="@drawable/YOUR_SELECTOR"
+        sliding:selectorEnabled="true|false"
+        sliding:shadowDrawable="@drawable/YOUR_SHADOW"
+        sliding:shadowWidth="@dimen/YOUR_SHADOW_WIDTH"
+        sliding:touchModeAbove="margin|fullscreen"
+        sliding:viewAbove="@layout/YOUR_ABOVE_VIEW"
+        sliding:viewBehind="@layout/YOUR_BEHIND_BEHIND"
+    -->

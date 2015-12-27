@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="@dimen/h290"
+        android:layout_height="@dimen/h50"
+        android:background="@drawable/dialog_title_waterblue_round" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/pay_tips"
+            android:textColor="@color/white"
+            android:textSize="@dimen/w20" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h6"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_baifubao"
+        android:layout_width="@dimen/h290"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/h10">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h7"
+            android:layout_alignParentTop="true"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h40"
+            android:text="充电币支付已成功"
+            android:textColor="@color/black"
+            android:textSize="@dimen/w25"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h8"
+            android:layout_marginBottom="@dimen/h60"
+            android:text="正在进入第三方支付页面"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/w12"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

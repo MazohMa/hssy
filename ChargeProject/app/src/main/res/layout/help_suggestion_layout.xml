@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_simple_layout" />
+
+    <include layout="@layout/line_horizontal_white_small" />
+
+    <RelativeLayout
+        android:id="@+id/pile_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/water_blue"
+        android:padding="@dimen/w10" >
+
+        <TextView
+            android:id="@+id/call_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/h5"
+            android:paddingLeft="@dimen/w10"
+            android:text="客服热线"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/call_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/call_line"
+            android:padding="@dimen/h5"
+            android:text="400-655-6620"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/call_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/h5"
+            android:src="@drawable/help_icon_phone" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/w10"
+        android:paddingLeft="@dimen/w15"
+        android:paddingTop="@dimen/w15"
+        android:text="常见问题"
+        android:textColor="@color/bg_grey"
+        android:background="@color/line_grey_back"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/bg_white"
+        android:divider="@drawable/line1"
+        android:dividerPadding="@dimen/h5"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:showDividers="middle|beginning|end" >
+
+        <RelativeLayout
+            android:id="@+id/first_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/h10"
+            android:paddingBottom="@dimen/h10"
+            android:background="@drawable/select_grey_white_click" >
+
+            <TextView
+                android:id="@+id/first"
+                style="@style/help_suggestion_menu_btn"
+                android:layout_alignParentLeft="true"
+                android:text="1、"
+                android:textColor="@color/bg_grey" />
+
+            <TextView
+                android:id="@+id/btn_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/first"
+                android:text="为什么我收不到验证手机号码的短信？"
+                android:textSize="15dp"
+                android:textColor="@color/bg_grey" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w10"
+                android:background="@drawable/icon_next"
+                android:padding="@dimen/h8" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/h10"
+            android:paddingBottom="@dimen/h10"
+            android:background="@drawable/select_grey_white_click" >
+
+            <TextView
+                android:id="@+id/second"
+                style="@style/help_suggestion_menu_btn"
+                android:layout_alignParentLeft="true"
+                android:text="2、"
+                android:textColor="@color/bg_grey" />
+
+            <TextView
+                android:id="@+id/btn_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/second"
+                android:text="App上显示的充电价格是什么费用？"
+                android:textSize="15dp"
+                android:textColor="@color/bg_grey" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w10"
+                android:background="@drawable/icon_next"
+                android:padding="@dimen/h8" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/third_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/h10"
+            android:paddingBottom="@dimen/h10"
+            android:background="@drawable/select_grey_white_click" >
+
+            <TextView
+                android:id="@+id/third"
+                style="@style/help_suggestion_menu_btn"
+                android:layout_alignParentLeft="true"
+                android:text="3、"
+                android:textColor="@color/bg_grey" />
+
+            <TextView
+                android:id="@+id/btn_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/third"
+                android:text="在哪里可以快速找到充电点？"
+                android:textSize="15dp"
+                android:textColor="@color/bg_grey" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w10"
+                android:background="@drawable/icon_next"
+                android:padding="@dimen/h8" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fouth_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/h10"
+            android:paddingBottom="@dimen/h10"
+            android:background="@drawable/select_grey_white_click" >
+
+            <TextView
+                android:id="@+id/fouth"
+                style="@style/help_suggestion_menu_btn"
+                android:layout_alignParentLeft="true"
+                android:text="4、"
+                android:textColor="@color/bg_grey" />
+
+            <TextView
+                android:id="@+id/btn_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/fouth"
+                android:text="为什么我不能同时预约两个电桩？"
+                android:textSize="15dp"
+                android:textColor="@color/bg_grey" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w10"
+                android:background="@drawable/icon_next"
+                android:padding="@dimen/h8" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fifth_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/h10"
+            android:paddingBottom="@dimen/h10"
+            android:background="@drawable/select_grey_white_click" >
+
+            <TextView
+                android:id="@+id/fifth"
+                style="@style/help_suggestion_menu_btn"
+                android:layout_alignParentLeft="true"
+                android:text="5、"
+                android:textColor="@color/bg_grey" />
+
+            <TextView
+                android:id="@+id/btn_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/fifth"
+                android:text="充电连接方式有哪些？"
+                android:textSize="15dp"
+                android:textColor="@color/bg_grey" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w10"
+                android:background="@drawable/icon_next"
+                android:padding="@dimen/h8" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sixth_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/h10"
+            android:paddingBottom="@dimen/h10"
+            android:background="@drawable/select_grey_white_click" >
+
+            <TextView
+                android:id="@+id/sixth"
+                style="@style/help_suggestion_menu_btn"
+                android:layout_alignParentLeft="true"
+                android:text="6、"
+                android:textColor="@color/bg_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/sixth"
+                android:text="我是否只能在预约的充电时段内连接充电桩启动充电？"
+                android:layout_marginRight="@dimen/h32"
+                android:textSize="15dp"
+                android:textColor="@color/bg_grey" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w10"
+                android:background="@drawable/icon_next"
+                android:padding="@dimen/h8" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/seventh_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/h10"
+            android:paddingBottom="@dimen/h10"
+            android:background="@drawable/select_grey_white_click" >
+
+            <TextView
+                android:id="@+id/seventh"
+                style="@style/help_suggestion_menu_btn"
+                android:layout_alignParentLeft="true"
+                android:text="7、"
+                android:textColor="@color/bg_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/seventh"
+                android:text="为什么我充电完成后订单状态没有改变？"
+                android:textSize="15dp"
+                android:textColor="@color/bg_grey" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w10"
+                android:background="@drawable/icon_next"
+                android:padding="@dimen/h8" />
+        </RelativeLayout>
+    
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h5"
+            android:background="@color/line_grey_back" />
+   
+
+        <RelativeLayout
+            android:id="@+id/eighth_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/h10"
+            android:paddingBottom="@dimen/h10"
+            android:background="@drawable/select_grey_white_click" >
+
+            <TextView
+                android:id="@+id/eighth"
+                style="@style/help_suggestion_menu_btn"
+                android:layout_alignParentLeft="true"
+                android:text="8、"
+                android:textColor="@color/bg_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/eighth"
+                android:text="其他问题？"
+                android:textSize="15dp"
+                android:textColor="@color/bg_grey" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/w10"
+                android:background="@drawable/icon_next"
+                android:padding="@dimen/h8" />
+        </RelativeLayout>
+</LinearLayout>
+</LinearLayout>

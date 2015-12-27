@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_simple_layout" />
+
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_green"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_distance"
+            style="@style/tab_line_white"
+            android:checked="true"
+            android:text="附近充电桩" />
+
+        <RadioButton
+            android:id="@+id/rb_type"
+            style="@style/tab_line_white"
+            android:text="充电桩类型" />
+
+        <RadioButton
+            android:id="@+id/rb_share_time"
+            style="@style/tab_line_white"
+            android:text="分享时段" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/h15"
+        android:background="@drawable/line_horizontal_grey_small" />
+
+    <com.xpg.hssy.view.PageView
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h90"
+        android:background="@drawable/bottom_bt_bg" >
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="@style/btn_green_big"
+            android:layout_centerVertical="true"
+            android:text="@string/complete" />
+    </RelativeLayout>
+
+</LinearLayout>

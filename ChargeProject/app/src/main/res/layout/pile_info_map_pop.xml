@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pile_pop_lr"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <include layout="@layout/line_horizontal_grey_small" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h160"
+        android:background="@color/white"
+        android:paddingTop="@dimen/h15" >
+
+        <LinearLayout
+            android:id="@+id/lr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/w10"
+            android:layout_marginRight="@dimen/w10"
+            android:divider="@drawable/line_vertical_grey_small"
+            android:dividerPadding="@dimen/w5"
+            android:orientation="horizontal"
+            android:showDividers="middle" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/w15"
+                android:layout_marginTop="@dimen/h5"
+                android:layout_weight="7"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="三优电桩"
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/w16" />
+
+            <Button
+                android:id="@+id/btn_pile_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w15"
+                android:layout_weight="2"
+                android:background="@drawable/shape_water_blue_round_middle"
+                android:gravity="center"
+                android:paddingBottom="@dimen/w5"
+                android:paddingLeft="@dimen/w10"
+                android:paddingRight="@dimen/w10"
+                android:paddingTop="@dimen/w5"
+                android:text="可预约"
+                android:textColor="@color/white"
+                android:textSize="@dimen/w13" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lr"
+            android:layout_marginLeft="@dimen/w10"
+            android:layout_marginTop="@dimen/h2"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="2"
+            android:text="海珠区江南大道中325号首层之一xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/h13" />
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_location"
+            android:layout_marginLeft="@dimen/w10"
+            android:layout_marginTop="@dimen/h4"
+            android:drawableLeft="@drawable/icon_map"
+            android:drawablePadding="@dimen/h3"
+            android:gravity="center"
+            android:text="距离1.2公里"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/h13" />
+
+        <ImageView
+            android:id="@+id/iv_current_type"
+            android:layout_width="@dimen/h18"
+            android:layout_height="@dimen/h18"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv_distance"
+            android:layout_below="@id/tv_location"
+            android:layout_marginRight="@dimen/w10"
+            android:gravity="center"
+            android:src="@drawable/icon_direct" />
+
+        <ImageView
+            android:id="@+id/iv_own_type"
+            android:layout_width="@dimen/h18"
+            android:layout_height="@dimen/h18"
+            android:layout_alignTop="@id/iv_current_type"
+            android:layout_marginRight="@dimen/h5"
+            android:layout_toLeftOf="@+id/iv_current_type"
+            android:gravity="center"
+            android:src="@drawable/icon_private" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/h48"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/pile_info_map_pop_bottom_color" >
+
+            <View
+                android:id="@+id/top_splite_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentTop="true"
+                android:background="@color/pile_info_map_pop_splite_line_color" />
+
+            <LinearLayout
+                android:id="@+id/ll_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/top_splite_line" >
+
+                <Button
+                    android:id="@+id/btn_navigation"
+                    android:layout_width="@dimen/w100"
+                    android:layout_height="match_parent"
+                    android:background="@color/water_blue"
+                    android:drawableLeft="@drawable/icon_navigation"
+                    android:padding="@dimen/h10"
+                    android:text="@string/navigation"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_grade_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/h2"
+                android:gravity="bottom|left"
+                android:paddingLeft="@dimen/w8"
+                android:text="4.5"
+                android:textColor="@color/text_wather_blue"
+                android:textSize="@dimen/h13" />
+
+            <LinearLayout
+                android:id="@+id/eva_star_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/ll_price"
+                android:layout_alignTop="@+id/ll_price"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w6"
+                android:layout_toRightOf="@id/tv_grade_data"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/star_rank_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/w3"
+                    android:src="@drawable/booking_info_favourite_3" />
+
+                <ImageView
+                    android:id="@+id/star_rank_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/w3"
+                    android:src="@drawable/booking_info_favourite_3" />
+
+                <ImageView
+                    android:id="@+id/star_rank_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/w3"
+                    android:src="@drawable/booking_info_favourite_3" />
+
+                <ImageView
+                    android:id="@+id/star_rank_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/w3"
+                    android:src="@drawable/booking_info_favourite_3" />
+
+                <ImageView
+                    android:id="@+id/star_rank_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/booking_info_favourite_3" />
+            </LinearLayout>
+
+            <!-- <View -->
+            <!-- android:layout_width="1px" -->
+            <!-- android:layout_height="match_parent" -->
+            <!-- android:layout_centerInParent="true" -->
+            <!-- android:background="@color/pile_info_map_pop_splite_line_color" /> -->
+
+            <TextView
+                android:layout_marginLeft="@dimen/w10"
+                android:id="@+id/tv_station_info"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/h13"
+                android:text="直流桩xxx个，交流桩xxx个" />
+
+            <LinearLayout
+                android:id="@+id/ll_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w12"
+                android:layout_marginRight="@dimen/w12"
+                android:layout_toLeftOf="@id/ll_bottom"
+                android:gravity="bottom|left"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/tv_price_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="￥"
+                    android:textColor="@color/text_wather_blue"
+                    android:textSize="@dimen/h13" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="0.6"
+                    android:textColor="@color/text_wather_blue"
+                    android:textSize="@dimen/h18" />
+
+                <TextView
+                    android:id="@+id/tv_price_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="/kWh"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/h12" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

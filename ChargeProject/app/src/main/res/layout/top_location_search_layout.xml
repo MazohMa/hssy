@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/top_height"
+              android:background="@color/water_blue">
+
+    <ImageButton
+        android:id="@+id/btn_left"
+        android:layout_width="@dimen/h40"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:scaleType="center"
+        android:src="@drawable/back_bt"
+        android:visibility="visible"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/h6"
+        android:layout_marginTop="@dimen/h6"
+        android:layout_weight="3"
+        android:background="@drawable/input_bg">
+
+        <TextView
+            android:id="@+id/tv_find_type"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/w10"
+            android:gravity="center_vertical|left"
+            android:text="@string/find_address"
+            android:textColor="@color/black"
+            android:textSize="@dimen/h16"/>
+
+        <ImageView
+            android:id="@+id/iv_pull_down"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/w4"
+            android:layout_marginRight="@dimen/w4"
+            android:layout_toRightOf="@id/tv_find_type"
+            android:src="@drawable/triangle_down_gray"/>
+
+        <ImageView
+            android:id="@+id/iv_icon_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/w4"
+            android:src="@drawable/emotionstore_progresscancelbtn"/>
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/iv_icon_delete"
+            android:layout_toRightOf="@id/iv_pull_down"
+            android:background="@color/transparent"
+            android:gravity="center|left"
+            android:hint="@string/search_input"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textSize="@dimen/h16"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="@dimen/h40"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:scaleType="center"
+        android:visibility="invisible"/>
+
+</LinearLayout>

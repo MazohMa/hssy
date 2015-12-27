@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/h60"
+    android:background="@color/bg_white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="@dimen/h10">
+
+    <EditText
+        android:id="@+id/ed_group_discuss"
+        android:layout_width="@dimen/h300"
+        android:layout_height="@dimen/h40"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/h5"
+        android:layout_marginRight="@dimen/h10"
+        android:layout_toLeftOf="@+id/btn_repeat"
+        android:background="@null"
+        android:focusable="true"
+        android:hint="@string/show_your_mind"
+        android:state_enabled="true"
+        android:state_focused="true"
+        android:textSize="@dimen/h12"/>
+
+    <Button
+        android:id="@+id/btn_repeat"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/h40"
+        android:layout_alignParentRight="true"
+        android:text="回复"
+        android:textColor="@color/water_blue" />
+
+    <View
+        android:layout_width="@dimen/h300"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/h5"
+        android:layout_marginRight="@dimen/h10"
+        android:layout_toLeftOf="@+id/btn_repeat"
+        android:background="@color/water_blue" />
+</RelativeLayout>

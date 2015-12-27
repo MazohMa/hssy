@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/h290"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_title_waterblue_round"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="@dimen/h290"
+            android:layout_height="@dimen/h50">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:padding="@dimen/h5"
+                android:text="title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/w20"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h8"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="@dimen/h290"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="@dimen/h50" >
+
+            <ListView
+                android:id="@+id/lv_content"
+                android:layout_width="@dimen/h290"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:divider="@drawable/line2"
+                android:listSelector="@color/full_alpha">
+            </ListView>
+        </RelativeLayout>
+        <View
+            android:layout_width="@dimen/h290"
+            android:layout_height="@dimen/h8"
+            android:background="@drawable/dialog_bottom_white_round"
+            android:orientation="vertical" >
+        </View>
+    </LinearLayout>
+</LinearLayout>

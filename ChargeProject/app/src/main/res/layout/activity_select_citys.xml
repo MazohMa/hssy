@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_simple_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/water_blue"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <!--不要让EditText默认获取焦点-->
+        <requestFocus/>
+
+        <com.xpg.hssy.view.EditDeleteText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h40"
+            android:layout_margin="@dimen/h6"
+            android:layout_marginRight="@dimen/h40"
+            android:background="@drawable/input_bg"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawableRight="@drawable/emotionstore_progresscancelbtn"
+            android:gravity="center|left"
+            android:hint="@string/find_city"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="@dimen/h10"
+            android:paddingRight="@dimen/h10"
+            android:singleLine="true"
+            android:textSize="@dimen/h16" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.hb.views.PinnedSectionListView
+            android:id="@+id/pslv_citys"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/ll_sections_side_bar"
+            android:background="@color/white"
+            android:clickable="true"
+            android:divider="@null"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:scrollbars="none" />
+
+        <com.xpg.hssy.view.SideBarView
+            android:id="@+id/ll_sections_side_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/h45"
+            android:layout_marginTop="@dimen/h45"
+            android:background="@color/white"
+            android:focusable="false"
+            android:gravity="center"
+            android:orientation="vertical" >
+        </com.xpg.hssy.view.SideBarView>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_simple_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/pay_success" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/h10"
+            android:text="@string/register_succeed"
+            android:textColor="@color/text_gray_dark"
+            android:textSize="@dimen/h40" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/register_succeed_tips"
+            android:textColor="@color/text_gray_dark"
+            android:textSize="@dimen/h16" />
+
+        <Button
+            android:id="@+id/btn_charge"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h50"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/w40"
+            android:layout_marginRight="@dimen/w40"
+            android:layout_marginTop="@dimen/h80"
+            android:background="@drawable/shape_btn_orange"
+            android:padding="10dp"
+            android:text="@string/charge_car"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/h20" />
+    </LinearLayout>
+
+</LinearLayout>

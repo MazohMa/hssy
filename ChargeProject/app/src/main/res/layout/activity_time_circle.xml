@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_simple_layout" />
+
+    <LinearLayout
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h40"
+            android:text="拖动圆点设置空闲时间段"
+            android:textColor="#A3A9A5"
+            android:textSize="@dimen/w14" />
+
+        <com.xpg.hssy.view.TimeCircleView
+            android:id="@+id/tcv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/h20" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#22ffffff" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/h25"
+            android:paddingLeft="@dimen/w15"
+            android:paddingRight="@dimen/w15"
+            android:paddingTop="@dimen/h25" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="充电时间长"
+                android:textColor="@color/white"
+                android:textSize="@dimen/w14" />
+
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="7h30m"
+                android:textColor="@color/text_wather_blue"
+                android:textSize="@dimen/w18" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_duration"
+                android:layout_marginTop="@dimen/h15" >
+
+                <ImageView
+                    android:id="@+id/iv_seekbar_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/tiao_bg1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/iv_seekbar_bg"
+                    android:layout_below="@+id/iv_seekbar_bg"
+                    android:text="0h"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/w12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/iv_seekbar_bg"
+                    android:layout_below="@+id/iv_seekbar_bg"
+                    android:text="10h"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/w12" />
+
+                <SeekBar
+                    android:id="@+id/sb_duration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="20"
+                    android:paddingLeft="@dimen/seekbar_padding"
+                    android:paddingRight="@dimen/seekbar_padding"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/time_period_bar"
+                    android:thumb="@drawable/tiao_bg3" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#22ffffff" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/h20"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg1"
+                android:text="重置"
+                android:textSize="@dimen/h17"
+                android:textColor="@color/text_wather_blue" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg1"
+                android:text="确定"
+                android:textSize="@dimen/h17"
+                android:textColor="@color/text_wather_blue" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

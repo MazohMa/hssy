@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:listViewAttr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/yuyue_charge_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/order_none" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="您还没有相关的订单！"
+            android:textColor="@color/grey_dark" />
+
+        <Button
+            android:id="@+id/btn_yuyue_charge"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="@dimen/w100"
+            android:layout_marginRight="@dimen/w100"
+            android:layout_marginTop="@dimen/h100"
+            android:background="@drawable/shape_orange_small"
+            android:text="马上预约"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/h16" />
+    </LinearLayout>
+
+    <com.xpg.hssy.view.DropDownListView
+        android:id="@+id/myorder_lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@drawable/line1"
+        android:dividerHeight="8dp"
+        android:drawSelectorOnTop="false"
+        listViewAttr:isAutoLoadOnBottom="true"
+        listViewAttr:isDropDownStyle="false"
+        listViewAttr:isOnBottomStyle="true" />
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xpg.hssy.view.PilesShowInfoViews xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/w220"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_chart_pop"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/w15"
+    android:paddingRight="@dimen/w15" >
+
+    <LinearLayout
+        android:id="@+id/listlinear"
+        android:layout_width="@dimen/w220"
+        android:layout_height="@dimen/h85"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/h2"
+        android:layout_marginTop="@dimen/h2"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/list_view_grey"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+
+</com.xpg.hssy.view.PilesShowInfoViews>

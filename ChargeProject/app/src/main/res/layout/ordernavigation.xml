@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/order_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_map_pole_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/white_bg_with_shadow"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/map_pole_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_map_pole_distance"
+            android:text="@string/tag_distance"
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/h14" />
+
+        <TextView
+            android:id="@+id/tv_map_pole_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/w10"
+            android:layout_toLeftOf="@id/map_pole_distance"
+            android:text="电桩A"
+            android:textColor="@color/black"
+            android:textSize="@dimen/h18" />
+
+        <TextView
+            android:id="@+id/tv_map_pole_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0.8公里"
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/h14" />
+
+        <TextView
+            android:id="@+id/map_pole_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_map_pole_name"
+            android:layout_marginTop="@dimen/h10"
+            android:text="@string/tag_position"
+            android:textColor="@color/black"
+            android:textSize="@dimen/h14" />
+
+        <TextView
+            android:id="@+id/tv_map_pole_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/map_pole_position"
+            android:layout_toRightOf="@id/map_pole_position"
+            android:text="广州市先烈中路102号"
+            android:textColor="@color/black"
+            android:textSize="@dimen/h14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/water_blue"
+        android:paddingBottom="@dimen/h10"
+        android:paddingTop="@dimen/h10" >
+
+        <ImageButton
+            android:id="@+id/btn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w15"
+            android:background="@drawable/back_bt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="电桩位置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/w20" />
+
+        <Button
+            android:id="@+id/btn_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/w15"
+            android:background="#00000000"
+            android:text="地图导航"
+            android:textColor="@color/white"
+            android:textSize="@dimen/w20" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/rg_tab_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/water_blue"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/id_tab_top_all"
+            style="@style/tab_line_white_new"
+            android:checked="true"
+            android:text="全部" />
+
+        <RadioButton
+            android:id="@+id/id_tab_top_unconfirm"
+            style="@style/tab_line_white_new"
+            android:text="待确认" />
+
+        <RadioButton
+            android:id="@+id/id_tab_top_unpay"
+            style="@style/tab_line_white_new"
+            android:text="待付款" />
+
+        <RadioButton
+            android:id="@+id/id_tab_top_complete"
+            style="@style/tab_line_white_new"
+            android:text="已完成" />
+
+        <RadioButton
+            android:id="@+id/id_tab_top_unused"
+            style="@style/tab_line_white_new"
+            android:text="已过期" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/water_blue" >
+
+        <ImageView
+            android:id="@+id/imageview_tiao"
+            android:layout_width="100dp"
+            android:layout_height="@dimen/h3"
+            android:background="@drawable/tab_line_white_newin" />
+    </RelativeLayout>
+
+    <com.xpg.hssy.view.PageView
+        android:id="@+id/id_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

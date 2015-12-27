@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/h15"
+        android:paddingTop="@dimen/h15" >
+
+        <CheckBox
+            android:id="@+id/cb_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:button="@drawable/switch_press_selector"
+            android:checked="false"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/ll_share_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/h20"
+            android:paddingRight="@dimen/h20" >
+
+            <TextView
+                android:id="@+id/time_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:paddingBottom="5dp"
+                android:text="时间段"
+                android:textColor="@color/water_blue" />
+
+            <ImageButton
+                android:id="@+id/ib_left_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_next"
+                android:padding="@dimen/h8" />
+
+            <TextView
+                android:id="@+id/tv_share_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/time_desc"
+                android:gravity="left"
+                android:text="09:00 - 11:30"
+                android:textColor="@color/text_gray_dark"
+                android:textSize="@dimen/h22"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_share_weekly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tv_share_time"
+                android:gravity="left"
+                android:text="周一   周二   周三   周四   周五   周六   周日"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/h12" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line_horizontal_grey_small" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pay_success" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="三优电桩预约成功！"
+        android:layout_marginTop="@dimen/h35"
+        android:textSize="@dimen/h30"
+        android:textColor="@color/text_white" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请等待业主的确认！"
+        android:layout_marginTop="@dimen/h10"
+        android:textSize="@dimen/h16"
+        android:textColor="@color/text_white" />
+    
+    <Button
+        android:id="@+id/btn_order_success"
+        android:layout_marginTop="@dimen/h90"
+        style="@style/btn_green_big"
+        android:text="查看我的订单" />
+    
+
+</LinearLayout>

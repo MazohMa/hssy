@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_simple_layout" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/w10"
+        android:paddingLeft="@dimen/w15"
+        android:paddingTop="@dimen/w10"
+        android:text="常见问题"
+        android:visibility="gone"
+        android:textColor="@color/bg_grey"
+        android:textSize="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ddd"/>
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:divider="@null" />
+
+
+</LinearLayout>

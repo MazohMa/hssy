@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/bg_white"
+              android:orientation="vertical">
+    <include layout="@layout/top_next_for_tv_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h150"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:id="@+id/ed_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/h15"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="left"
+            android:hint="@string/show_your_mind"
+            android:maxLength="140"
+            android:paddingLeft="@dimen/w10"
+            android:textSize="@dimen/w15">
+        </EditText>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_num_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:text="0/140"
+        android:textSize="@dimen/w11"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/line_grey_back"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:divider="@drawable/line1"
+        android:dividerPadding="@dimen/h5"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:showDividers="middle|beginning|end">
+
+        <GridView
+            android:id="@+id/gView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:listSelector="#00000000"
+            android:numColumns="5"
+            android:padding="@dimen/h5"
+            android:verticalSpacing="@dimen/h5"
+            android:scrollbars="none">
+        </GridView>
+    </LinearLayout>
+</LinearLayout>

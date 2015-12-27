@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:listViewAttr="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_white"
+              android:orientation="vertical">
+        <com.xpg.hssy.view.RefreshListView
+            android:id="@+id/rf_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:divider="@null"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="#00000000"
+            listViewAttr:isAutoLoadOnBottom="true"
+            listViewAttr:isDropDownStyle="true"
+            listViewAttr:isOnBottomStyle="true"/>
+</LinearLayout>

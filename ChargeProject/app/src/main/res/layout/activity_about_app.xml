@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="center"
+              android:background="@color/bg_white"
+              android:orientation="vertical"
+              android:paddingTop="20dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/h12"
+        android:layout_marginTop="@dimen/h50"
+        android:src="@drawable/logo_about"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/share_title"
+        android:textColor="@color/grey_dark"
+        android:textSize="@dimen/w22"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/share_second_title"
+        android:textColor="@color/hint_gray"
+        android:textSize="@dimen/w15"/>
+
+    <ImageView
+        android:id="@+id/iv_qr_code"
+        android:layout_width="@dimen/h220"
+        android:layout_height="@dimen/h220"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/h20"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/download_qr_code_text"
+        android:textColor="@color/grey_dark"
+        android:textSize="@dimen/w12"/>
+
+    <Button
+        android:id="@+id/topay"
+        android:layout_width="@dimen/w150"
+        android:layout_height="@dimen/h45"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_water_blue_small"
+        android:gravity="center"
+        android:text="求打赏"
+        android:textColor="@color/text_white"
+        android:textSize="22dp"/>
+</LinearLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h5"
+        android:background="@drawable/shape_gradient_horizontal"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_pile_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/h8"
+        android:paddingTop="@dimen/h10">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w10"
+            android:layout_marginRight="@dimen/w15"
+            android:layout_marginTop="@dimen/h5"
+            android:layout_weight="7"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="三优电桩"
+            android:textColor="@color/text_gray_dark"
+            android:textSize="@dimen/w16"/>
+
+        <ImageView
+            android:id="@+id/iv_pile_image"
+            android:layout_width="@dimen/w80"
+            android:layout_height="@dimen/w80"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginLeft="@dimen/w4"
+            android:layout_marginRight="@dimen/w4"
+            android:scaleType="fitXY"
+            android:src="@drawable/hssy_default"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_pile_image"
+            android:layout_alignLeft="@id/iv_pile_image"
+            android:layout_alignRight="@id/iv_pile_image"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/h10"
+            android:background="#99000000"
+            android:gravity="center_horizontal"
+            android:text="0.6"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h13"/>
+
+        <TextView
+            android:id="@+id/tv_pile_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginLeft="@dimen/w10"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="type"
+            android:textColor="@color/sky_blue"
+            android:textSize="@dimen/h12"/>
+
+
+        <TextView
+            android:id="@+id/tv_idle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_toRightOf="@id/tv_pile_type"
+            android:layout_alignBaseline="@id/tv_pile_type"
+            android:layout_marginLeft="@dimen/w15"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="空闲"
+            android:textColor="@color/sky_blue"
+            android:textSize="@dimen/h12"/>
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_pile_type"
+            android:layout_marginLeft="@dimen/w10"
+            android:layout_marginTop="@dimen/h1"
+            android:layout_toLeftOf="@+id/iv_pile_image"
+            android:layout_toStartOf="@+id/iv_pile_image"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:text="海珠区江南大道中325号首层之一xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/h13"/>
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tv_location"
+            android:layout_alignLeft="@+id/tv_location"
+            android:layout_alignRight="@+id/tv_location"
+            android:layout_alignStart="@+id/tv_location"
+            android:layout_below="@id/tv_location"
+            android:layout_marginTop="@dimen/h4"
+            android:drawablePadding="@dimen/h3"
+            android:gravity="center_vertical"
+            android:text="距离1.2公里"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/h13"/>
+
+        <TextView
+            android:id="@+id/tv_grade_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_distance"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/w10"
+            android:gravity="bottom|left"
+            android:text="4.5"
+            android:textColor="@color/text_wather_blue"
+            android:textSize="@dimen/h13"
+            android:visibility="gone"
+            />
+
+        <com.xpg.hssy.view.EvaluateColumn
+            android:id="@+id/eva_star_point"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/h20"
+            android:layout_below="@id/tv_distance"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/w10"
+            android:layout_marginTop="@dimen/h2"
+            android:layout_toRightOf="@id/tv_grade_data"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:evaluate="0"
+            app:maxCount="5"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/h54"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/rl_pile_info"
+        android:background="@color/pile_info_map_pop_bottom_color">
+
+        <View
+            android:id="@+id/top_splite_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/pile_info_map_pop_splite_line_color"/>
+
+        <LinearLayout
+            android:id="@+id/ll_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/top_splite_line"
+            android:layout_marginBottom="@dimen/h10"
+            android:layout_marginTop="@dimen/h6"
+            android:paddingLeft="@dimen/w5"
+            android:paddingRight="@dimen/w5">
+
+            <Button
+                android:id="@+id/btn_book_charge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/w5"
+                android:layout_marginRight="@dimen/w5"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_water_blue_light_gray_round_small"
+                android:text="@string/book_charge"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h17"
+                android:visibility="visible"/>
+
+            <Button
+                android:id="@+id/btn_navigation"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/w5"
+                android:layout_marginRight="@dimen/w5"
+                android:layout_weight="1"
+                android:background="@drawable/shape_sky_blue_round_small"
+                android:text="@string/navigation"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h17"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_station_info"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginLeft="@dimen/w10"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:text="直流桩xxx个，交流桩xxx个"-->
+        <!--android:textColor="@color/text_gray"-->
+        <!--android:textSize="@dimen/h13"/>-->
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="@dimen/h290"
+        android:layout_height="@dimen/h50"
+        android:background="@drawable/dialog_title_waterblue_round">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="@dimen/h5"
+            android:text="温馨提示"
+            android:textColor="@color/white"
+            android:textSize="@dimen/w20"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h6"
+            android:layout_alignParentBottom="true"
+            android:background="#F5F4F3"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/h290"
+        android:layout_height="@dimen/h140"
+        android:background="@drawable/linearlayout_round"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h6"
+                android:layout_alignParentTop="true"
+                android:background="#F5F4F3"
+                />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:maxLines="4"
+                android:ellipsize="end"
+                android:text="本次充电已完成，尚未付款 \n 充电信息已保存到&apos;我的订单&apos;里"
+                android:textColor="@color/text_menu"
+                android:textSize="@dimen/w15">
+            </TextView>
+
+            <Button
+                android:id="@+id/btn_ok"
+                style="@style/btn_orange_small"
+                android:layout_width="@dimen/w110"
+                android:layout_height="@dimen/h45"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/h4"
+                android:gravity="center"
+                android:text="我知道了"
+                android:textColor="@color/white"
+                android:textSize="@dimen/w18"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

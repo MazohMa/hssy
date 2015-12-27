@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    android:background="@color/bg_grey"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/id_Dianzhuangsettingfragment_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_grey_click"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/showPopWindow_year"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="0.5"
+            android:background="#3cac13"
+            android:drawableRight="@drawable/pull_down_icon"
+            android:text="2014年" />
+
+        <Button
+            android:id="@+id/showPopWindow_month"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="0.5"
+            android:background="#3cac13"
+            android:drawableRight="@drawable/pull_down_icon"
+            android:text="选择月份" />
+
+        <Button
+            android:id="@+id/showPopWindow_user"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="0.5"
+            android:background="#3cac13"
+            android:drawableRight="@drawable/pull_down_icon"
+            android:text="全部用户" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/dianzhuangsetting_yuyue_all_lv"
+        android:layout_width="wrap_content"
+        android:layout_height="302dp"
+        android:layout_weight="1.03" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="89dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_bt_bg"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/bt_mashangdisplays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/shape_green"
+            android:padding="10dp"
+            android:text="统计电费金额"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/h16" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include layout="@layout/line_horizontal_grey_small" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/line_horizontal_grey_small"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/h15" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/h5" >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/device_release_icon" />
+
+            <TextView
+                android:id="@+id/tv_pole_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/h10"
+                android:layout_weight="1"
+                android:text="三优电庄B"
+                android:textColor="@color/text_green"
+                android:textSize="@dimen/h18" />
+
+            <TextView
+                android:id="@+id/tv_share_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/h20"
+                android:text="已发布"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/h15" />
+        </LinearLayout>
+
+        <include layout="@layout/line_horizontal_grey_small" />
+
+        <LinearLayout
+            android:id="@+id/lv_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/h15" >
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_green"
+                android:text="更新发布"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/h16" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/h10"
+                android:layout_toLeftOf="@id/btn_update"
+                android:background="@drawable/shape_btn_orange"
+                android:text="取消发布"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/h16" />
+
+            <Button
+                android:id="@+id/btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_green"
+                android:paddingLeft="@dimen/h56"
+                android:paddingRight="@dimen/h56"
+                android:text="马上发布"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/h16"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/line_horizontal_grey_small" />
+
+</LinearLayout>

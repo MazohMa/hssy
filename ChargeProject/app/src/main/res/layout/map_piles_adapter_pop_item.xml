@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_linearlayout_back_status" >
+
+    <ImageView
+        android:id="@+id/img_pile"
+        android:layout_width="@dimen/w40"
+        android:layout_height="@dimen/w40"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_public" />
+    
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/img_pile"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/w2"
+        android:paddingRight="@dimen/w2"
+        android:singleLine="true"
+        android:layout_marginRight="@dimen/w2"
+        android:text="三优电桩水水水水水水水水水水dsdsdsd水水sdsdsdsdsdssssssssssdsdsds水水水水水水水"
+        android:textColor="@color/text_gray" />
+
+    <ImageView
+        android:id="@+id/iv_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/time_icon_arrow_right" 
+        android:visibility="invisible"/>
+
+</RelativeLayout>

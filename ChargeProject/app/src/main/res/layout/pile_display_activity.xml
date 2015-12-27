@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginBottom="-3dp"
+        android:layout_alignParentTop="true" >
+        
+        <include layout="@layout/top_layout2"/>
+       </RelativeLayout> -->
+        
+
+    <RadioGroup
+        android:id="@+id/rg_pager_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h65"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="-3dp"
+        android:layout_marginTop="-3dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="#66CC00"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_charge_tab"
+            android:checked="true"
+            style="@style/main_tab"
+           android:text="设置" 
+           android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/rb_search_tab"
+            style="@style/main_tab"
+             android:text="发布"  />
+
+        <RadioButton
+            android:id="@+id/rb_me_tab"
+            style="@style/main_tab"
+            android:text="预约"  />
+        
+        <RadioButton
+            android:id="@+id/rb_display_tab"
+            style="@style/main_tab"
+            
+             android:text="记录" />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rg_pager_tab">
+    </android.support.v4.view.ViewPager>
+
+
+</RelativeLayout>

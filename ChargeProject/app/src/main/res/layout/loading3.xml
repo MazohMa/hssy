@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loading3" >
+
+    <Button
+        android:id="@+id/jump_to_main"
+        android:layout_width="@dimen/w180"
+        android:layout_height="@dimen/h50"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/h80"
+        android:background="@drawable/loading3_button_bg"
+        android:text="马上体验"
+        android:textSize="25dp"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

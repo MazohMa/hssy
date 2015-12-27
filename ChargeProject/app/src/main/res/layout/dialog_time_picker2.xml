@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="@dimen/h290"
+        android:layout_height="@dimen/h50"
+        android:background="@drawable/dialog_title_waterblue_round" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="@dimen/h5"
+            android:text="设备列表"
+            android:textColor="@color/white"
+            android:textSize="@dimen/w20" />
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/connect_button_cancel" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h6"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/h290"
+        android:layout_height="@dimen/h220"
+        android:background="@drawable/linearlayout_round"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h175"
+            android:background="@color/white" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <kankan.wheel.widget.WheelView
+                    android:id="@+id/wv_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_split"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textColor="@color/water_blue"
+                    android:textSize="@dimen/w20" />
+
+                <kankan.wheel.widget.WheelView
+                    android:id="@+id/wv_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:text="取消定时"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/w18" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="@dimen/h50"
+                    android:background="@color/gray" />
+
+                <Button
+                    android:id="@+id/btn_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:text="@string/ok"
+                    android:textColor="@color/water_blue"
+                    android:textSize="@dimen/w18" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

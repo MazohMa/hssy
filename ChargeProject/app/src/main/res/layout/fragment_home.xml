@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- title bar -->
+
+    <include layout="@layout/top_next_layout" />
+
+    <RadioGroup
+        android:id="@+id/rg_tab_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/water_blue"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/id_tab_top_all"
+            style="@style/tab_line_white_new_outside"
+            android:checked="true"
+            android:text="设置" />
+
+        <RadioButton
+            android:id="@+id/id_tab_top_unconfirm"
+            style="@style/tab_line_white_new_outside"
+            android:text="发布" />
+
+        <RadioButton
+            android:id="@+id/id_tab_top_unpay"
+            style="@style/tab_line_white_new_outside"
+            android:text="分享" />
+
+        <RadioButton
+            android:id="@+id/id_tab_top_complete"
+            style="@style/tab_line_white_new_outside"
+            android:text="记录" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rl_tiao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/water_blue" >
+
+        <ImageView
+            android:id="@+id/imageview_tiao"
+            android:layout_width="100dp"
+            android:layout_height="@dimen/h3"
+            android:background="@drawable/tab_line_white_newin" />
+    </RelativeLayout>
+
+    <com.xpg.hssy.view.PageView
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+   
+
+</LinearLayout>

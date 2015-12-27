@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_marginLeft="@dimen/w10"
+        android:id="@+id/iv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/location_icon"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/w5"
+        android:text="城市"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/h18" />
+
+    <ImageView
+        android:id="@+id/iv_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ok_icon1"
+        android:visibility="invisible" />
+
+</LinearLayout>

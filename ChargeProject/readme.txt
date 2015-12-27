@@ -1,0 +1,1 @@
+首次打开项目,会清空掉.idea文件夹里面的内容,而自定义打包的脚本放在.idea/runConfiurations/文件夹中,同样也会被清空,所以要在外面保留一份runConfiurations文件夹副本,供第一次打开的时候恢复打包脚本使用,打开完项目之后,复制runConfiurations文件夹到./idea即可.当然,如果能操作git的话,也可以利用git恢复被删掉的runConfiurations文件夹

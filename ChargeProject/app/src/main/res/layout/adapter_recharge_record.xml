@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_white_small"
+                android:padding="@dimen/h20">
+
+    <TextView
+        android:id="@+id/tv_recharge_count_tag"
+        style="@style/text_black_small"
+        android:drawableLeft="@drawable/wallet_record_money"
+        android:drawablePadding="@dimen/w8"
+        android:text="@string/recharge_count"/>
+
+    <TextView
+        android:id="@+id/tv_recharge_count"
+        style="@style/text_red_small"
+        android:layout_toRightOf="@id/tv_recharge_count_tag"
+        android:text="100"/>
+
+    <TextView
+        android:id="@+id/tv_recharge_time_tag"
+        style="@style/text_black_small"
+        android:layout_below="@id/tv_recharge_count_tag"
+        android:layout_marginTop="@dimen/h5"
+        android:drawableLeft="@drawable/wallet_record_time"
+        android:drawablePadding="@dimen/w8"
+        android:text="@string/recharge_time"/>
+
+    <TextView
+        android:id="@+id/tv_recharge_time"
+        style="@style/text_gray_small"
+        android:layout_alignBaseline="@id/tv_recharge_time_tag"
+        android:layout_toRightOf="@id/tv_recharge_time_tag"
+        android:text="2015-12-12 12:00"/>
+
+
+    <TextView
+        android:id="@+id/tv_recharge_type_tag"
+        style="@style/text_black_small"
+        android:layout_below="@id/tv_recharge_time_tag"
+        android:layout_marginTop="@dimen/h5"
+        android:drawableLeft="@drawable/wallet_record_way"
+        android:drawablePadding="@dimen/w8"
+        android:text="@string/recharge_type"/>
+
+    <TextView
+        android:id="@+id/tv_recharge_type"
+        style="@style/text_gray_small"
+        android:layout_alignBaseline="@id/tv_recharge_type_tag"
+        android:layout_toRightOf="@id/tv_recharge_type_tag"
+        android:text="微信支付"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey"
+    android:orientation="vertical" >
+    <include layout="@layout/appointment_title" />
+    <RelativeLayout
+        android:id="@+id/rl_top_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h50"
+        android:background="@color/water_blue" >
+        <TextView
+            android:id="@+id/tv_delete_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/w10"
+            android:text="删除订单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h16" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/w10"
+            android:background="@null"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h16" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_tab_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/water_blue"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/id_tab_top_unconfirm"
+            style="@style/tab_line_white_new_outside"
+            android:checked="true"
+            android:background="@drawable/pile_tab_bg"
+            android:text="进行中" />
+
+        <RadioButton
+            android:id="@+id/id_tab_top_unpay"
+            style="@style/tab_line_white_new_outside"
+            android:background="@drawable/pile_tab_bg"
+            android:text="待付款" />
+
+        <RadioButton
+            android:id="@+id/id_tab_top_complete"
+            style="@style/tab_line_white_new_outside"
+            android:background="@drawable/pile_tab_bg"
+            android:text="已完成" />
+
+        <RadioButton
+            android:id="@+id/id_tab_top_unused"
+            style="@style/tab_line_white_new_outside"
+            android:background="@drawable/pile_tab_bg"
+            android:text="已失效" />
+
+        <RadioButton
+            android:id="@+id/id_tab_top_all"
+            style="@style/tab_line_white_new_outside"
+            android:background="@drawable/pile_tab_bg"
+            android:text="全部" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/water_blue"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageview_tiao"
+            android:layout_width="@dimen/h105"
+            android:layout_height="@dimen/h3"
+            android:background="@drawable/tab_line_white_newin" />
+    </RelativeLayout>
+
+    <com.xpg.hssy.view.PageView
+        android:id="@+id/id_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:id="@+id/delete_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_top_or_bottom"
+        android:orientation="vertical"
+        android:padding="@dimen/h15"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/delete"
+            style="@style/btn_red_small"
+            android:text="删除(0)" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:orientation="vertical"
+    android:padding="@dimen/h5" >
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="@dimen/w5"
+        android:layout_toRightOf="@+id/iv_is_read"
+        android:padding="@dimen/h5"
+        android:singleLine="false"
+        android:text="有一位租户需要租赁你的电桩，请及时处理"
+        android:textColor="@color/grey_dark" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/w5"
+        android:layout_toLeftOf="@+id/tv_date"
+        android:layout_toRightOf="@+id/iv_is_read"
+        android:gravity="left"
+        android:padding="@dimen/w5"
+        android:singleLine="true"
+        android:text="xxxxxxxxxxxxxxxxxxx"
+        android:textColor="@color/water_blue"
+        android:textSize="@dimen/h18" />
+
+    <ImageView
+        android:id="@+id/iv_is_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/w5"
+        android:src="@drawable/circle_blue" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_title"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/w5"
+        android:text="2016-01-11 06:15:45"
+        android:textColor="@color/text_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/h18"
+        android:paddingRight="@dimen/h18" >
+
+        <include layout="@layout/line_horizontal_grey_small" />
+    </LinearLayout>
+
+</RelativeLayout>

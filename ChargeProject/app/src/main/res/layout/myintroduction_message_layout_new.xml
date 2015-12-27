@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/bg_white"
+              android:orientation="vertical">
+
+    <include layout="@layout/top_logout_layout"/>
+
+    <include layout="@layout/line_horizontal_grey_small"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg_white"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/usericon_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_grey_white_click"
+                android:paddingBottom="@dimen/h15"
+                android:paddingLeft="@dimen/h10"
+                android:paddingRight="@dimen/h10"
+                android:paddingTop="@dimen/h15">
+
+                <ImageButton
+                    android:id="@+id/imageButton_usericon11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/personal_picture"
+                    android:padding="@dimen/h8"/>
+
+                <ImageView
+                    android:id="@+id/update_pic"
+                    android:layout_width="@dimen/h45"
+                    android:layout_height="@dimen/h45"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/w8"
+                    android:layout_toLeftOf="@+id/imageButton_next11"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/personal_touxiang"/>
+
+                <ImageButton
+                    android:id="@+id/imageButton_next11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_next"
+                    android:padding="@dimen/h8"/>
+
+                <TextView
+                    android:id="@+id/user_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageButton_usericon11"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/h8"
+                    android:text="头像"
+                    android:textColor="@color/text_gray_dark"
+                    android:textSize="@dimen/w15"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/h15"
+                android:paddingRight="@dimen/h15">
+
+                <include layout="@layout/line_horizontal_grey_small"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/username_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_grey_white_click"
+                android:paddingBottom="@dimen/h20"
+                android:paddingLeft="@dimen/h10"
+                android:paddingRight="@dimen/h10"
+                android:paddingTop="@dimen/h20">
+
+                <ImageButton
+                    android:id="@+id/imageButton_usericon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/personal_icon_name"
+                    android:padding="@dimen/h8"/>
+
+                <ImageButton
+                    android:id="@+id/imageButton_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_next"
+                    android:padding="@dimen/h8"/>
+
+                <TextView
+                    android:id="@+id/shouquan_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageButton_usericon"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/h8"
+                    android:text="用户名"
+                    android:textColor="@color/text_gray_dark"
+                    android:textSize="@dimen/w15"/>
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/w8"
+                    android:layout_toLeftOf="@+id/imageButton_next"
+                    android:enabled="false"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="demo"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/w15"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/h15"
+                android:paddingRight="@dimen/h15">
+
+                <include layout="@layout/line_horizontal_grey_small"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/sex_layout_id"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_grey_white_click"
+                android:paddingBottom="@dimen/h20"
+                android:paddingLeft="@dimen/h10"
+                android:paddingRight="@dimen/h10"
+                android:paddingTop="@dimen/h20">
+
+                <ImageButton
+                    android:id="@+id/imageButton_usericon3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/personal_icon_sex"
+                    android:padding="@dimen/h8"/>
+
+                <TextView
+                    android:id="@+id/sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageButton_usericon3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/h8"
+                    android:text="性别"
+                    android:textColor="@color/text_gray_dark"
+                    android:textSize="@dimen/w15"/>
+
+                <RadioGroup
+                    android:id="@+id/sex_tab_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/sex_male"
+                        style="@style/tab_booking_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/w25"
+                        android:drawableLeft="@drawable/tab_sex_selector"
+                        android:drawablePadding="@dimen/w6"
+                        android:text="男"/>
+
+                    <RadioButton
+                        android:id="@+id/sex_female"
+                        style="@style/tab_booking_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/tab_sex_selector"
+                        android:drawablePadding="@dimen/w6"
+                        android:text="女"/>
+                </RadioGroup>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/h15"
+                android:paddingRight="@dimen/h15">
+
+                <include layout="@layout/line_horizontal_grey_small"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/userphone_layout_id"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_grey_white_click"
+                android:paddingBottom="@dimen/h20"
+                android:paddingLeft="@dimen/h10"
+                android:paddingRight="@dimen/h10"
+                android:paddingTop="@dimen/h20">
+
+                <ImageButton
+                    android:id="@+id/imageButton_usericon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/personal_icon_phone"
+                    android:padding="@dimen/h8"/>
+
+
+                <EditText
+                    android:id="@+id/userphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/w15"/>
+
+                <TextView
+                    android:id="@+id/shouquan_username1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageButton_usericon1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/h8"
+                    android:text="@string/phone_num"
+                    android:textColor="@color/text_gray_dark"
+                    android:textSize="@dimen/w15"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/h15"
+                android:paddingRight="@dimen/h15">
+
+                <include layout="@layout/line_horizontal_grey_small"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/passageword_layout_id"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_grey_white_click"
+                android:paddingBottom="@dimen/h20"
+                android:paddingLeft="@dimen/h10"
+                android:paddingRight="@dimen/h10"
+                android:paddingTop="@dimen/h20">
+
+                <ImageButton
+                    android:id="@+id/imagepwd_usericon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/personal_password"
+                    android:padding="@dimen/h8"/>
+
+                <ImageButton
+                    android:id="@+id/pwd_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_next"
+                    android:padding="@dimen/h8"/>
+
+                <EditText
+                    android:id="@+id/change_ed_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/w8"
+                    android:layout_toLeftOf="@+id/pwd_icon"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="修改"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/w15"/>
+
+                <TextView
+                    android:id="@+id/tv_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imagepwd_usericon1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/h8"
+                    android:text="@string/login_pwd"
+                    android:textColor="@color/text_gray_dark"
+                    android:textSize="@dimen/w15"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/h15"
+                android:paddingRight="@dimen/h15">
+
+                <include layout="@layout/line_horizontal_grey_small"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/alipay_layout_id"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_grey_white_click"
+                android:paddingBottom="@dimen/h20"
+                android:paddingLeft="@dimen/h10"
+                android:paddingRight="@dimen/h10"
+                android:paddingTop="@dimen/h20">
+
+                <ImageButton
+                    android:id="@+id/imageButton_alipay"
+                    android:layout_width="@dimen/w22"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/alipay_icon1"
+                    android:padding="@dimen/h8"/>
+
+                <ImageButton
+                    android:id="@+id/imageButton_alipays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_next"
+                    android:padding="@dimen/h8"/>
+
+                <TextView
+                    android:id="@+id/shouquan_alipay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/w8"
+                    android:layout_toLeftOf="@+id/imageButton_alipays"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/w15"/>
+
+                <TextView
+                    android:id="@+id/shouquan_alipays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageButton_alipay"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/h8"
+                    android:text="支付宝账号"
+                    android:textColor="@color/text_gray_dark"
+                    android:textSize="@dimen/w15"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/h15"
+                android:paddingRight="@dimen/h15">
+
+                <include layout="@layout/line_horizontal_grey_small"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/erweima_layout_id"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_grey_white_click"
+                android:paddingBottom="@dimen/h20"
+                android:paddingLeft="@dimen/h10"
+                android:paddingRight="@dimen/h10"
+                android:paddingTop="@dimen/h20">
+
+                <ImageButton
+                    android:id="@+id/imageButton_usericon4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/personal_icon_2dcode"
+                    android:padding="@dimen/h8"/>
+
+                <ImageButton
+                    android:id="@+id/erweinoib"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/icon_next"
+                    android:padding="@dimen/h8"/>
+
+                <TextView
+                    android:id="@+id/erweino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageButton_usericon4"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/w5"
+                    android:singleLine="true"
+                    android:text="我的二维码"
+                    android:textColor="@color/text_gray_dark"
+                    android:textSize="@dimen/w15"/>
+            </RelativeLayout>
+
+            <include layout="@layout/line_horizontal_grey_small"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/line_horizontal_grey_small"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_top_or_bottom"
+        android:orientation="vertical"
+        android:padding="@dimen/h10">
+
+        <Button
+            android:id="@+id/save"
+            style="@style/btn_orange_small"
+            android:text="退出账号"/>
+    </RelativeLayout>
+
+</LinearLayout>

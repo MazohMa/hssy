@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_grey"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_simple_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line_horizontal_grey_small" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/h80"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/imageButton_next"
+            android:layout_width="@dimen/w16"
+            android:layout_height="@dimen/w16"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/next_bt"
+            android:layout_margin="5dp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/shouquan_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="用户名"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/w15" />
+
+        <TextView
+            android:id="@+id/username_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imageButton_next"
+            android:text="USERNAME"
+            android:textColor="@color/text_green"
+            android:textSize="@dimen/w15" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_horizontal_grey_small_padding" />
+
+    <RelativeLayout
+        android:id="@+id/rl_date"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/h80"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/imageButton_next2"
+            android:layout_width="@dimen/w16"
+            android:layout_height="@dimen/w16"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/next_bt"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="预约日期"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/w15" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imageButton_next2"
+            android:text="2015-03-24"
+            android:textColor="@color/text_green"
+            android:textSize="@dimen/w18" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_horizontal_grey_small_padding" />
+    <include layout="@layout/line_horizontal_grey_small_padding" />
+
+    <RelativeLayout
+        android:id="@+id/rl_time_start"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/h80"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/imageButton_next3"
+            android:layout_width="@dimen/w16"
+            android:layout_height="@dimen/w16"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/next_bt"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="起始时间"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/w15" />
+
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imageButton_next3"
+            android:text="09:00"
+            android:textColor="@color/text_green"
+            android:textSize="@dimen/w18" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_horizontal_grey_small_padding" />
+
+    <RelativeLayout
+        android:id="@+id/rl_time_end"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/h80"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/imageButton_next4"
+            android:layout_width="@dimen/w16"
+            android:layout_height="@dimen/w16"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/next_bt"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="结束时间"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/w15" />
+
+        <TextView
+            android:id="@+id/end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imageButton_next4"
+            android:text="11:00"
+            android:textColor="@color/text_green"
+            android:textSize="@dimen/w18" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_horizontal_grey_small" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/btn_add_order"
+            style="@style/btn_green_big"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/h30"
+            android:text="提交" />
+    </RelativeLayout>
+
+</LinearLayout>

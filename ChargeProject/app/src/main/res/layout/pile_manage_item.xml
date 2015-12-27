@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <include layout="@layout/line_horizontal_grey_small" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/h15"
+        android:paddingLeft="@dimen/h15"
+        android:paddingRight="@dimen/h15"
+        android:paddingTop="@dimen/h15">
+
+        <com.xpg.hssy.view.RoundAngleImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/h120"
+            android:layout_height="@dimen/h120"
+            android:layout_marginRight="@dimen/h10"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_list_img" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_icon"
+            android:layout_toLeftOf="@+id/tv_display"
+            android:layout_toRightOf="@id/iv_icon"
+            android:ellipsize="end"
+            android:paddingRight="@dimen/w5"
+            android:singleLine="true"
+            android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            android:textColor="@color/text_gray_dark"
+            android:textSize="@dimen/h18" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginTop="@dimen/h3"
+            android:layout_toRightOf="@id/iv_icon"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="海珠区江南大道中325号首层之一xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/h13" />
+
+        <LinearLayout
+            android:id="@+id/icon_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_icon"
+            android:layout_marginTop="@dimen/h3"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:divider="@drawable/line_vertical_grey_small"
+            android:dividerPadding="@dimen/w5"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/appoint_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/selector_order_manage_icon"
+                android:enabled="true"
+                android:gravity="center"
+                android:text="订单管理"
+                android:textColor="@drawable/selector_text_enable_waterblue_gray"
+                android:textSize="@dimen/w12" />
+
+            <TextView
+                android:id="@+id/pile_setting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/selector_pile_setting_icon"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="电桩设置"
+                android:textColor="@drawable/selector_text_enable_waterblue_gray"
+                android:textSize="@dimen/w12" />
+
+            <TextView
+                android:id="@+id/charge_record"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/selector_charge_record_icon"
+                android:enabled="true"
+                android:gravity="center"
+                android:text="充电记录"
+                android:textColor="@drawable/selector_text_enable_waterblue_gray"
+                android:textSize="@dimen/w12" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/tv_location"
+            android:layout_alignTop="@+id/tv_name"
+            android:background="@drawable/shape_orange_round_small"
+            android:padding="@dimen/h5"
+            android:text="未发布"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h12" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_horizontal_grey_small" />
+
+</LinearLayout>

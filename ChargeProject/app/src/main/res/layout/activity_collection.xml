@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:listViewAttr="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_white"
+              android:orientation="vertical">
+    <include layout="@layout/top_next_layout"/>
+    <LinearLayout
+        android:id="@+id/listview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
+        <com.xpg.hssy.view.RefreshListView
+            android:id="@+id/pole_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:divider="@color/list_view_grey"
+            android:dividerHeight="1dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="#00000000"
+            listViewAttr:isAutoLoadOnBottom="true"
+            listViewAttr:isDropDownStyle="true"
+            listViewAttr:isOnBottomStyle="true"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/delete_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_top_or_bottom"
+        android:orientation="vertical"
+        android:padding="@dimen/h15"
+        android:visibility="gone">
+        <Button
+            android:layout_centerHorizontal="true"
+            android:id="@+id/delete"
+            android:paddingTop="@dimen/h10"
+            android:textSize="@dimen/h22"
+            android:paddingBottom="@dimen/h10"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/h120"
+            android:background="@drawable/shape_btn_red"
+            android:text="@string/btn_delete"/>
+    </RelativeLayout>
+
+</LinearLayout>

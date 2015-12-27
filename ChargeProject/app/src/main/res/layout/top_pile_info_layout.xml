@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/top_height"
+                android:background="@color/water_blue">
+
+    <ImageView
+        android:id="@+id/iv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w4"
+        android:layout_marginRight="@dimen/w4"
+        android:background="@null"
+        android:scaleType="center"
+        android:src="@drawable/back_bt"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@id/tv_center"
+        style="@style/text_title_top"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@+id/ll_right_part"
+        android:layout_toRightOf="@+id/iv_left"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:paddingRight="@dimen/w2"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/title"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:id="@+id/ll_right_part"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/iv_edit_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/w4"
+            android:background="@null"
+            android:paddingBottom="@dimen/h10"
+            android:paddingLeft="@dimen/w8"
+            android:paddingRight="@dimen/w4"
+            android:paddingTop="@dimen/h4"
+            android:scaleType="center"
+            android:src="@drawable/icon_tab_edit"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/iv_favor"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/w4"
+            android:background="@null"
+            android:scaleType="center"
+            android:src="@drawable/icon_tab_collection"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/w4"
+            android:background="@null"
+            android:scaleType="center"
+            android:src="@drawable/icon_tab_share"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+</RelativeLayout>

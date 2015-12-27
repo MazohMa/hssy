@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_all_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:coustom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/top_simple_layout"/>
+
+    <ScrollView
+        android:id="@+id/scoll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg_white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/img_author_head"
+                    android:layout_width="@dimen/h50"
+                    android:layout_height="@dimen/h50"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/touxiang"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/rl_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_author_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="Tom"
+                        android:textColor="@color/water_blue"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tv_author_name"
+                        android:drawableLeft="@drawable/youyiquan_location"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="广东省 珠海市"
+                        android:textColor="@color/text_gray_light"
+                        android:textSize="12dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_address"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/tv_address"
+                        android:gravity="center"
+                        android:text="2015-09-10 12:20"
+                        android:textColor="@color/text_gray_light"
+                        android:textSize="12dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tv_address"
+                        android:layout_marginTop="@dimen/h5"
+                        android:gravity="left"
+                        android:text="今天做一个测试，记下起始时间，时用百度地图轨迹功能记录行使数据，轨迹显示201公里这个什么？"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"/>
+
+                    <com.xpg.hssy.view.MyGridView
+                        android:id="@+id/gView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_content"
+                        android:layout_marginTop="10dp"
+                        android:horizontalSpacing="@dimen/h2"
+                        android:listSelector="#00000000"
+                        android:numColumns="3"
+                        android:scrollbars="none"
+                        android:verticalSpacing="@dimen/h5">
+                    </com.xpg.hssy.view.MyGridView>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_gv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/gView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/h20"
+                            android:layout_alignParentLeft="true"
+                            android:background="@null"
+                            android:gravity="left|center"
+                            android:text="我给"
+                            android:textColor="@color/text_gray_light"
+                            android:textSize="12dp"/>
+
+                        <com.xpg.hssy.view.EvaluateColumn
+                            android:id="@+id/eva_star_point"
+                            android:layout_width="@dimen/w50"
+                            android:layout_height="@dimen/h20"
+                            android:layout_alignBottom="@+id/tv_start"
+                            android:layout_alignTop="@+id/tv_start"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/tv_start"
+                            android:gravity="left|center"
+                            android:orientation="horizontal"
+                            coustom:evaluate="0"/>
+
+                        <TextView
+                            android:id="@+id/tv_good"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_start"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignTop="@+id/tv_start"
+                            android:drawableLeft="@drawable/seletor_like_icon"
+                            android:drawablePadding="@dimen/w5"
+                            android:gravity="center"
+                            android:text="41"
+                            android:textColor="@color/text_gray_light"
+                            android:textSize="12dp"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.xpg.hssy.view.LikeAndCommentView
+                android:id="@+id/like_and_commend_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="3dp"/>
+
+            <Button
+                android:id="@+id/bt_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left"
+                android:text="删除"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/text_gray_light"
+                android:textSize="12dp"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_comment"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:padding="@dimen/h10"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/to_commtent"
+            style="@style/btn_water_blue_small"
+            android:textSize="18dp"
+            android:text="@string/comment"/>
+    </RelativeLayout>
+</LinearLayout>

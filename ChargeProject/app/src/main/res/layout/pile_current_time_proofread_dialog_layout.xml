@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h200"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_white" >
+
+        <RelativeLayout
+            android:id="@+id/top_head"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h50"
+            android:layout_alignParentTop="true"
+            android:background="@color/bg_top_or_bottom" >
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:text="@string/cancel"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/w18" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:text="@string/ok"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/w18" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_head"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wv_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=":"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/w20"
+                android:visibility="invisible" />
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wv_month"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=":"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/w20"
+                android:visibility="invisible" />
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wv_day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=":"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/w20"
+                android:visibility="invisible" />
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wv_hour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+            <TextView
+                android:id="@+id/tv_split"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=":"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/w20"
+                android:visibility="invisible" />
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wv_min"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=":"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/w20"
+                android:visibility="invisible" />
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wv_sec"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

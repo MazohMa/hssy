@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_white"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/top_simple_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_user_evaluate_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h104"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_bg_color_white_to_gray"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/h6"
+                        android:gravity="center"
+                        android:text="@string/evaluate_poor"
+                        android:textColor="@drawable/selector_text_color_light_gray_to_black"
+                        android:textSize="@dimen/h16"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/selector_assess_btn_angry"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_bg_color_white_to_gray"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/h6"
+                        android:gravity="center"
+                        android:text="@string/evaluate_ordinary"
+                        android:textColor="@drawable/selector_text_color_light_gray_to_black"
+                        android:textSize="@dimen/h16"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/selector_assess_btn_normal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_bg_color_white_to_gray"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/h6"
+                        android:gravity="center"
+                        android:text="@string/evaluate_good"
+                        android:textColor="@drawable/selector_text_color_light_gray_to_black"
+                        android:textSize="@dimen/h16"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/selector_assess_btn_good"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_bg_color_white_to_gray"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/h6"
+                        android:gravity="center"
+                        android:text="@string/evaluate_very_good"
+                        android:textColor="@drawable/selector_text_color_light_gray_to_black"
+                        android:textSize="@dimen/h16"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/selector_assess_btn_very_good"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_bg_color_white_to_gray"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/h6"
+                        android:gravity="center"
+                        android:text="@string/evaluate_recommend"
+                        android:textColor="@drawable/selector_text_color_light_gray_to_black"
+                        android:textSize="@dimen/h16"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/selector_assess_btn_recommend"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h10"
+                android:background="@color/split_line_gray"/>
+
+            <com.xpg.hssy.view.EvaluateColumn
+                android:id="@+id/eva_user_evaluate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h25"
+                android:layout_marginBottom="@dimen/h10"
+                android:layout_marginLeft="@dimen/w25"
+                android:layout_marginRight="@dimen/w25"
+                android:layout_marginTop="@dimen/h10"
+                app:evaluate="0"
+                app:evaluatedImage="@drawable/order_star_3"
+                app:halfEvaluatedImage="@drawable/order_star_2"
+                app:maxCount="5"
+                app:unevaluatedImage="@drawable/order_star_1"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d15"
+                android:background="@color/split_line_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h8"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/w5"
+                android:paddingRight="@dimen/w5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/evaluate_environment"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/h18"/>
+
+                <com.xpg.hssy.view.EvaluateColumn
+                    android:id="@+id/eva_environment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h36"
+                    android:layout_marginLeft="@dimen/w10"
+                    app:editable="true"
+                    app:evaluate="0"
+                    app:evaluatedImage="@drawable/assess_btn_link_face02"
+                    app:maxCount="5"
+                    app:unevaluatedImage="@drawable/assess_btn_link_face01"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h8"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/w5"
+                android:paddingRight="@dimen/w5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/evaluate_exterior"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/h18"/>
+
+                <com.xpg.hssy.view.EvaluateColumn
+                    android:id="@+id/eva_exterior"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h36"
+                    android:layout_marginLeft="@dimen/w10"
+                    app:editable="true"
+                    app:evaluate="0"
+                    app:evaluatedImage="@drawable/assess_btn_link_face02"
+                    app:maxCount="5"
+                    app:unevaluatedImage="@drawable/assess_btn_link_face01"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h8"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/w5"
+                android:paddingRight="@dimen/w5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/evaluate_performance"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/h18"/>
+
+                <com.xpg.hssy.view.EvaluateColumn
+                    android:id="@+id/eva_performance"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h36"
+                    android:layout_marginLeft="@dimen/w10"
+                    app:editable="true"
+                    app:evaluate="0"
+                    app:evaluatedImage="@drawable/assess_btn_link_face02"
+                    app:maxCount="5"
+                    app:unevaluatedImage="@drawable/assess_btn_link_face01"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h8"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/w5"
+                android:paddingRight="@dimen/w5"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/evaluate_services"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/h18"/>
+
+                <com.xpg.hssy.view.EvaluateColumn
+                    android:id="@+id/eva_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h36"
+                    android:layout_marginLeft="@dimen/w10"
+                    app:editable="true"
+                    app:evaluate="5"
+                    app:evaluatedImage="@drawable/assess_btn_link_face02"
+                    app:maxCount="5"
+                    app:unevaluatedImage="@drawable/assess_btn_link_face01"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h10"
+                android:layout_marginTop="@dimen/h10"
+                android:background="@color/split_line_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h10"
+                android:gravity="center"
+                android:paddingLeft="@dimen/w5"
+                android:paddingRight="@dimen/w5">
+
+                <ImageView
+                    android:layout_width="@dimen/w42"
+                    android:layout_height="@dimen/h52"
+                    android:layout_marginRight="@dimen/w42"
+                    android:src="@drawable/assess_input"/>
+
+                <EditText
+                    android:id="@+id/et_evaluate_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h52"
+                    android:background="@color/white"
+                    android:hint="@string/edit_view_hint"
+                    android:maxLength="200"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/h14"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_photo_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w5"
+                android:layout_marginTop="@dimen/h20"
+                android:text="0/6"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h12"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d5"
+                android:background="@color/split_line_gray"/>
+
+            <GridView
+                android:id="@+id/grv_photos"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h220"
+                android:listSelector="#00000000"
+                android:numColumns="3"
+                android:paddingBottom="@dimen/h3"
+                android:paddingLeft="@dimen/w5"
+                android:paddingRight="@dimen/w5"
+                android:scrollbars="none">
+            </GridView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

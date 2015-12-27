@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+    	android:background="@color/water_blue">
+    	
+        
+        <ImageButton
+            android:id="@+id/btn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:scaleType="center"
+            android:src="@drawable/back_bt" />
+        
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="扫码领券"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/rl_qrcode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <SurfaceView
+            android:id="@+id/preview_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.xpg.hssy.zxing.view.ViewfinderView
+            android:id="@+id/viewfinderview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-40dp" />
+    </RelativeLayout>
+
+</LinearLayout>

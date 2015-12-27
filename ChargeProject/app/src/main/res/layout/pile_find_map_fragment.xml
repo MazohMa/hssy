@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:listViewAttr="http://schemas.android.com/apk/res/com.xpg.hssychargingpole"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/map_p"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/rl_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/map_bg_l"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_navi_by_other_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/map_bg_r"
+            android:text="@string/navi_by_location_map"
+            android:textColor="@color/text_orange" />
+
+        <ImageButton
+            android:id="@+id/btn_Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_my_local_n" />
+
+        <RelativeLayout
+            android:id="@+id/rl_map_pole_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_translucent_white"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_map_pole_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="@dimen/w10"
+                android:drawableLeft="@drawable/my_usercheckin_icon_normal"
+                android:gravity=""
+                android:text="广州市先烈中路102号"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h18" />
+
+            <TextView
+                android:id="@+id/tv_map_pole_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_map_pole_position"
+                android:layout_below="@+id/tv_map_pole_position"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="5dp"
+                android:text="距您0.8公里"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/h14" />
+
+            <TextView
+                android:id="@+id/tv_map_pole_avgLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_map_pole_distance"
+                android:layout_alignBottom="@+id/tv_map_pole_distance"
+                android:layout_alignParentRight="true"
+                android:text="4.5分"
+                android:textColor="@color/text_orange"
+                android:textSize="@dimen/h14" />
+
+            <TextView
+                android:id="@+id/map_pile_share_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_map_pole_distance"
+                android:layout_marginTop="5dp"
+                android:background="@color/bg_gray"
+                android:text="@string/share_time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h14" />
+
+            <LinearLayout
+                android:id="@+id/llyt_map_pile_share_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/map_pile_share_time"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_map_pile_share_time_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="10:00-12:00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/h14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="|"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/h14" />
+                
+                <TextView
+                    android:id="@+id/tv_map_pile_share_time_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="10:00-12:00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/h14" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="|"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/h14" />
+
+                <TextView
+                    android:id="@+id/tv_map_pile_share_time_third"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="10:00-12:00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/h14" />
+            </LinearLayout>
+            
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/llyt_map_pile_share_time"
+                android:layout_marginTop="5dp"
+                android:src="@color/text_blue" />
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llyt_map_pile_share_time"
+                android:layout_marginTop="11dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_collect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="收藏"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/h20" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:src="@color/text_blue" />
+                
+                <TextView
+                    android:id="@+id/tv_navi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="导航"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/h20" />
+                
+                <ImageView
+                    android:id="@+id/iv_dividing_line"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:src="@color/text_blue" />
+
+                <TextView
+                    android:id="@+id/tv_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="预约"
+                    android:textColor="@color/text_blue"
+                    android:textSize="@dimen/h20" />
+            </LinearLayout>
+
+        </RelativeLayout>
+        <!--
+        <RelativeLayout
+            android:id="@+id/rl_map_pole_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/white_bg_with_shadow"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_map_pole_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="@dimen/w10"
+                android:layout_toLeftOf="@+id/map_pile_share_time"
+                android:text="电桩A"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h18" />
+
+            <TextView
+                android:id="@+id/map_pole_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_map_pole_name"
+                android:layout_marginTop="@dimen/h10"
+                android:text="@string/tag_position"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h14" />
+
+            <TextView
+                android:id="@+id/tv_map_pole_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/map_pole_position"
+                android:layout_toRightOf="@id/map_pole_position"
+                android:text="广州市先烈中路102号"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h14" />
+
+            <TextView
+                android:id="@+id/map_pile_share_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_map_pile_share_time"
+                android:text="@string/share_time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h14" />
+
+            <TextView
+                android:id="@+id/tv_map_pile_share_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="10:00-12:00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h14" />
+
+            <TextView
+                android:id="@+id/map_pole_annotation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_map_pole_position"
+                android:layout_marginTop="@dimen/h10"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/h14" />
+
+            <TextView
+                android:id="@+id/map_pole_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/map_pole_position"
+                android:layout_below="@id/map_pole_annotation"
+                android:layout_marginTop="@dimen/h10"
+                android:text="@string/tag_distance"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/h14" />
+
+            <TextView
+                android:id="@+id/tv_map_pole_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/map_pole_distance"
+                android:layout_toRightOf="@id/map_pole_distance"
+                android:text="0.8公里"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/h14" />
+
+            <Button
+                android:id="@+id/bt_collect"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/h28"
+                android:layout_alignBottom="@id/map_pole_distance"
+                android:layout_marginRight="@dimen/w8"
+                android:layout_toLeftOf="@+id/bt_navigation"
+                android:background="@drawable/shape_green_small"
+                android:text="@string/collect"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/h14" />
+
+            <Button
+                android:id="@+id/bt_navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/h28"
+                android:layout_alignBottom="@id/map_pole_distance"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_orange_small"
+                android:text="@string/navigation"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/h14" />
+        </RelativeLayout>
+        -->
+    </RelativeLayout>
+
+</LinearLayout>

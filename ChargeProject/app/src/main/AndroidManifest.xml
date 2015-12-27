@@ -1,0 +1,838 @@
+<manifest
+    package="com.xpg.hssychargingpole"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- Jpush权限 -->
+    <permission
+        android:name="com.xpg.hssychargingpole.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="com.xpg.hssychargingpole.permission.JPUSH_MESSAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA">
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+    </uses-permission>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <!-- 百度map权限 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <!-- 百度定位权限 -->
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
+    </uses-permission>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
+    </uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+    </uses-permission>
+    <!-- sony桌面图标推送消息提示权限 -->
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+    </uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+    </uses-permission>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE">
+    </uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE">
+    </uses-permission>
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS">
+    </uses-permission>
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS">
+    </uses-permission>
+
+    <!-- shareSDK权限-->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <!-- beecloud -->
+    <!-- for all -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- for Baidu and PayPal pay -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!--for Baidu pay -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
+
+    <application
+        android:name="com.xpg.hssychargingpole.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+
+        <!-- =============================================Jpush start=================================================== -->
+        <!-- Jpush界面 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.xpg.hssychargingpole"/>
+            </intent-filter>
+        </activity>
+        <!-- Jpush下载服务 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+
+        <!-- Jpush推送服务 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER"/>
+                <action android:name="cn.jpush.android.intent.REPORT"/>
+                <action android:name="cn.jpush.android.intent.PushService"/>
+                <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
+            </intent-filter>
+        </service>
+
+        <!-- Jpush内部接收器 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>
+                <!-- Required  显示通知栏 -->
+                <category android:name="com.xpg.hssychargingpole"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Jpush定时心跳 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver"/>
+
+        <!-- Jpush自定义接收器 -->
+        <receiver
+            android:name="com.xpg.hssy.receiver.JpushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION"/>
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION"/>
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.xpg.hssychargingpole"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Jpush AppKey -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default"/>
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="98e79b905a0f4c6072db9ae2"/>
+        <!-- AppKey  98e79b905a0f4c6072db9ae2 -->
+        <!-- API 主密码   6bc237c1f71985e9fac998d4 -->
+
+
+        <!-- Yu开发用jpush Key -->
+        <!-- AppKey  51b0b1bd6d00965e23b7a0d0 -->
+        <!-- API 主密码   7f31b6def178cbef2673ad10 -->
+        <!-- =============================================Jpush end=================================================== -->
+
+
+        <!-- =============================================Umeng start=================================================== -->
+        <!-- 友盟 AppKey -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="551e4e7bfd98c5f0e5000fd2">
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}"/>
+        <!-- 友盟更新提示 -->
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity">
+        </activity>
+
+        <!-- 友盟更新服务 -->
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService">
+        </service>
+        <!-- =============================================Umeng end=================================================== -->
+
+
+        <!-- =============================================Baidu start=================================================== -->
+        <!-- 百度地图appkey -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="${COM_BAIDU_LBSAPI_API_KEY}"/>
+        <!-- PDiYupqlRtQQWlX8apbcNMDv Joke用于开发的签名对应key -->
+        <!-- zkq1mD4m2zRniyzqup3IFOKT 正式签名对应key -->
+
+
+        <!-- 百度定位服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+        </service>
+        <!-- =============================================Baidu end=================================================== -->
+
+
+        <!-- ===========================================alipay start================================================== -->
+        <!--  <activity
+              android:name="com.alipay.sdk.app.H5PayActivity"
+              android:configChanges="orientation|keyboardHidden|navigation"
+              android:exported="false"
+              android:screenOrientation="behind" >
+          </activity>-->
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind">
+        </activity>
+        <!-- ===========================================alipay end=================================================== -->
+
+
+        <!-- =========================================== ShareSDK start=============================================== -->
+
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+
+        <!--微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+
+        <!-- QQ客户端回调 -->
+        <activity
+            android:name="cn.sharesdk.tencent.qq.ResultReceiver"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <!--如果集成QQ分享，或者使用QQ客户端来进行QQ空间的分享，须要在此处添加一个对ACTION_VIEW
+                事件的过滤器，其中的scheme是“tencent”前缀再开发者应用的加上appId。如果此过滤器不设置，
+                则分享结束以后不能得到正确的回调-->
+            <intent-filter android:priority="1000">
+                <data android:scheme="tencent1104865176"/>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+
+        <!-- =========================================== ShareSDK end=============================================== -->
+
+        <activity
+            android:name="com.xpg.hssy.account.LoginActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.account.RegisterActivity2"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.account.RegisterInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.account.RegisterActivitySuccessfully"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.account.ForgetPwdActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.account.ResetPwdActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.account.ConfirmNoPwdActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.PileSettingActivityNew"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.PileShareActivityNew"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.EditChargeFreeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.PileCurrentTimeProofreadNewActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.EditPileNameActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.EditUserNameActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.EditAlipayNameActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.account.ModifyPwdActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN"/>-->
+
+            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.launch.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WelcomePage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.launch.GuideActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/GuidePage">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.PileManageToSettingInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.WebViewAlipayActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--  <activity
+              android:name="com.xpg.hssy.main.activity.PileMessageCommandActivity"
+              android:screenOrientation="portrait">
+          </activity>-->
+        <activity
+            android:name="com.xpg.hssy.main.activity.MyOrderFragmentActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.MyOrderDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.MyIntroductionMessageActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.SettingTimeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.AddTimeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.PileManageActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.PileDisplayActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.ChargeRecordActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.ChargeRecordDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.ChoicePayWayActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.OrderAddSuccessActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.PileAppointmentFailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.AuthorizedUserManageActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.util.ScanQrCode"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.AddUserManualActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.ChargeCompleteActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.PaidCompleteForRecordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.PileInfoNewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.BindBaifubaoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity
+            android:name="com.xpg.hssy.main.activity.PileStationInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.OrderNavigationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.WebViewNewsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.MessageCenterActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.SelectCityActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.SearchPileAndAddressActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.TimeConditionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.TimeCircleActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.PilePhotoActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 自定义拍照上传 -->
+        <activity
+            android:name="com.king.photo.activity.AlbumActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.king.photo.activity.GalleryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.king.photo.activity.ImageFile"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.king.photo.activity.ShowAllPhoto"
+            android:screenOrientation="portrait"/>
+        <!-- 自定义拍照上传 -->
+        <activity
+            android:name="com.xpg.hssy.main.activity.HelpAndSuggestionActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.HelpAndSuggestionSixthActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.HelpAndSuggestionListViewActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.GalleryForHelpAndSuggestionScannActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.GalleryForAddPileAndSiteActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.AddPublicPileBaiduMapActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.AddPublicPileBaiduMapNewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.AddPublicPileForInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.MultipleEvaluateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.AddPileOrSiteActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.SubmitPileSuccessActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.AboutAppActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.BindAccountActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.MyCollectionNewActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.xpg.hssy.main.activity.SystemSettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.MessageNotificationSettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.TopicDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.xpg.hssy.main.activity.ThemeDisplayTopicActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.LikeListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.xpg.hssy.main.activity.SpecifiedEvaluateAndMomentsActivity"
+            android:screenOrientation="portrait"/>
+
+        <service android:name="com.xpg.hssy.service.ChargeRecordSyncService"/>
+
+        <!-- 充电币 -->
+        <activity
+            android:name="com.xpg.hssy.main.activity.MyWalletActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.xpg.hssy.main.activity.PaymentRecordsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.xpg.hssy.main.activity.RechargeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.xpg.hssy.main.activity.ChargeMoneyInstructionsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- beecloud -->
+        <!-- 微信支付 -->
+        <activity
+            android:name="cn.beecloud.BCWechatPaymentActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <activity-alias
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="cn.beecloud.BCWechatPaymentActivity"/>
+
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <!-- 银联 -->
+        <activity
+            android:name="cn.beecloud.BCUnionPaymentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize"/>
+        <!-- 百度钱包 -->
+        <activity
+            android:name="com.baidu.paysdk.login.LoginActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@style/EbpayThemeActivit"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="com.baidu.paysdk.ui.WelcomeActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:screenOrientation="portrait"
+            android:theme="@style/EbpayThemeActivityWelcome"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="com.baidu.paysdk.ui.OrderHomeActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/EbpayThemeActivit"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="com.baidu.paysdk.ui.PayResultActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:screenOrientation="portrait"
+            android:theme="@style/EbpayThemeActivit"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name="com.baidu.paysdk.ui.PcPwdCheckActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:screenOrientation="portrait"
+            android:theme="@style/EbpayThemeActivit"
+            android:windowSoftInputMode="stateVisible"/>
+        <activity
+            android:name="com.baidu.paysdk.ui.PwdCheckActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:screenOrientation="portrait"
+            android:theme="@style/EbpayThemeActivit"
+            android:windowSoftInputMode="stateVisible">
+        </activity>
+        <!--  <activity
+              android:name="com.baidu.paysdk.ui.PwdSetActivity"
+              android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+              android:excludeFromRecents="true"
+              android:exported="@bool/bd_wallet_switch_global_debug"
+              android:screenOrientation="portrait"
+              android:theme="@style/EbpayThemeActivit"
+              android:windowSoftInputMode="stateVisible" >
+          </activity>
+          <activity
+              android:name="com.baidu.paysdk.ui.PwdConfirmActivity"
+              android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+              android:excludeFromRecents="true"
+              android:exported="@bool/bd_wallet_switch_global_debug"
+              android:screenOrientation="portrait"
+              android:theme="@style/EbpayThemeActivit"
+              android:windowSoftInputMode="stateVisible" >
+          </activity>-->
+        <activity
+            android:name="com.baidu.paysdk.ui.PwdSetAndConfirmActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:theme="@style/EbpayThemeActivit"
+            android:windowSoftInputMode="stateVisible">
+        </activity>
+        <activity
+            android:name="com.baidu.paysdk.ui.PwdPayActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:screenOrientation="portrait"
+            android:theme="@style/EbpayThemeActivitTranslucent"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity
+            android:name="com.baidu.paysdk.ui.PwdPaySmsActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:screenOrientation="portrait"
+            android:theme="@style/EbpayThemeActivitTranslucent"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="com.baidu.paysdk.ui.WebViewActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:screenOrientation="portrait"
+            android:theme="@style/EbpayThemeActivit"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name="com.baidu.paysdk.ui.BindCardNoActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:screenOrientation="portrait"
+            android:theme="@style/EbpayThemeActivit"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="com.baidu.paysdk.ui.BindCardDetailActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:screenOrientation="portrait"
+            android:theme="@style/EbpayThemeActivit"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity
+            android:name="com.baidu.paysdk.ui.BindCardDetailCredit2Activity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:screenOrientation="portrait"
+            android:theme="@style/EbpayThemeActivit"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity
+            android:name="com.baidu.paysdk.ui.BindCardDetailCreditActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:screenOrientation="portrait"
+            android:theme="@style/EbpayThemeActivit"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity
+            android:name="com.baidu.paysdk.ui.BindSmsActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:screenOrientation="portrait"
+            android:theme="@style/EbpayThemeActivit"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.baidu.paysdk.ui.SelectBindCardActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:screenOrientation="portrait"
+            android:theme="@style/EbpayThemeActivit"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 支付相关 Activity 结束 -->
+        <!-- 安全中心 Activity 开始 -->
+        <!-- <activity
+             android:name="com.baidu.paysdk.ui.PhonePwdActivity"
+             android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+             android:excludeFromRecents="true"
+             android:exported="@bool/bd_wallet_switch_global_debug"
+             android:screenOrientation="portrait"
+             android:theme="@style/EbpayThemeActivit"
+             android:windowSoftInputMode="adjustUnspecified|stateHidden" />-->
+        -->
+        <!-- 安全中心 Activity 结束 -->
+        <activity
+            android:name="com.baidu.paysdk.ui.SignChannelListActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="@bool/bd_wallet_switch_global_debug"
+            android:hardwareAccelerated="false"
+            android:theme="@style/EbpayThemeActivit"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <activity
+            android:name="com.android.crop.CropImageActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+</manifest>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <include layout="@layout/line_horizontal_grey_small"/>
+
+    <com.xpg.hssy.view.PilePhotoPager
+        android:id="@+id/ppp_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_ppp_favor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/w4"
+        android:background="@null"
+        android:padding="@dimen/h20"
+        android:scaleType="center"
+        android:src="@drawable/find_collect03"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/iv_background_loading"
+        android:layout_marginTop="@dimen/h4"
+        android:layout_width="@dimen/h45"
+        android:layout_height="@dimen/h45"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/loading"
+        android:scaleType="center"
+        android:visibility="gone"/>
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/h200"
+        android:background="@drawable/popup_box_2" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h40"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="建议反馈"
+            android:background="@drawable/dialog_title_round"
+            android:textColor="@color/water_blue"
+            android:textSize="@dimen/w18" />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h100"
+            android:layout_below="@+id/title"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="请输入你的建议"
+            android:padding="@dimen/h12"
+            android:textColor="@color/grey_dark"
+            android:textSize="@dimen/w13" />
+
+        <LinearLayout
+            android:id="@+id/bt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/et_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/cancel"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/w18" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/ok"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/w18" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

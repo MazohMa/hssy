@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical"
+              android:focusable="true"
+              android:focusableInTouchMode="true">
+    <!--不要让EditText默认获取焦点-->
+    <requestFocus/>
+
+    <include layout="@layout/top_ok_layout" />
+
+        <com.xpg.hssy.view.EditDeleteText
+            android:id="@+id/shoudongadd_user_et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="用户手机号"
+            android:padding="15dp"
+            android:inputType="number"
+            android:drawableRight="@drawable/emotionstore_progresscancelbtn"
+            android:singleLine="true"
+            android:textSize="@dimen/w15" />
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line_horizontal_grey_small" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/shoudongadd_user_tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h10"
+        android:gravity="right"
+        android:layout_marginRight="15dp"
+        android:text="*必须是注册用户"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/w12" />
+
+</LinearLayout>

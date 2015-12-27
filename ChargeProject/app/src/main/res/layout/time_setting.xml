@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/setting_time_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/ll_share_time1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/h13"
+            android:paddingLeft="@dimen/h50"
+            android:paddingTop="@dimen/h13" >
+
+            <TextView
+                android:id="@+id/tv_share_time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09:00 - 11:30"
+                android:textColor="@color/text_green"
+                android:textSize="@dimen/h22" />
+
+            <TextView
+                android:id="@+id/tv_share_weekly1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h3"
+                android:text="周一   周二   周三   周四   周五   周六   周日"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/h15" />
+        </LinearLayout>
+
+        <include layout="@layout/line_horizontal_grey_small" />
+    </LinearLayout>
+
+</LinearLayout>

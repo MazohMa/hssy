@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/settingtime_top_layout" />
+
+    <LinearLayout
+        android:id="@+id/start_time_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg_white"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/h10"
+            android:text="@string/pile_current_time_tip"
+            android:textColor="@color/text_gray_dark"
+            android:textSize="@dimen/h20" />
+
+        <TextView
+            android:id="@+id/current_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/h10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/h24" />
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="2"
+            android:padding="@dimen/h10"
+            android:text="@string/pile_current_time_tip2"
+            android:textColor="@color/text_gray_light"
+            android:textSize="@dimen/h20" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h76"
+        android:background="@color/bg_top_or_bottom"
+        android:paddingLeft="@dimen/w25"
+        android:paddingTop="@dimen/h5"
+        android:paddingBottom="@dimen/h15"
+        android:paddingRight="@dimen/w25" >
+
+        <Button
+            android:id="@+id/automatic"
+            android:layout_height="@dimen/h46"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/selector_btn_water_blue"
+            android:text="@string/pile_automatic_change_time"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h22" />
+
+        <Button
+            android:id="@+id/unantomatic"
+            style="@style/btn_water_blue_small"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_btn_water_blue"
+            android:text="@string/pile_unautomatic_change_time"
+            android:visibility="gone"
+            android:textSize="@dimen/h22" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- base -->
+    <color name="full_alpha">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00ff00</color>
+    <color name="blue">#0000ff</color>
+    <color name="blu_dialog_text_right">#4F4F4C</color>
+    <color name="blue_progress_background">#444444</color>
+    <color name="back_light">#88000000</color>
+    <color name="button_background">#f7f8f8</color>
+    <color name="split_line_gray">#eeeeee</color>
+    <color name="split_line_black">#B7B7B7</color>
+    <color name="gold_yellow">#FBA700</color>
+    <color name="blue_green">#67F5AD</color>
+
+    <!-- app base color -->
+    <color name="water_blue">#00b4ae</color>
+    <color name="lake_blue">#01acf1</color>
+    <color name="tint_read">#db472c</color>
+    <color name="light_gray">#999999</color>
+    <color name="yellow">#f8891d</color>
+    <color name="like_and_comment_background">#f7f7f7</color>
+
+    <!-- text -->
+    <color name="text_green">#84cd05</color>
+    <color name="text_green_gray">#8cbd69</color>
+    <color name="text_green_dark">#009056</color>
+    <color name="text_blue_gray">#8EDFD8</color>
+    <color name="text_condition">#CFE8B1</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_black">#000000</color>
+    <color name="text_menu">#8c8c8c</color>
+    <color name="text_gray_light">#999999</color>
+    <color name="text_gray">#666666</color>
+    <color name="text_orange">#f8891d</color>
+    <color name="text_blue">#01acf1</color>
+    <color name="text_pink">#F3A5A3</color>
+    <color name="text_blue_light">#83F4FC</color>
+    <color name="text_gray_dark">#3A3A3A</color>
+    <color name="text_wather_blue">#00B4AE</color>
+    <color name="text_water_blue_dark">#006F6B</color>
+    <color name="text_cyan">#00F69E</color>
+
+    <!-- bg -->
+    <color name="bg_grey">#212121</color>
+    <color name="bg_green">#3f9105</color>
+    <color name="bg_gray_pale">#F7F8F7</color>
+    <color name="bg_gray_light">#323232</color>
+    <color name="bg_gray">#DCDCDC</color>
+    <color name="alpha_black">#22000000</color>
+    <color name="bg_orange">#f8891d</color>
+    <color name="bg_blue">#01acf1</color>
+    <color name="bg_yellow">#f9b62b</color>
+    <color name="bg_translucent_white">#F0FFFFFF</color>
+    <color name="bg_top_or_bottom">#F7F8F7</color>
+    <color name="bg_guide">#292C29</color>
+    <color name="bg_white">#FFFFFF</color>
+    <!-- ?? -->
+    <color name="clear">#00ffffff</color>
+    <color name="tip_word">#F2F2F2</color>
+    <color name="add_room">#f9fdd1</color>
+    <color name="edit_word">#EFE677</color>
+    <color name="hint_gray">#A4A4A4</color>
+    <color name="darker_gray">#ddd</color>
+    <color name="grey_dark_pressed">#ff363c43</color>
+    <color name="grey_dark">#ff404850</color>
+    <color name="gray">#C2C3BE</color>
+    <color name="line_grey_light">#DBDBDB</color>
+    <color name="line_grey_back">#EEF3F9</color>
+    <color name="line_grey_pale">#ECECEC</color>
+    <color name="line_grey">#464646</color>
+    <color name="line_blue">#01acf1</color>
+    <color name="line_water_blue">#00C3BE</color>
+    <color name="grey">#D7D4D4</color>
+    <color name="grey_in">#33A00F</color>
+    <color name="grey_outside">#33830A</color>
+    <color name="pressed_grey">#999999</color>
+
+    <!-- activity标题 -->
+
+
+    <!-- listView -->
+    <color name="list_view_grey">#ECECEC</color>
+
+    <!-- order_add -->
+    <color name="order_add_split_line">#E4E4E4</color>
+    <color name="text_order_add_grey">#ADADAD</color>
+    <color name="text_order_add_black">#303030</color>
+    <color name="bg_order_add_dark_grey">#F5F5F5</color>
+
+    <!-- map -->
+    <color name="map_location_message_background">#F7F8F8</color>
+    <color name="map_location_message_text">#7F7F7F</color>
+    <color name="map_filtrate_background">#00CEC7</color>
+
+    <!-- WeelView -->
+    <color name="wheel_view_text_default">#E1E2E2</color>
+    <color name="wheel_view_background">#F7F8F8</color>
+    <!-- pileType -->
+    <color name="pile_type_background">#F7F8F8</color>
+    <!-- order_info_view -->
+    <color name="order_info_inner_split_line">#E6E6E6</color>
+    <color name="order_info_negative_button_background">#FF8000</color>
+    <color name="order_info_play_button_background">#00AEF0</color>
+    <!-- pile_info_layout -->
+    <color name="sky_blue">#00C7F2</color>
+    <color name="pile_info_book_zone_background">#F7F8F8</color>
+    <color name="pile_info_line_grey">#CFCFCF</color>
+    <color name="pile_info_charging_time_text">#707070</color>
+    <color name="pile_info_text_grey">#C5C5C5</color>
+    <color name="pile_info_more_background">#F8F8F8</color>
+    <color name="pile_info_more_divider">#F5F5F5</color>
+    <color name="pile_info_no_share_message">#AAAAAA</color>
+    <!-- pile_info_map_pop -->
+    <color name="pile_info_map_pop_bottom_color">#F7F8F7</color>
+    <color name="pile_info_map_pop_splite_line_color">#E7E6E3</color>
+    <!-- 上传图片添加的颜色 -->
+    <color name="none_color">#00000000</color>
+    <color name="plugin_camera_black">#000000</color>
+    <color name="albumback">#E1E0DE</color>
+
+    <!-- selectCityActivity  -->
+    <color name="section_background">#F8F8F7</color>
+    <color name="grid_background">#F1F0EE</color>
+    <color name="grid_item_text_color">#2E2E2E</color>
+    <color name="city_text_background_click">#ACA8A3</color>
+    <color name="select_city_activity_split_line_color">#CFCBC6</color>
+</resources>

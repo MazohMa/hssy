@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:coustom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h54"
+                android:background="@color/pile_info_map_pop_bottom_color"
+                android:orientation="vertical">
+
+        <View
+            android:id="@+id/top_splite_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/pile_info_map_pop_splite_line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/top_splite_line"
+            android:layout_marginBottom="@dimen/h10"
+            android:layout_marginTop="@dimen/h6"
+            android:paddingLeft="@dimen/w5"
+            android:paddingRight="@dimen/w5">
+
+            <Button
+                android:id="@+id/btn_charge_or_comment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/w5"
+                android:layout_marginRight="@dimen/w5"
+                android:layout_weight="1"
+                android:background="@drawable/selector_btn_water_blue_light_gray_round_small"
+                android:text="@string/book_charge"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h17"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btn_navigation"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/w5"
+                android:layout_marginRight="@dimen/w5"
+                android:layout_weight="1"
+                android:background="@drawable/shape_sky_blue_round_small"
+                android:text="@string/navigation"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h17"
+                android:visibility="visible" />
+        </LinearLayout>
+</RelativeLayout>

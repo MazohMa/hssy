@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+<LinearLayout
+    android:gravity="center_horizontal"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/h5"
+        android:src="@drawable/error"/>
+    <TextView
+        android:id="@+id/tv_loading_fail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/h20"
+        android:gravity="center"
+        android:text="@string/activity_loading_fail"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/h20"/>
+
+    <Button
+        android:id="@+id/btn_try_to_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_water_blue_round_small"
+        android:paddingBottom="@dimen/h10"
+        android:paddingLeft="@dimen/w80"
+        android:paddingRight="@dimen/w80"
+        android:paddingTop="@dimen/h10"
+        android:text="@string/try_to_refresh"
+        android:textColor="@color/white"
+        android:textSize="@dimen/h20"/>
+</LinearLayout>
+</RelativeLayout>

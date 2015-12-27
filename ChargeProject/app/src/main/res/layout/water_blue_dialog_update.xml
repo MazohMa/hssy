@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="@dimen/w250"
+        android:layout_height="@dimen/h130"
+        android:background="@drawable/popup_box_2"
+        android:paddingLeft="@dimen/w10"
+        android:paddingRight="@dimen/w10" >
+
+        <LinearLayout
+            android:id="@+id/bt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_content"
+            android:layout_marginTop="@dimen/h33"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/cancel"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/w18" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/ok"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/w18" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="@dimen/h250"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/h30"
+            android:gravity="center"
+            android:text="内容"
+            android:textColor="@color/grey_dark_pressed"
+            android:textSize="@dimen/w19" />
+    </RelativeLayout>
+
+</LinearLayout>

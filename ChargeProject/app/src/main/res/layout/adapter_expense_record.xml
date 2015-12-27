@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/h10"
+                android:background="@color/white"
+                android:padding="@dimen/h15">
+
+    <TextView
+        android:id="@+id/tv_expense_count_tag"
+        style="@style/text_black_small"
+        android:drawableLeft="@drawable/wallet_record_number"
+        android:drawablePadding="@dimen/w8"
+        android:text="@string/pay_count"/>
+
+    <TextView
+        android:id="@+id/tv_expense_count"
+        style="@style/text_red_small"
+        android:layout_toRightOf="@id/tv_expense_count_tag"
+        android:text="100"/>
+
+    <TextView
+        android:id="@+id/tv_expense_time_tag"
+        style="@style/text_black_small"
+        android:layout_below="@id/tv_expense_count_tag"
+        android:layout_marginTop="@dimen/h5"
+        android:drawableLeft="@drawable/wallet_record_time"
+        android:drawablePadding="@dimen/w8"
+        android:text="@string/pay_coin_time"/>
+
+    <TextView
+        android:id="@+id/tv_expense_time"
+        style="@style/text_gray_small"
+        android:layout_alignBaseline="@id/tv_expense_time_tag"
+        android:layout_toRightOf="@id/tv_expense_time_tag"
+        android:text="2015-12-12 12:00"/>
+
+
+    <TextView
+        android:id="@+id/tv_pay_order_id_tag"
+        style="@style/text_black_small"
+        android:layout_below="@id/tv_expense_time_tag"
+        android:layout_marginTop="@dimen/h5"
+        android:drawableLeft="@drawable/wallet_record_order"
+        android:drawablePadding="@dimen/w8"
+        android:text="@string/pay_order_id"/>
+
+    <TextView
+        android:id="@+id/tv_pay_order_id"
+        style="@style/text_gray_small"
+        android:layout_alignBaseline="@id/tv_pay_order_id_tag"
+        android:layout_toRightOf="@id/tv_pay_order_id_tag"
+        android:text="微信支付"/>
+
+
+</RelativeLayout>

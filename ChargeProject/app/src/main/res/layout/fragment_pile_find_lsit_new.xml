@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:listViewAttr="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_white">
+
+    <com.xpg.hssy.view.RefreshListView
+        android:id="@+id/lv_piles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_white"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:divider="@null"
+        android:listSelector="#00000000"
+        listViewAttr:isAutoLoadOnBottom="true"
+        listViewAttr:isDropDownStyle="true"
+        listViewAttr:isOnBottomStyle="true"/>
+
+    <LinearLayout
+        android:id="@+id/ll_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/water_blue"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RadioGroup
+            android:id="@+id/rg_condition2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h40"
+            android:background="@color/water_blue"
+            android:divider="@drawable/line_vertical_grey_small"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/h3"
+            android:paddingTop="@dimen/h3">
+
+            <RadioButton
+                android:id="@+id/rb_distance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="false"
+                android:drawableRight="@drawable/selector_check_arrow"
+                android:gravity="center"
+                android:paddingBottom="@dimen/h5"
+                android:paddingLeft="@dimen/w20"
+                android:paddingRight="@dimen/w20"
+                android:paddingTop="@dimen/h5"
+                android:text="@string/distance"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h16"/>
+
+            <RadioButton
+                android:id="@+id/rb_sort"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableRight="@drawable/selector_check_arrow"
+                android:gravity="center"
+                android:paddingBottom="@dimen/h5"
+                android:paddingLeft="@dimen/w20"
+                android:paddingRight="@dimen/w20"
+                android:paddingTop="@dimen/h5"
+                android:text="@string/sort"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h16"/>
+
+            <RadioButton
+                android:id="@+id/rb_filter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableRight="@drawable/selector_check_arrow"
+                android:gravity="center"
+                android:paddingBottom="@dimen/h5"
+                android:paddingLeft="@dimen/w20"
+                android:paddingRight="@dimen/w20"
+                android:paddingTop="@dimen/h5"
+                android:text="@string/filtrate"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h16"/>
+        </RadioGroup>
+    </LinearLayout>
+
+
+
+    <View
+        android:id="@+id/v_touch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_condition"
+        android:background="#99000000"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_condition">
+
+        <include
+            android:id="@+id/rl_pile_filter"
+            layout="@layout/layout_list_pile_filter_window"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </ScrollView>
+
+</RelativeLayout>

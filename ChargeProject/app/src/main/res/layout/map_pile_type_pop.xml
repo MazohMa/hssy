@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/pile_type_background"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/line2" />
+
+    <RelativeLayout
+        android:id="@+id/rlyt_ac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pile_type_background"
+        android:padding="@dimen/h15" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@color/pile_type_background"
+            android:drawableLeft="@drawable/icon_personal_ac2"
+            android:drawablePadding="@dimen/h5"
+            android:gravity="center_vertical"
+            android:text="私人交流桩"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/iv_ac_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ok_icon1" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/line2" />
+
+    <RelativeLayout
+        android:id="@+id/rlyt_dc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pile_type_background"
+        android:padding="@dimen/h15" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@color/pile_type_background"
+            android:drawableLeft="@drawable/icon_personal_dc2"
+            android:drawablePadding="@dimen/h5"
+            android:gravity="center_vertical"
+            android:text="私人直流桩"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/iv_dc_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ok_icon1" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/line2" />
+
+    <RelativeLayout
+        android:id="@+id/rlyt_public"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pile_type_background"
+        android:padding="@dimen/h15" >
+
+        <ImageView
+            android:id="@+id/iv_public_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ok_icon1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@color/pile_type_background"
+            android:drawableLeft="@drawable/icon_station2"
+            android:drawablePadding="@dimen/h5"
+            android:gravity="center_vertical"
+            android:text="公共站"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+</LinearLayout>

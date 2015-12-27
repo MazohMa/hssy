@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h105"
+        android:background="@color/bg_white"
+        android:padding="@dimen/h10">
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="@dimen/w100"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/hssy_default" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/h10"
+            android:layout_toRightOf="@id/iv_pic"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="全国首部电动汽车基础设施建设标准出台"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_title"
+            android:layout_below="@id/tv_title"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="全国首部电动汽车基础设施建设标准出台全国首部电动汽车基础设施建设标准出台全国首部电动汽车基础设施建设标准出台全国首部电动汽车基础设施建设标准出台"
+            android:textColor="@color/text_gray"
+            android:textSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_title"
+            android:layout_alignParentBottom="true"
+            android:lines="1"
+            android:text="2015-10-29"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/proud_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/youyiquan_information_look"
+            android:drawablePadding="@dimen/h5"
+            android:lines="1"
+            android:text="19258"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h10"
+        android:background="@drawable/line1"/>
+</LinearLayout>

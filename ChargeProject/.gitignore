@@ -1,0 +1,13 @@
+/.idea/copyright/
+/.idea/dictionaries/
+/.idea/libraries/
+/.idea/*.xml
+/.idea/.name
+/build/
+/app/build/
+/.gradle/
+/local.properties
+
+*.iml
+*.log
+*.class

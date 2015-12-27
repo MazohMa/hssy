@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/top_simple_layout"/>
+
+    <RadioGroup
+        android:id="@+id/rg_payment_records_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/water_blue"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/id_tab_recharge"
+            style="@style/tab_line_white_new_outside"
+            android:background="@drawable/pile_tab_bg"
+            android:checked="true"
+            android:text="@string/recharge_records"/>
+
+        <RadioButton
+            android:id="@+id/id_tab_pay"
+            style="@style/tab_line_white_new_outside"
+            android:background="@drawable/pile_tab_bg"
+            android:text="@string/pay_records"/>
+    </RadioGroup>
+
+    <com.xpg.hssy.view.PageView
+        android:id="@+id/payment_record_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</LinearLayout>

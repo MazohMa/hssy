@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/settingtime_top_layout" />
+
+    <LinearLayout
+        android:id="@+id/start_time_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/h10"
+        android:paddingTop="@dimen/h10" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="起始时间"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/h16" />
+
+        <TextView
+            android:id="@+id/time_begins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09:30"
+            android:textColor="@color/water_blue"
+            android:textSize="@dimen/h22"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_next"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h150"
+        android:layout_gravity="center"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wv_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_split"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/w20" />
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wv_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/overtime_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/h10"
+        android:paddingTop="@dimen/h10" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="结束时间"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/h16" />
+
+        <TextView
+            android:id="@+id/time_ends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11:30"
+            android:textColor="@color/water_blue"
+            android:textSize="@dimen/h22"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_next"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h150"
+        android:layout_gravity="center"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wv_hour2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_split2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/w20" />
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wv_min2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/h30" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="重复"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/h16" />
+
+        <LinearLayout
+            android:id="@+id/ll_weeks"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h40"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/h15"
+            android:background="@drawable/shape_green_frame"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_green_left_round"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="日"
+                android:textColor="@color/grey_dark_pressed"
+                android:textSize="@dimen/h17" />
+
+            <View
+                android:layout_width="@dimen/week_frame_width"
+                android:layout_height="match_parent"
+                android:background="@color/water_blue" />
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_green"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="一"
+                android:textColor="@color/grey_dark_pressed"
+                android:textSize="@dimen/h17" />
+
+            <View
+                android:layout_width="@dimen/week_frame_width"
+                android:layout_height="match_parent"
+                android:background="@color/water_blue" />
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_green"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="二"
+                android:textColor="@color/grey_dark_pressed"
+                android:textSize="@dimen/h17" />
+
+            <View
+                android:layout_width="@dimen/week_frame_width"
+                android:layout_height="match_parent"
+                android:background="@color/water_blue" />
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_green"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="三"
+                android:textColor="@color/grey_dark_pressed"
+                android:textSize="@dimen/h17" />
+
+            <View
+                android:layout_width="@dimen/week_frame_width"
+                android:layout_height="match_parent"
+                android:background="@color/water_blue" />
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_green"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="四"
+                android:textColor="@color/grey_dark_pressed"
+                android:textSize="@dimen/h17" />
+
+            <View
+                android:layout_width="@dimen/week_frame_width"
+                android:layout_height="match_parent"
+                android:background="@color/water_blue" />
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_green"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="五"
+                android:textColor="@color/grey_dark_pressed"
+                android:textSize="@dimen/h17" />
+
+            <View
+                android:layout_width="@dimen/week_frame_width"
+                android:layout_height="match_parent"
+                android:background="@color/water_blue" />
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_green_right_round"
+                android:button="@null"
+                android:checked="false"
+                android:gravity="center"
+                android:text="六"
+                android:textColor="@color/grey_dark_pressed"
+                android:textSize="@dimen/h17" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

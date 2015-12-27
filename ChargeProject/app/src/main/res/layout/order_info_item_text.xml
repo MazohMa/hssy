@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_data_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="5dp"
+        android:gravity="left"
+        android:text="数据名称 "
+        android:textColor="@color/gray"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tv_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="data detail"
+        android:textColor="@color/grey_dark"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="right"
+        android:text="data tip"
+        android:textColor="@color/text_orange"
+        android:textSize="15dp"
+        android:visibility="gone" />
+</LinearLayout>

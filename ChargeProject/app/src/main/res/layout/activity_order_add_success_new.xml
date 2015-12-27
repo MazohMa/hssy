@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+    <include
+        android:id="@+id/ll_top"
+        layout="@layout/top_simple_layout"/>
+
+    <TextView
+        android:id="@+id/pile_book_success"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_top"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/h35"
+        android:text="@string/pile_book_success_message"
+        android:textColor="@color/black"
+        android:textSize="@dimen/h30"/>
+
+    <ImageView
+        android:id="@+id/iv_collect_heart"
+        android:layout_width="@dimen/h34"
+        android:layout_height="@dimen/h34"
+        android:layout_alignLeft="@+id/pile_book_success"
+        android:layout_below="@+id/pile_book_success"
+        android:layout_marginBottom="@dimen/h20"
+        android:layout_marginLeft="@dimen/w80"
+        android:layout_marginTop="@dimen/h6"
+        android:src="@drawable/selector_collect_heart_white_red"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_collect_heart"
+        android:layout_alignBottom="@id/iv_collect_heart"
+        android:layout_marginLeft="@dimen/w8"
+        android:layout_marginTop="@dimen/h3"
+        android:layout_toRightOf="@id/iv_collect_heart"
+        android:text="@string/add_success_collect_pile"
+        android:textColor="@color/black"
+        android:textSize="@dimen/h22"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_collect_heart"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/w20"
+        android:paddingRight="@dimen/w20">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/split_line_gray"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/h10"
+            android:paddingTop="@dimen/h10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w16"
+                android:text="@string/add_success_order_num"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/h14"/>
+
+            <TextView
+                android:id="@+id/tv_order_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w100"
+                android:text="2015/03/20  14:00-18:00"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/h14"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/h10"
+            android:paddingTop="@dimen/h10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w10"
+                android:text="@string/add_success_pile_name"
+                android:textColor="@color/text_order_add_black"
+                android:textSize="@dimen/h14"/>
+
+            <TextView
+                android:id="@+id/tv_pile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w100"
+                android:layout_marginRight="@dimen/h8"
+                android:text="2015/03/20  14:00-18:00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h14"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/h10"
+            android:paddingTop="@dimen/h10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w10"
+                android:text="@string/add_success_pile_location"
+                android:textColor="@color/text_order_add_black"
+                android:textSize="@dimen/h14"/>
+
+            <TextView
+                android:id="@+id/tv_pile_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w100"
+                android:text="2015/03/20  14:00-18:00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h14"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/h10"
+            android:paddingTop="@dimen/h10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w10"
+                android:text="@string/add_success_book_time"
+                android:textColor="@color/text_order_add_black"
+                android:textSize="@dimen/h14"/>
+
+            <TextView
+                android:id="@+id/tv_book_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w100"
+                android:text="2015/03/20  14:00-18:00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h14"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/h10"
+            android:paddingTop="@dimen/h10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w10"
+                android:text="@string/add_success_pile_price"
+                android:textColor="@color/text_order_add_black"
+                android:textSize="@dimen/h14"/>
+
+            <TextView
+                android:id="@+id/tv_pile_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w100"
+                android:text="2015/03/20  14:00-18:00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/h14"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/h72"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_order_add_dark_grey">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentTop="true"
+            android:background="@color/order_add_split_line"/>
+
+        <Button
+            android:id="@+id/btn_check_order"
+            style="@style/btn_green_big"
+            android:layout_width="160dp"
+            android:layout_height="52dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_water_blue_round_small"
+            android:text="查看预约单"/>
+    </RelativeLayout>
+
+</RelativeLayout>

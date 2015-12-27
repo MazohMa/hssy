@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_white"
+    android:gravity="center_horizontal"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+    <!--不要让EditText默认获取焦点-->
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <include layout="@layout/top_next_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <com.xpg.hssy.view.EditDeleteText
+            android:id="@+id/et_cur_pwd"
+            android:layout_width="@dimen/w250"
+            android:layout_height="@dimen/h50"
+            android:drawableRight="@drawable/emotionstore_progresscancelbtn"
+            android:layout_marginTop="@dimen/h50"
+            android:background="@drawable/shape_water_blue_frame"
+            android:digits="1234567890abcdefghijklmnopqrstuvwxyz"
+            android:drawableLeft="@drawable/login_icon_password"
+            android:drawablePadding="@dimen/w5"
+            android:inputType="textPassword"
+            android:hint="当前密码"
+            android:padding="@dimen/h15"
+            android:maxLength="16"
+            android:singleLine="true"
+            android:textSize="@dimen/w13" />
+
+        <com.xpg.hssy.view.EditDeleteText
+            android:id="@+id/et_new_pwd"
+            android:layout_width="@dimen/w250"
+            android:layout_height="@dimen/h50"
+            android:drawableRight="@drawable/emotionstore_progresscancelbtn"
+            android:layout_marginTop="@dimen/h15"
+            android:background="@drawable/shape_water_blue_frame"
+            android:digits="1234567890abcdefghijklmnopqrstuvwxyz"
+            android:drawableLeft="@drawable/login_icon_password"
+            android:drawablePadding="@dimen/w5"
+            android:inputType="textPassword"
+            android:hint="新密码"
+            android:maxLength="16"
+            android:padding="@dimen/h15"
+            android:singleLine="true"
+            android:textSize="@dimen/w13" />
+
+        <com.xpg.hssy.view.EditDeleteText
+            android:id="@+id/et_comfirm_new_pwd"
+            android:layout_width="@dimen/w250"
+            android:layout_height="@dimen/h50"
+            android:drawableRight="@drawable/emotionstore_progresscancelbtn"
+            android:layout_marginTop="@dimen/h15"
+            android:background="@drawable/shape_water_blue_frame"
+            android:digits="1234567890abcdefghijklmnopqrstuvwxyz"
+            android:drawableLeft="@drawable/login_icon_password"
+            android:drawablePadding="@dimen/w5"
+            android:hint="确认新密码"
+            android:maxLength="16"
+            android:inputType="textPassword"
+            android:padding="@dimen/h15"
+            android:singleLine="true"
+            android:textSize="@dimen/w13" />
+    </LinearLayout>
+</RelativeLayout>

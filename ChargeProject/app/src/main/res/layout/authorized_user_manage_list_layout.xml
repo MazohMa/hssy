@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_white"
+                android:gravity="center_horizontal">
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/top_simple_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_qrcode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_layout"
+        android:visibility="gone">
+
+        <SurfaceView
+            android:id="@+id/preview_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.xpg.hssy.zxing.view.ViewfinderView
+            android:id="@+id/viewfinderview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-40dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_no_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_not_user"
+            android:layout_width="@dimen/w80"
+            android:layout_centerHorizontal="true"
+            android:layout_height="@dimen/w80"
+            android:src="@drawable/touxiang"/>
+        <TextView
+            android:id="@+id/tv_not_user"
+            android:layout_marginTop="@dimen/h5"
+            android:layout_below="@+id/iv_not_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/w16"
+            android:text="@string/no_family"/>
+
+        <Button
+            android:id="@+id/btn_manual_add"
+            style="@style/btn_water_blue_small"
+            android:layout_width="@dimen/w200"
+            android:layout_height="@dimen/h50"
+            android:layout_below="@+id/tv_not_user"
+            android:layout_marginTop="@dimen/h80"
+            android:gravity="center"
+            android:text="@string/manual_add"
+            android:textSize="@dimen/w18"/>
+
+        <Button
+            android:id="@+id/btn_qr_add"
+            style="@style/btn_water_blue_small"
+            android:layout_width="@dimen/w200"
+            android:layout_height="@dimen/h50"
+            android:layout_below="@+id/btn_manual_add"
+            android:layout_marginTop="@dimen/h15"
+            android:gravity="center"
+            android:text="@string/qr_add"
+            android:textSize="@dimen/w18"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_userlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_layout"
+        android:background="@color/bg_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_top_or_bottom"
+            android:paddingBottom="@dimen/h18"
+            android:paddingLeft="@dimen/h18"
+            android:paddingTop="@dimen/h18"
+            android:text="@string/authed_user"
+            android:textColor="@color/water_blue"
+            android:textSize="@dimen/h20"/>
+
+        <ListView
+            android:layout_below="@+id/tv_tag"
+            android:layout_above="@+id/bottom_layout"
+            android:id="@+id/lv_shouquanUserManages_list"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/line2"
+            android:paddingLeft="@dimen/w15"
+            android:paddingRight="@dimen/w15"
+            android:scrollbars="none"/>
+
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_top_or_bottom"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/h10"
+            android:paddingLeft="@dimen/w20"
+            android:paddingRight="@dimen/w20"
+            android:paddingTop="@dimen/h10">
+
+            <Button
+                android:id="@+id/shoudong_add_bt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/w40"
+                android:layout_weight="1"
+                android:background="@null"
+                android:padding="@dimen/w10"
+                android:text="手动添加 "
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/h18"/>
+
+            <Button
+                android:id="@+id/erweima_add_bt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w40"
+                android:layout_weight="1"
+                android:background="@null"
+                android:padding="@dimen/w10"
+                android:text="二维码添加"
+                android:textColor="@color/water_blue"
+                android:textSize="@dimen/h18"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

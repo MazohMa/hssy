@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="android:Theme.Black.NoTitleBar">
+        <!-- 
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+         -->
+    </style>
+
+    <style name="WelcomePage" parent="AppTheme">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="GuidePage" parent="AppTheme">
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+
+
+</resources>
